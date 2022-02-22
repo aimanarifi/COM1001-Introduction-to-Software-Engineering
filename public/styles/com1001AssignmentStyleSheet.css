@@ -14,8 +14,9 @@ body {
   background-color: var(--colour-background);
 }
 
-p {
+p, h1 {
   color: var(--colour-text);
+  font-family: verdana;
 }
 
 header {
@@ -24,6 +25,7 @@ header {
 
 header h1 {
   background-color: var(--colour-contrast);
+  font-size: 280%;
 }
 
 form {
@@ -52,6 +54,7 @@ input:hover {
   color: var(--colour-text);
   background-color: var(--colour-contrast);
   width: 40%;
+  margin: auto;
 }
 
 #invalidText {
