@@ -1,10 +1,17 @@
 GEM
+  specs:
+
+GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
+    logger (1.5.0)
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
+    puma (5.6.2)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -24,6 +31,7 @@ GEM
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
     ruby2_keywords (0.0.5)
+    sequel (5.53.0)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -41,10 +49,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  logger!
+  puma!
   rack-test!
   rspec!
+  sequel!
   sinatra!
   sinatra-contrib!
 
 BUNDLED WITH
-   2.0.2
+   2.3.7
