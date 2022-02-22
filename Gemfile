@@ -4,4 +4,6 @@ source "https://rubygems.org" do
     gem "rspec"
     gem "sinatra"
     gem "sinatra-contrib"
+    gem "logger"
+    gem "sequel"
 end
