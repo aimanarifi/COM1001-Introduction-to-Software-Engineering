@@ -10,7 +10,11 @@ post "/new-post" do
     @post = Post.new
     @post.load(params)
 
-    # Check if player object is valid, save changes, redirect
+    # If object is valid, save changes to database, redirect to home
+    if @player.valid?
+        @player.save_changes
+        redirect "/"
+    end
 
     erb :new_post
 end

@@ -25,4 +25,17 @@ class Post < Sequel::Model
             self.is_image = 1
         end
     end
+
+    def validate
+        # Check if a new post object is valid
+        super
+        errors.add("username", "cannot be empty") if !username || username.empty?
+        errors.add("title", "cannot be empty") if !title || title.empty?
+        errors.add("message", "cannot be empty") if !message || message.empty?
+        errors.add("university", "cannot be empty") if !university || university.empty?
+        errors.add("tags", "cannot be empty") if !tags || tags.empty?
+        errors.add("date_posted", "cannot be empty") if !date_posted || date_posted.empty?
+        errors.add("is_moderated", "cannot be empty") if !is_moderated
+        errors.add("is_image", "cannot be empty") if !is_image
+    end
 end
