@@ -6,5 +6,4 @@ source "https://rubygems.org" do
     gem "sequel"
     gem "sinatra"
     gem "sqlite3"
-    gem "time_difference"
 end

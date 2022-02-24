@@ -6,14 +6,14 @@ get "/new-post" do
 end
 
 post "/new-post" do
-    # Create new post, add parameters
+    # Create new post, add parameters from form
     @post = Post.new
     @post.load(params)
 
     # If object is valid, save changes to database, redirect to home
-    if @player.valid?
-        @player.save_changes
-        redirect "/"
+    if @post.valid?
+        @post.save_changes
+        redirect "/feed"
     end
 
     erb :new_post

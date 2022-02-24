@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Our Website | Make A Post</title>
+    <link rel="stylesheet" href="style/com1001AssignmentStyleSheet.css">
+</head>
+
+<body>
+  <h1>Make A Post</h1>
+
+  <form method="post">
+    <p class="label">Username</p>
+    <p class="field"><input type="text" name="username" value="<%= h @post.username %>"></p>
+
+    <p class="label">Title</p>
+    <p class="field"><input type="text" name="title" value="<%= h @post.title %>"></p>
+
+    <p class="label">Message</p>
+    <p class="field"><input type="text" name="message" value="<%= h @post.message %>"></p>
+
+    <p class="label">University</p>
+    <p class="field"><input type="text" name="university" value="<%= h @post.university %>"></p>
+
+    <p class="label">Tags (Comma Separated)</p>
+    <p class="field"><input type="text" name="tags" value="<%= h @post.tags %>"></p>
+
+    <p class="label">Image Link</p>
+    <p class="field"><input type="text" name="image_link" value="<%= h @post.image_link %>"></p>
+
+    <p class="submit"><input type="submit" value="Submit"></p>
+  </form>
+
+</body>
+</html>
