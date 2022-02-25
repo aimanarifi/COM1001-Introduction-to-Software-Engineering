@@ -1,0 +1,10 @@
+# Logfile created on 2022-02-25 21:09:56 +0000 by logger.rb/v1.5.0
+I, [2022-02-25T21:09:56.417360 #228]  INFO -- : (0.000196s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:09:56.417461 #228]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:09:56.418200 #228]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2022-02-25T21:09:56.418493 #228]  INFO -- : (0.000131s) PRAGMA table_info('posts')
+I, [2022-02-25T21:09:56.419387 #228]  INFO -- : (0.000107s) PRAGMA table_info('users')
+I, [2022-02-25T21:10:10.155167 #228]  INFO -- : (0.000039s) BEGIN
+I, [2022-02-25T21:10:10.155672 #228]  INFO -- : (0.000216s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag', 'image.com', '2022-02-25 21:10:10', 0, 1)
+I, [2022-02-25T21:10:10.155952 #228]  INFO -- : (0.000113s) SELECT * FROM `posts` WHERE `post_id` = 1
+I, [2022-02-25T21:10:10.211959 #228]  INFO -- : (0.055939s) COMMIT
