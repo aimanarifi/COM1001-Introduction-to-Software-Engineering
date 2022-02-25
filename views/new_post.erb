@@ -7,23 +7,52 @@
 <body>
   <h1>Make A Post</h1>
 
+  <% unless @post.errors.size.zero? %>
+    <p><strong class="error">Please fix the errors below:</strong></p>
+  <% end %>
+
   <form method="post">
     <p class="label">Username</p>
     <p class="field"><input type="text" name="username" value="<%= h @post.username %>"></p>
+    <% if @post.errors.include?("username") %>
+      <% @post.errors["username"].each do |error| %>
+        <p class="error"><strong>Username <%= error %></strong></p>
+      <% end %>
+    <% end %>
 
     <p class="label">Title</p>
     <p class="field"><input type="text" name="title" value="<%= h @post.title %>"></p>
+    <% if @post.errors.include?("title") %>
+      <% @post.errors["title"].each do |error| %>
+        <p class="error"><strong>Cannot <%= error %></strong></p>
+      <% end %>
+    <% end %>
 
     <p class="label">Message</p>
     <p class="field"><input type="text" name="message" value="<%= h @post.message %>"></p>
+    <% if @post.errors.include?("message") %>
+      <% @post.errors["message"].each do |error| %>
+        <p class="error"><strong>Message <%= error %></strong></p>
+      <% end %>
+    <% end %>
 
     <p class="label">University</p>
     <p class="field"><input type="text" name="university" value="<%= h @post.university %>"></p>
+    <% if @post.errors.include?("university") %>
+      <% @post.errors["university"].each do |error| %>
+        <p class="error"><strong>University <%= error %></strong></p>
+      <% end %>
+    <% end %>
 
     <p class="label">Tags (Comma Separated)</p>
     <p class="field"><input type="text" name="tags" value="<%= h @post.tags %>"></p>
+    <% if @post.errors.include?("tags") %>
+      <% @post.errors["tags"].each do |error| %>
+        <p class="error"><strong>Tags <%= error %></strong></p>
+      <% end %>
+    <% end %>
 
-    <p class="label">Image Link</p>
+    <p class="label">Image Link (Imgur)</p>
     <p class="field"><input type="text" name="image_link" value="<%= h @post.image_link %>"></p>
 
     <p class="submit"><input type="submit" value="Submit"></p>
