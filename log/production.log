@@ -157,3 +157,8 @@ I, [2022-02-24T10:45:42.933843 #582]  INFO -- : (0.000041s) BEGIN
 I, [2022-02-24T10:45:42.934353 #582]  INFO -- : (0.000237s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:45:42', 0, 1)
 I, [2022-02-24T10:45:42.934630 #582]  INFO -- : (0.000117s) SELECT * FROM `posts` WHERE `post_id` = 1
 I, [2022-02-24T10:45:43.012919 #582]  INFO -- : (0.078188s) COMMIT
+I, [2022-02-27T15:19:57.850214 #427]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
+I, [2022-02-27T15:19:57.850373 #427]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-27T15:19:57.850904 #427]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2022-02-27T15:19:57.851144 #427]  INFO -- : (0.000132s) PRAGMA table_info('posts')
+I, [2022-02-27T15:19:57.852018 #427]  INFO -- : (0.000112s) PRAGMA table_info('users')
