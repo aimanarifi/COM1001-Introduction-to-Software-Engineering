@@ -1,0 +1,20 @@
+<%#load common header here%>
+
+<body>
+
+    <% @posts.each do |post|%>
+        <h1 class="post_title" ><%= h post.title %></h1>
+        <p class="post_message" name="message" ><%= h post.message %></p>
+
+        <% if post.is_image == 1 %>
+            <img src="@post.image_source" alt="">
+        <% else %>
+        <% end %>
+
+        <%# The link below brings to new page where moderator can edit/reject/approve%>
+        <p><a href="/edit?id=<%= h post.post_id %>">Moderate post</a></p>
+    <end>
+
+</body>
+
+<%#load common footer here%>>
