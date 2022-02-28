@@ -1,0 +1,88 @@
+# Logfile created on 2022-02-25 21:09:56 +0000 by logger.rb/v1.5.0
+I, [2022-02-25T21:09:56.417360 #228]  INFO -- : (0.000196s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:09:56.417461 #228]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:09:56.418200 #228]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2022-02-25T21:09:56.418493 #228]  INFO -- : (0.000131s) PRAGMA table_info('posts')
+I, [2022-02-25T21:09:56.419387 #228]  INFO -- : (0.000107s) PRAGMA table_info('users')
+I, [2022-02-25T21:10:10.155167 #228]  INFO -- : (0.000039s) BEGIN
+I, [2022-02-25T21:10:10.155672 #228]  INFO -- : (0.000216s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag', 'image.com', '2022-02-25 21:10:10', 0, 1)
+I, [2022-02-25T21:10:10.155952 #228]  INFO -- : (0.000113s) SELECT * FROM `posts` WHERE `post_id` = 1
+I, [2022-02-25T21:10:10.211959 #228]  INFO -- : (0.055939s) COMMIT
+I, [2022-02-25T21:25:44.439456 #250]  INFO -- : (0.000172s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:25:44.439560 #250]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:25:44.440165 #250]  INFO -- : (0.000054s) SELECT sqlite_version()
+I, [2022-02-25T21:25:44.440449 #250]  INFO -- : (0.000126s) PRAGMA table_info('posts')
+I, [2022-02-25T21:25:44.441292 #250]  INFO -- : (0.000107s) PRAGMA table_info('users')
+I, [2022-02-25T21:28:09.937777 #261]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:28:09.937879 #261]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:28:09.938496 #261]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2022-02-25T21:28:09.938795 #261]  INFO -- : (0.000146s) PRAGMA table_info('posts')
+I, [2022-02-25T21:28:09.939713 #261]  INFO -- : (0.000134s) PRAGMA table_info('users')
+I, [2022-02-25T21:39:01.556979 #273]  INFO -- : (0.000193s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:39:01.557074 #273]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:39:01.557677 #273]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2022-02-25T21:39:01.558069 #273]  INFO -- : (0.000219s) PRAGMA table_info('posts')
+I, [2022-02-25T21:39:01.559215 #273]  INFO -- : (0.000227s) PRAGMA table_info('users')
+I, [2022-02-25T21:39:02.297396 #273]  INFO -- : (0.062937s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:39:56.441426 #274]  INFO -- : (0.000169s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:39:56.441511 #274]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:39:56.442020 #274]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2022-02-25T21:39:56.442262 #274]  INFO -- : (0.000120s) PRAGMA table_info('posts')
+I, [2022-02-25T21:39:56.443079 #274]  INFO -- : (0.000113s) PRAGMA table_info('users')
+I, [2022-02-25T21:40:44.620307 #286]  INFO -- : (0.000180s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:40:44.620408 #286]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:40:44.621021 #286]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2022-02-25T21:40:44.621347 #286]  INFO -- : (0.000191s) PRAGMA table_info('posts')
+I, [2022-02-25T21:40:44.622324 #286]  INFO -- : (0.000149s) PRAGMA table_info('users')
+I, [2022-02-25T21:40:44.877925 #286]  INFO -- : (0.000096s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:41:49.717134 #287]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:41:49.717227 #287]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:41:49.717812 #287]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2022-02-25T21:41:49.718121 #287]  INFO -- : (0.000182s) PRAGMA table_info('posts')
+I, [2022-02-25T21:41:49.719220 #287]  INFO -- : (0.000160s) PRAGMA table_info('users')
+I, [2022-02-25T21:41:49.970645 #287]  INFO -- : (0.000097s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:42:36.155660 #288]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:42:36.155746 #288]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:42:36.156331 #288]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2022-02-25T21:42:36.156650 #288]  INFO -- : (0.000181s) PRAGMA table_info('posts')
+I, [2022-02-25T21:42:36.157601 #288]  INFO -- : (0.000154s) PRAGMA table_info('users')
+I, [2022-02-25T21:42:36.414682 #288]  INFO -- : (0.000103s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:43:24.274648 #289]  INFO -- : (0.000126s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:43:24.274738 #289]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:43:24.275282 #289]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2022-02-25T21:43:24.275579 #289]  INFO -- : (0.000167s) PRAGMA table_info('posts')
+I, [2022-02-25T21:43:24.277941 #289]  INFO -- : (0.000146s) PRAGMA table_info('users')
+I, [2022-02-25T21:43:24.545928 #289]  INFO -- : (0.000099s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:43:40.211360 #290]  INFO -- : (0.000167s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:43:40.211441 #290]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:43:40.211990 #290]  INFO -- : (0.000050s) SELECT sqlite_version()
+I, [2022-02-25T21:43:40.212240 #290]  INFO -- : (0.000121s) PRAGMA table_info('posts')
+I, [2022-02-25T21:43:40.213107 #290]  INFO -- : (0.000113s) PRAGMA table_info('users')
+I, [2022-02-25T21:44:07.511119 #301]  INFO -- : (0.000170s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:44:07.511212 #301]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:44:07.511854 #301]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2022-02-25T21:44:07.512169 #301]  INFO -- : (0.000182s) PRAGMA table_info('posts')
+I, [2022-02-25T21:44:07.513128 #301]  INFO -- : (0.000153s) PRAGMA table_info('users')
+I, [2022-02-25T21:44:07.773993 #301]  INFO -- : (0.000103s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:46:15.184362 #303]  INFO -- : (0.000178s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:46:15.184454 #303]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:46:15.185044 #303]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2022-02-25T21:46:15.185364 #303]  INFO -- : (0.000185s) PRAGMA table_info('posts')
+I, [2022-02-25T21:46:15.186342 #303]  INFO -- : (0.000154s) PRAGMA table_info('users')
+I, [2022-02-25T21:46:15.445117 #303]  INFO -- : (0.000096s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:46:15.532139 #303]  INFO -- : (0.000053s) BEGIN
+I, [2022-02-25T21:46:15.532781 #303]  INFO -- : (0.000249s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('testuser100', 'This is a post!', 'This is the content of my post!', 'University Of Sheffield', 'Tag, another tag, yet another tag', 'https://imgur.com/gallery/lePaN', '2022-02-25 21:46:15', 0, 1)
+I, [2022-02-25T21:46:15.533156 #303]  INFO -- : (0.000179s) SELECT * FROM `posts` WHERE `post_id` = 1
+I, [2022-02-25T21:46:15.591460 #303]  INFO -- : (0.058197s) COMMIT
+I, [2022-02-25T21:46:15.656543 #303]  INFO -- : (0.062841s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:47:24.640330 #304]  INFO -- : (0.000123s) PRAGMA foreign_keys = 1
+I, [2022-02-25T21:47:24.640432 #304]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T21:47:24.641026 #304]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2022-02-25T21:47:24.642086 #304]  INFO -- : (0.000914s) PRAGMA table_info('posts')
+I, [2022-02-25T21:47:24.644827 #304]  INFO -- : (0.000975s) PRAGMA table_info('users')
+I, [2022-02-25T21:47:24.915152 #304]  INFO -- : (0.000098s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-02-25T21:47:24.987634 #304]  INFO -- : (0.000039s) BEGIN
+I, [2022-02-25T21:47:24.988186 #304]  INFO -- : (0.000258s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('testuser100', 'This is a post!', 'This is the content of my post!', 'University Of Sheffield', 'Tag, another tag, yet another tag', 'https://imgur.com/gallery/lePaN', '2022-02-25 21:47:24', 0, 1)
+I, [2022-02-25T21:47:24.988440 #304]  INFO -- : (0.000113s) SELECT * FROM `posts` WHERE `post_id` = 1
+I, [2022-02-25T21:47:25.063453 #304]  INFO -- : (0.074929s) COMMIT
+I, [2022-02-25T21:47:25.124314 #304]  INFO -- : (0.058926s) DELETE FROM `posts` WHERE (1 = 1)

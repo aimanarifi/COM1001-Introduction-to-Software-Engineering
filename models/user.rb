@@ -1,5 +1,6 @@
 # A user record from the database
 class User < Sequel::Model
+    
     def name
         # Return full name of user
         "#{first_name} #{last_name}"

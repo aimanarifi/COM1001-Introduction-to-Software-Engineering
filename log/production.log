@@ -157,6 +157,29 @@ I, [2022-02-24T10:45:42.933843 #582]  INFO -- : (0.000041s) BEGIN
 I, [2022-02-24T10:45:42.934353 #582]  INFO -- : (0.000237s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:45:42', 0, 1)
 I, [2022-02-24T10:45:42.934630 #582]  INFO -- : (0.000117s) SELECT * FROM `posts` WHERE `post_id` = 1
 I, [2022-02-24T10:45:43.012919 #582]  INFO -- : (0.078188s) COMMIT
+I, [2022-02-25T13:51:12.814047 #281]  INFO -- : (0.001512s) PRAGMA foreign_keys = 1
+I, [2022-02-25T13:51:12.817242 #281]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T13:51:12.817929 #281]  INFO -- : (0.000063s) SELECT sqlite_version()
+I, [2022-02-25T13:51:12.818204 #281]  INFO -- : (0.000125s) PRAGMA table_info('posts')
+I, [2022-02-25T13:51:12.819148 #281]  INFO -- : (0.000111s) PRAGMA table_info('users')
+I, [2022-02-25T13:51:40.214610 #281]  INFO -- : (0.000042s) BEGIN
+I, [2022-02-25T13:51:40.215143 #281]  INFO -- : (0.000253s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user1', 'This is a title!', 'This is a post!', 'University Of Sheffield', 'tag, another tag, woah another tag', 'image.co.uk/image', '2022-02-25 13:51:40', 0, 1)
+I, [2022-02-25T13:51:40.215399 #281]  INFO -- : (0.000104s) SELECT * FROM `posts` WHERE `post_id` = 2
+I, [2022-02-25T13:51:40.286091 #281]  INFO -- : (0.070605s) COMMIT
+I, [2022-02-25T13:53:32.722755 #292]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
+I, [2022-02-25T13:53:32.722842 #292]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T13:53:32.723384 #292]  INFO -- : (0.000052s) SELECT sqlite_version()
+I, [2022-02-25T13:53:32.723629 #292]  INFO -- : (0.000120s) PRAGMA table_info('posts')
+I, [2022-02-25T13:53:32.724485 #292]  INFO -- : (0.000109s) PRAGMA table_info('users')
+I, [2022-02-25T14:17:31.406190 #321]  INFO -- : (0.000178s) PRAGMA foreign_keys = 1
+I, [2022-02-25T14:17:31.406281 #321]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-02-25T14:17:31.406839 #321]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2022-02-25T14:17:31.407090 #321]  INFO -- : (0.000119s) PRAGMA table_info('posts')
+I, [2022-02-25T14:17:31.407980 #321]  INFO -- : (0.000114s) PRAGMA table_info('users')
+I, [2022-02-25T14:17:48.799766 #321]  INFO -- : (0.000042s) BEGIN
+I, [2022-02-25T14:17:48.800216 #321]  INFO -- : (0.000198s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('username', 'title', 'message', 'uni', 'tag', '', '2022-02-25 14:17:48', 0, 0)
+I, [2022-02-25T14:17:48.800451 #321]  INFO -- : (0.000104s) SELECT * FROM `posts` WHERE `post_id` = 3
+I, [2022-02-25T14:17:48.858722 #321]  INFO -- : (0.058198s) COMMIT
 I, [2022-02-27T15:19:57.850214 #427]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
 I, [2022-02-27T15:19:57.850373 #427]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
 I, [2022-02-27T15:19:57.850904 #427]  INFO -- : (0.000051s) SELECT sqlite_version()
