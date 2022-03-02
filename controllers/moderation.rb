@@ -1,9 +1,3 @@
-require "db/db"
-require "sequel"
-require "../models/user.rb"
-
-DB = Sequel.sqlite("../db/production.sqlite3" , logger: Logger.new("db.log"))
-
 get "/moderation-feed" do
     #Fetch the usertype from database (post table)
     user_id = #the mod id
@@ -19,14 +13,14 @@ get "/moderation-feed" do
         @posts = Post.where(is_moderated: 0)
     end
 
-    erb: moderation-feed
+    erb :moderation_feed
 end
 
 get "/moderator-action" do
     id = params[post_id]
-    @post = Post.[id]
+    @post = Post.where(post_id: id)
     @user = User.where(username: @post.username)
-    erb:moderation-action
+    erb :moderation_action
 end
 
 post "/moderation-action/approve" do
