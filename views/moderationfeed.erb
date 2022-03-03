@@ -1,0 +1,33 @@
+<%#load common header here%>
+<%#load nav bar here%>
+<html>
+<head>
+</head>
+<body>
+    
+    <h1><%= h @user_type_query %>'s Feed</h1>
+
+
+    <% if @posts != nil %>
+        <% @posts.each do |post| %>
+            <h3 class="post_title" ><%= h post.title %></h3>
+            <p class="post_message" name="message" ><%= h post.message %></p>
+
+            <!-- load image if exist -->
+            <% if post.is_image == 1 %>
+                <img src="<%= h post.image_link %>" alt="" >
+            <% end %>
+
+            <%# The link below brings to new page where moderator can edit/reject/approve %>
+            <p><a href="/moderationaction?post_id=<%= h post.post_id %>">Moderate post</a></p>
+        <% end %>
+
+    <% else %>
+
+        <p>Database is empty </p>
+        
+    <% end %>
+</body>
+
+<%#load common footer here%>
+</html>
