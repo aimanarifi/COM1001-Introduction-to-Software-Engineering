@@ -1,1 +1,18 @@
-<p>This will be the feed!</p>
+<%#load common header here%>
+
+<h1>Feed</h1>
+
+<% if @posts.count > 0 %>
+    <% @posts.each do |post| %>
+        <br>
+        <article>
+            <p>'<%= h post.title %>' by <%= h post.username %></p>
+            <p><%= h post.message %></p>
+            <p><em>Tags: <%= h post.tags %></em></p>
+        </article>
+    <% end %>
+<% else %>
+    <p>No posts were found.</p>
+<% end %>
+
+<%#load common footer here%>
