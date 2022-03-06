@@ -4,12 +4,12 @@
 
 <% if @posts.count > 0 %>
     <% @posts.each do |post| %>
-        <br>
         <article>
-            <p>'<%= h post.title %>' by <%= h post.username %></p>
+            <p><b>'<%= h post.title %>'</b> by <%= h post.username %></p>
             <p><%= h post.message %></p>
-            <p><em>Tags: <%= h post.tags %></em></p>
+            <p><%= h post.university %>. Tags: <em><%= h post.tags %></em></p>
         </article>
+        <br>
     <% end %>
 <% else %>
     <p>No posts were found.</p>
