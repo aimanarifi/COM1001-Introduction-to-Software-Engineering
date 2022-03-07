@@ -4,12 +4,14 @@
 
 <% if @posts.count > 0 %>
     <% @posts.each do |post| %>
-        <article>
-            <p><b>'<%= h post.title %>'</b> by <%= h post.username %></p>
-            <p><%= h post.message %></p>
-            <p><%= h post.university %>. Tags: <em><%= h post.tags %></em></p>
-        </article>
-        <br>
+        <% if post.is_moderated == 1 %>
+            <article class="feed_post">
+                <p><b>'<%= h post.title %>'</b> by <%= h post.username %></p>
+                <p><%= h post.message %></p>
+                <p><%= h post.university %>. Tags: <em><%= h post.tags %></em></p>
+            </article>
+            <br>
+        <% end %>
     <% end %>
 <% else %>
     <p>No posts were found.</p>
