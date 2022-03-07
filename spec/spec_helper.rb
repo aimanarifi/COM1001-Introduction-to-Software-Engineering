@@ -24,8 +24,12 @@ RSpec.configure do |config|
     config.include Rack::Test::Methods
 end
 
-
 # Methods for testing
+# Log in before all tests
+def log_in
+    visit "/login"
+end
+
 # Add a valid test post
 def add_test_post
     visit "/new-post"
@@ -45,11 +49,22 @@ def add_invalid_test_post
     click_button "Submit"
 end
 
+def add_post_title_too_long
+    visit "/new-post"
+    fill_in "title", with: "HBftkbhYbVjJzPWzwMYGfaBpXtXcXaNRtSzpNuNcpXqsguRgnDRSeNjRVnjDUVHvnNktZcvBOBDPrZYJHRmxmtjtaOZBxVchCgJjA"
+    click_button "Submit"
+end
+
+def add_post_message_too_long
+    visit "/new-post"
+    fill_in "message", with: "QXTjNWOAveHkaOBSkxwnksEWrWoXASNqKYDOVFytZywoyWhhFhDnaJWDgQOuFMWKgHBCtWGkPcpufARFBMjuOkCVNTAMMdhrNpxXjpaKSDwegNYEboyepajTUZhhhFHsEZFFzccsEuOwRkDHbkCnauhkJnrXKBPCJcFBPvCJkyPdNCFWpTcKTHstPDyGyQouSyEFzYBxNQUFFatFqdZVgJkzUoQjGRbTCbYvyWYyNePVBHUZaFhvGAYPJhHmHOaPOVWKYWmOJkxrYvPUTduAvjxWgNnZeWoBaTRXngtEZUByGyGJfZRZOurbNSFcCORwCbPRyjsCuSBSdbaesjOwGDOAhqUnOgMvPogcFWOGxYtZhTnXbDjkPjpmupkjxdTsJtaKoxKxGSyhbODRCbgZTQYwONWobWfnweVcxqCdyvKTMVPWsmFyDCjfEVdceMwHXDpTuEfuHJpjcdsrFOcqUzduvoaDJmvWwPpoFPKaOveqKJjScxFVkbZPpkSuQcqpPfJRduhDORrXhYsTOQauBaACCwMwvNqQGVNNxBJMSBRErGFstdvXkoYYavxEnmnDQVVtNURVgmPkVwhCAwavzuHNcEADwjqKttAEpJMnMpjxQQxhSsvjzDfVzqKVHtQoYXcHAaeeTeASQwcHRzNFqCdTAWvTYxeVYoHZfaqdtmHHryXJQneRffonppmdmDnXXAvHpYcZHazPcWAquHrgdtFFArjKzYBgCHSGGOJHQQZFAgqNzjQNEsKJPGyAXTdjushnxWRtPunNfYcrWjhRfJeyDSNrDQSRQfQNoEeoFVCTysoeDDUVsndbHGMETRjKUkyJbdqTUHTFncbKOYWPCPbQqWDrMmXETzFhAVZooUGskQytzNTQUjPSyodYuoFPmQdYFtaReQQdpfJseqSEEgrpNWmYrkCdeMsWyoAJJHMnkQqkRvPmcVGRVwbgaUjpppygCoRAoYsWQdzyXyroZneGuAXGJmCKDdrjmxrbB"
+    click_button "Submit"
+end
+
 # Clear the database
 def clear_database
     DB.from("posts").delete
 end
-
 
 # Ensure we always start from a clear database
 clear_database
