@@ -1,20 +1,16 @@
 # Author: Alexander Johns
 
 get "/" do
-    # Temporary, for testing:
-    response.set_cookie("is_logged_in", 1)
+    # Temporary, until login is implemented:
+    session[:logged_in] = true
 
-    # If logged in, go to feed
-    # Else, go to log in 
-    if request.cookies["is_logged_in"].to_i == 1
-        @posts = Post.all
+    redirect "/login" unless session[:logged_in]
 
-        # Posts added to DB in chronological order
-        # Reverse the list of posts to have newest-first
-        @posts = @posts.reverse
+    @posts = Post.all
 
-        erb :feed
-    else
-        redirect "/login"
-    end
+    # Posts added to DB in chronological order
+    # Reverse the list of posts to have newest-first
+    @posts = @posts.reverse
+
+    erb :feed
 end

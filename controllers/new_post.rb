@@ -1,28 +1,24 @@
 # Author: Alexander Johns
 
 get "/new-post" do
-    if request.cookies["is_logged_in"].to_i == 1
-        @post = Post.new
-        erb :new_post
-    else
-        redirect "/login"
-    end
+    redirect "/login" unless session[:logged_in]
+
+    @post = Post.new
+    erb :new_post
 end
 
 post "/new-post" do
-    if request.cookies["is_logged_in"].to_i == 1
-        # Create new post, add parameters from form
-        @post = Post.new
-        @post.load(params)
+    redirect "/login" unless session[:logged_in]
 
-        # If valid post, save changes to db, redirect to feed
-        if @post.valid?
-            @post.save_changes
-            redirect "/"
-        end
+    # Create new post, add parameters from form
+    @post = Post.new
+    @post.load(params)
 
-        erb :new_post
-    else
-        redirect "/login"
+    # If valid post, save changes to db, redirect to feed
+    if @post.valid?
+        @post.save_changes
+        redirect "/"
     end
+
+    erb :new_post
 end

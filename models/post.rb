@@ -31,7 +31,9 @@ class Post < Sequel::Model
         super
         errors.add("username", "cannot be empty") if !username || username.empty?
         errors.add("title", "cannot be empty") if !title || title.empty?
+        errors.add("title", "cannot be more than 100 characters") if title.length>100
         errors.add("message", "cannot be empty") if !message || message.empty?
+        errors.add("message", "cannot be more than 1000 characters") if message.length>1000
         errors.add("university", "cannot be empty") if !university || university.empty?
         errors.add("tags", "cannot be empty") if !tags || tags.empty?
         errors.add("date_posted", "cannot be empty") if !date_posted || date_posted.empty?
