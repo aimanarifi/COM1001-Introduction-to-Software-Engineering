@@ -1,16 +1,16 @@
 # Author: Alexander Johns
 
 get "/new-post" do
-    if request.cookies["is_logged_in"] == 1
+    if request.cookies["is_logged_in"].to_i == 1
         @post = Post.new
         erb :new_post
     else
-        erb :login
+        redirect "/login"
     end
 end
 
 post "/new-post" do
-    if request.cookies["is_logged_in"] == 1
+    if request.cookies["is_logged_in"].to_i == 1
         # Create new post, add parameters from form
         @post = Post.new
         @post.load(params)
@@ -23,6 +23,6 @@ post "/new-post" do
 
         erb :new_post
     else
-        erb :login
+        redirect "/login"
     end
 end

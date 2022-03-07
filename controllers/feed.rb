@@ -15,6 +15,6 @@ get "/" do
 
         erb :feed
     else
-        erb :login
+        redirect "/login"
     end
 end
