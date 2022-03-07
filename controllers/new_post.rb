@@ -12,6 +12,11 @@ post "/new-post" do
 
     # Create new post, add parameters from form
     @post = Post.new
+
+    # Add session cookies to params hash
+    params[:username] = session[:username]
+    params[:account_type] = session[:account_type]
+
     @post.load(params)
 
     # If valid post, save changes to db, redirect to feed

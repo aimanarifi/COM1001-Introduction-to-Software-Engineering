@@ -28,12 +28,12 @@ end
 # Log in before all tests
 def log_in
     visit "/login"
+    # TODO - log into a test account on the test db
 end
 
 # Add a valid test post
 def add_test_post
     visit "/new-post"
-    fill_in "username", with: "testuser100"
     fill_in "title", with: "This is a post!"
     fill_in "message", with: "This is the content of my post!"
     fill_in "university", with: "University Of Sheffield"

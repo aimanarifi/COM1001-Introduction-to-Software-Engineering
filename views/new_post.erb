@@ -7,14 +7,6 @@
 <% end %>
 
 <form method="post">
-  <p class="label">Username</p>
-  <p class="field"><input type="text" name="username" value="<%= h @post.username %>"></p>
-  <% if @post.errors.include?("username") %>
-    <% @post.errors["username"].each do |error| %>
-      <p class="error"><strong>Username <%= error %></strong></p>
-    <% end %>
-  <% end %>
-
   <p class="label">Title</p>
   <p class="field"><input type="text" name="title" value="<%= h @post.title %>"></p>
   <% if @post.errors.include?("title") %>
