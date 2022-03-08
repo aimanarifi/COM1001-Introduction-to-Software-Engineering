@@ -4,25 +4,6 @@
 require "logger"
 require "sequel"
 
-unless defined?(DB)
-    # What mode are we in?
-    type = ENV.fetch("APP_ENV", "production")
-
-    # Find the path to the database file
-    db_path = File.dirname(__FILE__)
-    db = "#{db_path}/#{type}.sqlite3"
-
-    # Find the path to the logger
-    log_path = "#{File.dirname(__FILE__)}/../log/"
-    log = "#{log_path}/#{type}.log"
-
-    # Create log directory if it doesn't exist
-    Dir.mkdir(log_path) unless File.exist?(log_path)
-
-    # Set up the Sequel databse instance
-    DB = Sequel.sqlite(db, logger: Logger.new(log))
-end
-
 def create_tables
     unless DB.table_exists?(:users)
         DB.create_table :users do
@@ -52,13 +33,13 @@ def create_tables
         end
     end
 
-    #unless DB.table_exists?(:post_tags)
-        #DB.create_table :post_tags do
-            #primary_key :postID :tagID
-            #foreign_key :postID, :posts
-            #foreign_key :tagID, :tags
-        #end
-    #end
+    unless DB.table_exists?(:post_tags)
+        DB.create_table :post_tags do
+            primary_key [:postID, :tagID]
+            foreign_key :postID, :posts
+            foreign_key :tagID, :tags
+        end
+    end
 
     unless DB.table_exists?(:tags)
         DB.create_table :tags do
@@ -78,19 +59,19 @@ def create_tables
         DB.create_table :deleted_users do
             primary_key :deleteID_user # this need tweaking on here and deleted posts
             foreign_key :userID, :users
-            column date_deleted, String # this needs tweaking on here and deleted posts
+            column :date_deleted, String # this needs tweaking on here and deleted posts
         end
     end
 
-    unless DB.tables_exists?(:deleted_posts)
+    unless DB.table_exists?(:deleted_posts)
         DB.create_table :deleted_posts do
             primary_key :deleteID_post
             foreign_key :userID, :users
-            column date_deleted, String
+            column :date_deleted, String
         end
     end
 
-    unless DB.tables_exists?(:reported_posts) # whole thing needs tweaking
+    unless DB.table_exists?(:reported_posts) # whole thing needs tweaking
         DB.create_table :reported_posts do
             primary_key :reported_postID #tweak this later
             foreign_key :postID, :posts
@@ -99,8 +80,8 @@ def create_tables
         end
     end
 
-    unless DB.tables_exists?(:report_reasons)
-        DB.create_tables :report_reasons do
+    unless DB.table_exists?(:report_reasons)
+        DB.create_table :report_reasons do
             primary_key :report_reasonID
             column :report_name, String
         end
@@ -108,10 +89,23 @@ def create_tables
 
 end
 
+unless defined?(DB)
+    # What mode are we in?
+    type = ENV.fetch("APP_ENV", "production")
 
-create_tables
+    # Find the path to the database file
+    db_path = File.dirname(__FILE__)
+    db = "#{db_path}/#{type}.sqlite3"
 
+    # Find the path to the logger
+    log_path = "#{File.dirname(__FILE__)}/../log/"
+    log = "#{log_path}/#{type}.log"
 
+    # Create log directory if it doesn't exist
+    Dir.mkdir(log_path) unless File.exist?(log_path)
 
+    # Set up the Sequel databse instance
+    DB = Sequel.sqlite(db, logger: Logger.new(log))
 
-
+    create_tables
+end
