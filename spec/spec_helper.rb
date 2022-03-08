@@ -36,7 +36,6 @@ def add_test_post
     visit "/new-post"
     fill_in "title", with: "This is a post!"
     fill_in "message", with: "This is the content of my post!"
-    fill_in "university", with: "University Of Sheffield"
     fill_in "tags", with: "Tag, another tag, yet another tag"
     fill_in "image_link", with: "https://imgur.com/gallery/lePaN"
     click_button "Submit"
@@ -63,6 +62,7 @@ end
 
 # Clear the database
 def clear_database
+    DB.from("post_tags").delete
     DB.from("posts").delete
 end
 

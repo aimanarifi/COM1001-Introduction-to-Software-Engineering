@@ -5,6 +5,7 @@ get "/login" do
     session[:account_type] = 3 # Admin
     session[:user_id] = 1
     session[:username] = "admin1"
+    session[:universityID] = 1
     
     erb :login
 end

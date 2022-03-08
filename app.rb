@@ -10,4 +10,4 @@ enable :sessions
 set :session_secret, "$g]Rd2M/WbJ`~~<GZWdH@Fm'ESk2_gckCtLJJkySYG"
 
 # App
-require_rel "db/db", "models", "controllers"
+require_rel "db/db.rb", "models", "controllers"

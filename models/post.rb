@@ -1,18 +1,9 @@
 # A post record from the database
 class Post < Sequel::Model
-    def get_tags
-        # Split comma separated tags into an array
-        # Removes spaces around the commas
-        return tags.split(/\s*,\s*/)
-    end
-
     def load(params)
-        self.username = params.fetch("username", "") # TODO - might need to be changed to user ID
-        self.university = params.fetch("university", "").strip # TODO - automatically get uni from the user account
+        self.userID = params.fetch("userID", "") 
         self.title = params.fetch("title", "").strip
         self.message = params.fetch("message", "").strip
-        self.tags = params.fetch("tags", "").strip
-        self.image_link = params.fetch("image_link", "").strip
         self.date_posted = Time.new.strftime("%Y-%m-%d %H:%M:%S").to_s
 
         # If user is moderator or admin, post doesn't need to be moderated
@@ -28,6 +19,9 @@ class Post < Sequel::Model
         else
             self.is_image = 1
         end
+
+        self.image_link = params.fetch("image_link", "").strip
+        self.universityID = params.fetch("universityID", "")
     end
 
     def validate
@@ -37,8 +31,10 @@ class Post < Sequel::Model
         errors.add("title", "cannot be more than 100 characters") if title.length>100
         errors.add("message", "cannot be empty") if !message || message.empty?
         errors.add("message", "cannot be more than 1000 characters") if message.length>1000
-        errors.add("university", "cannot be empty") if !university || university.empty?
-        errors.add("tags", "cannot be empty") if !tags || tags.empty?
         # TODO - check if image link is valid
+    end
+
+    def get_post_id
+        return self.postID
     end
 end

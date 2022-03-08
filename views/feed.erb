@@ -1,15 +1,17 @@
 <%#load common header here%>
 
 <h1>Feed</h1>
+<a href="/new-post" target="_parent"><button>Create Post</button></a>
 
+<!-- TODO - MAKE IT AUTOMATICALLY GET USERNAME, UNI AND TAGS -->
 <% if @posts.count > 0 %>
     <% @posts.each do |post| %>
         <% if post.is_moderated == 1 %>
             <article class="feed_post">
                 <p><b>'<%= h post.title %>'</b></p>
-                <p><em>By <%= h post.username %></em></p>
+                <p><em>By user</em></p>
                 <p><%= h post.message %></p>
-                <p><%= h post.university %>. Tags: <em><%= h post.tags %></em></p>
+                <p>Uni. Tags: </p>
             </article>
             <br>
         <% end %>
