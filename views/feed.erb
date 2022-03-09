@@ -7,11 +7,13 @@
 <% if @posts.count > 0 %>
     <% @posts.each do |post| %>
         <% if post.is_moderated == 1 %>
+            <% @user = DB[:users].where(userID: session[:userID]).first %>
+            <% @university = DB[:universities].where(universityID: @user[:universityID]).first %>
             <article class="feed_post">
                 <p><b>'<%= h post.title %>'</b></p>
-                <p><em>By user</em></p>
+                <p><em>By <%= h @user[:username] %></em></p>
                 <p><%= h post.message %></p>
-                <p>Uni. Tags: </p>
+                <p><%= h @university[:university_name] %>. Tags: </p>
             </article>
             <br>
         <% end %>
