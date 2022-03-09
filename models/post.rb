@@ -37,4 +37,21 @@ class Post < Sequel::Model
     def get_post_id
         return self.postID
     end
+    
+    def publish(params)
+        #save change the modifiable data
+        self.title = params.fetch("title").strip
+        self.message = params.fetch("message").strip
+        self.is_moderated = 1
+
+        if params["image_link"].present?
+            self.image_link = params.fetch("image_link", "").strip
+            if self.image_link == ""
+                self.is_image = 0
+            else
+                self.is_image = 1
+            end
+        end
+
+    end
 end
