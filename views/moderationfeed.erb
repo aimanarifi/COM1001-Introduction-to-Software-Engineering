@@ -1,33 +1,72 @@
-<%#load common header here%>
-<%#load nav bar here%>
-<html>
-<head>
-</head>
+<!-- Author: Muhammad Kamaludin -->
 <body>
+    <%#load common header here%>
+    <%#load nav bar here%>
     
-    <h1><%= h @user_type_query %>'s Feed</h1>
+   
+    <% unless @user.nil? %>
+        <h1><%= h @user_type_query %>'s Feed</h1>
+        
+        <% @tags = Tag.all %>
+        <% unless @tags.nil? %>
+            <%# This is dropdown for filter *Not done yet %>
+            <label for="feedfilter">Filter post by:</label>
+            <select name="filter" id="feedfilter">
 
+                <optgroup label="By Tags">
+                    
+                    <% @tags.each do |tag| %>
+                        <option value="<%= h tag.tagID %>"><a href="/moderationfeed?filter=<%= h tag.tagID %>"><%= h tag.tag_name %></a></option>
+                    <% end %>
 
-    <% if @posts != nil %>
-        <% @posts.each do |post| %>
-            <h3 class="post_title" ><%= h post.title %></h3>
-            <p class="post_message" name="message" ><%= h post.message %></p>
+                </optgroup>
+                <% if @user[:account_type] == 3 %>
 
-            <!-- load image if exist -->
-            <% if post.is_image == 1 %>
-                <img src="<%= h post.image_link %>" alt="" >
+                    <optgroup label="By University">
+
+                        <option value="uni1">Uni1</option>
+
+                    </optgroup>
+
+                <% end %>
+
+            </select>
+
+        <% end %>
+
+        <% if @posts.count > 0 %>
+
+            <% @posts.each do |post| %>
+
+                <div>
+                    <% @uni = DB[:universities].where(universityID: post.universityID).first %>
+                    <h3 class="post_title" ><%= h post.title %></h3>
+                    <p>By <strong><%= h User[post.userID].username %></strong> From <%= h @uni[:university_name] %></p>
+                    <p class="post_message" name="message" ><%= h post.message %></p>
+
+                    <!-- load image if exist -->
+                    <% if post.is_image == 1 %>
+                        <br>
+                        <img src="<%= h post.image_link %>" alt="This is alt text" >
+                    <% end %>
+
+                    <!-- The link below brings to new page where moderator can edit/reject/approve -->
+                    <p><a id="moderatepost<%= h post.postID %>" href="/moderationaction?postID=<%= h post.postID %>" >Moderate post</a></p>
+                </div>
+
             <% end %>
 
-            <%# The link below brings to new page where moderator can edit/reject/approve %>
-            <p><a href="/moderationaction?post_id=<%= h post.post_id %>">Moderate post</a></p>
+        <% else %>
+
+            <p>All posts have been moderated</p>
+            
         <% end %>
 
     <% else %>
 
-        <p>Database is empty </p>
-        
-    <% end %>
-</body>
+        <p>Error, <strong>User Not Found</strong></p>
 
-<%#load common footer here%>
-</html>
+    <% end %>
+
+    <%#load common footer here%>   
+</body>
