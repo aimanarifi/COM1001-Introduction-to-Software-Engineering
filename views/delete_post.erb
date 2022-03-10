@@ -9,11 +9,9 @@
         <p>Why the post needs to be deleted?</p>
         <div>
             <% if @report_reason.count > 0 %>
-                <% index = 0 %>
                 <% @report_reason.each do |reason| %>
-                    <% index += 1 %>
-                    <input type="radio" id="report<%= h index %>" name="report_reasonID" value="<%= h reason[:report_reasonID] %>" required="required">
-                    <label for="report<%= h index %>"> <%= reason[:report_name] %></label><br>
+                    <input type="radio" id="reason<%= h reason[:report_reasonID] %>" name="report_reasonID" value="<%= h reason[:report_reasonID] %>" required="required">
+                    <label for="reason<%= h reason[:report_reasonID] %>"> <%= reason[:report_name] %></label><br>
                 <% end %>
             <% end %>
         </div>
