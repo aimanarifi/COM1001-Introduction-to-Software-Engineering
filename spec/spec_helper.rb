@@ -64,6 +64,7 @@ end
 def clear_database
     DB.from("post_tags").delete
     DB.from("posts").delete
+    DB.from("report_reasons").delete
 end
 
 # Ensure we always start from a clear database
