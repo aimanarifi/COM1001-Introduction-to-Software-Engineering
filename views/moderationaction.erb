@@ -46,7 +46,8 @@
         <% if @post[:is_image] == 1 %>
             <label><strong>Image</strong></label>
             <img src=" <%= h @post[:image_link] %>" alt="d" >
-            <input type="checkbox" id="deleteimage" name="image_link" value="">
+            <input type="hidden" name="image_link" value="<%= h @post[:image_link] %>" > <!-- When checbox is unchecked, returns this image link param -->
+            <input type="checkbox" id="deleteimage" name="image_link" value="">          <!-- When checbox is checked, returns this image link param. Sequel take the latest as param -->
             <label for="deleteimage">Delete this image</label>
         <% end %>
 
