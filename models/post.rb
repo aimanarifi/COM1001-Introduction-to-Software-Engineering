@@ -13,14 +13,15 @@ class Post < Sequel::Model
             self.is_moderated = 0 
         end
 
+        self.image_link = params.fetch("image_link", "").strip
+
         # If image link is empty, post doesn't have an image
-        if self.image_link == ""
+        if params.fetch("image_link", "").strip.empty?
             self.is_image = 0
         else
             self.is_image = 1
         end
 
-        self.image_link = params.fetch("image_link", "").strip
         self.universityID = params.fetch("universityID", "")
     end
 
