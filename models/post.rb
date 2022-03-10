@@ -44,13 +44,10 @@ class Post < Sequel::Model
         self.message = params.fetch("message").strip
         self.is_moderated = 1
 
-        if params["image_link"].present?
-            self.image_link = params.fetch("image_link", "").strip
-            if self.image_link == ""
-                self.is_image = 0
-            else
-                self.is_image = 1
-            end
+        #if the post has image, check whether it want to be deleted or not
+        if self.is_image == 1
+            self.image_link = params.fetch("image_link").strip
+            self.is_image = 0 if self.image_link == ""
         end
 
     end
