@@ -55,6 +55,7 @@ post "/approve" do
     @post.publish(params)
 
     if @post.valid?
+        @post.save_changes
         redirect "/moderationfeed"
     end
 
