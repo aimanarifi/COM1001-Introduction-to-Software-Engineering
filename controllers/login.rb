@@ -15,7 +15,7 @@ post "/login" do
 
   if @user.exist?
     session[:logged_in] = true
-    redirect "/feed"
+    redirect "/profile"
   else
     @error = "The username or password that you entered is incorrect, please try again"
   end
@@ -24,7 +24,7 @@ post "/login" do
   if @user.valid?
     if @user.exist?
       session[:logged_in] = true
-      redirect "/feed"
+      redirect "/profile"
     else
       @error = "The username or password that you entered is incorrect, please try again"
     end
@@ -40,7 +40,7 @@ get "/logout" do
   erb :login
 end
 
-
+=begin
     # Temporary, until login is implemented:
     session[:logged_in] = true
     session[:is_guest] = 0 # Not a guest
@@ -51,4 +51,4 @@ end
     
     erb :login
 end
->>>>>>> 4707b7108e0a35e5c62abfb82db3462f14dda066
+=end
