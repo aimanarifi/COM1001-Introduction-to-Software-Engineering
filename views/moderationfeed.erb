@@ -1,0 +1,70 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<% @subtitle = "Manage Posts" %>
+<%= erb :"common/header" %>    
+   
+<% unless @user.nil? %>
+    <h1><%= h @user_type_query %>'s Feed</h1>
+    
+    <% @tags = Tag.all %>
+    <% unless @tags.nil? %>
+        <%# This is dropdown for filter *Not done yet %>
+        <label for="feedfilter">Filter post by:</label>
+        <select name="filter" id="feedfilter">
+
+            <optgroup label="By Tags">
+                
+                <% @tags.each do |tag| %>
+                    <option value="<%= h tag.tagID %>"><a href="/moderationfeed?filter=<%= h tag.tagID %>"><%= h tag.tag_name %></a></option>
+                <% end %>
+
+            </optgroup>
+            <% if @user[:account_type] == 3 %>
+
+                <optgroup label="By University">
+
+                    <option value="uni1">Uni1</option>
+
+                </optgroup>
+
+            <% end %>
+
+        </select>
+
+    <% end %>
+
+    <% if @posts.count > 0 %>
+
+        <% @posts.each do |post| %>
+
+            <div>
+                <% @uni = DB[:universities].where(universityID: post.universityID).first %>
+                <h3 class="post_title" ><%= h post.title %></h3>
+                <p>By <strong><%= h User[post.userID].username %></strong> From <%= h @uni[:university_name] %></p>
+                <p class="post_message" name="message" ><%= h post.message %></p>
+
+                <!-- load image if exist -->
+                <% if post.is_image == 1 %>
+                    <br>
+                    <img src="<%= h post.image_link %>" alt="This is alt text" >
+                <% end %>
+
+                <!-- The link below brings to new page where moderator can edit/reject/approve -->
+                <p><a id="moderatepost<%= h post.postID %>" href="/moderationaction?postID=<%= h post.postID %>" >Moderate post</a></p>
+            </div>
+
+        <% end %>
+
+    <% else %>
+
+        <p>All posts have been moderated</p>
+        
+    <% end %>
+
+<% else %>
+
+    <p>Error, <strong>User Not Found</strong></p>
+
+<% end %>
+
+<%= erb :"common/footer" %>

@@ -24,15 +24,18 @@ RSpec.configure do |config|
     config.include Rack::Test::Methods
 end
 
-
 # Methods for testing
+# Log in before all tests
+def log_in
+    visit "/login"
+    # TODO - log into a test account on the test db
+end
+
 # Add a valid test post
 def add_test_post
     visit "/new-post"
-    fill_in "username", with: "testuser100"
     fill_in "title", with: "This is a post!"
     fill_in "message", with: "This is the content of my post!"
-    fill_in "university", with: "University Of Sheffield"
     fill_in "tags", with: "Tag, another tag, yet another tag"
     fill_in "image_link", with: "https://imgur.com/gallery/lePaN"
     click_button "Submit"
@@ -45,11 +48,24 @@ def add_invalid_test_post
     click_button "Submit"
 end
 
-# Clear the database
-def clear_database
-    DB.from("posts").delete
+def add_post_title_too_long
+    visit "/new-post"
+    fill_in "title", with: "HBftkbhYbVjJzPWzwMYGfaBpXtXcXaNRtSzpNuNcpXqsguRgnDRSeNjRVnjDUVHvnNktZcvBOBDPrZYJHRmxmtjtaOZBxVchCgJjA"
+    click_button "Submit"
 end
 
+def add_post_message_too_long
+    visit "/new-post"
+    fill_in "message", with: "QXTjNWOAveHkaOBSkxwnksEWrWoXASNqKYDOVFytZywoyWhhFhDnaJWDgQOuFMWKgHBCtWGkPcpufARFBMjuOkCVNTAMMdhrNpxXjpaKSDwegNYEboyepajTUZhhhFHsEZFFzccsEuOwRkDHbkCnauhkJnrXKBPCJcFBPvCJkyPdNCFWpTcKTHstPDyGyQouSyEFzYBxNQUFFatFqdZVgJkzUoQjGRbTCbYvyWYyNePVBHUZaFhvGAYPJhHmHOaPOVWKYWmOJkxrYvPUTduAvjxWgNnZeWoBaTRXngtEZUByGyGJfZRZOurbNSFcCORwCbPRyjsCuSBSdbaesjOwGDOAhqUnOgMvPogcFWOGxYtZhTnXbDjkPjpmupkjxdTsJtaKoxKxGSyhbODRCbgZTQYwONWobWfnweVcxqCdyvKTMVPWsmFyDCjfEVdceMwHXDpTuEfuHJpjcdsrFOcqUzduvoaDJmvWwPpoFPKaOveqKJjScxFVkbZPpkSuQcqpPfJRduhDORrXhYsTOQauBaACCwMwvNqQGVNNxBJMSBRErGFstdvXkoYYavxEnmnDQVVtNURVgmPkVwhCAwavzuHNcEADwjqKttAEpJMnMpjxQQxhSsvjzDfVzqKVHtQoYXcHAaeeTeASQwcHRzNFqCdTAWvTYxeVYoHZfaqdtmHHryXJQneRffonppmdmDnXXAvHpYcZHazPcWAquHrgdtFFArjKzYBgCHSGGOJHQQZFAgqNzjQNEsKJPGyAXTdjushnxWRtPunNfYcrWjhRfJeyDSNrDQSRQfQNoEeoFVCTysoeDDUVsndbHGMETRjKUkyJbdqTUHTFncbKOYWPCPbQqWDrMmXETzFhAVZooUGskQytzNTQUjPSyodYuoFPmQdYFtaReQQdpfJseqSEEgrpNWmYrkCdeMsWyoAJJHMnkQqkRvPmcVGRVwbgaUjpppygCoRAoYsWQdzyXyroZneGuAXGJmCKDdrjmxrbB"
+    click_button "Submit"
+end
+
+# Clear the database
+def clear_database
+    DB.from("post_tags").delete
+    DB.from("posts").delete
+    DB.from("report_reasons").delete
+end
 
 # Ensure we always start from a clear database
 clear_database

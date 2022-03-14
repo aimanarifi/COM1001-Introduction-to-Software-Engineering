@@ -1,0 +1,63 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<% @subtitle = "Manage Post" %>
+<%= erb :"common/header" %>
+    
+<!-- Non-modifiable info -->
+
+<p><strong>Post ID:</strong> <%= h @post[:postID] %></p><br>
+<% @author = User[@post[:userID]] %>
+<p><strong>Author:</strong> <%= h @author.name %></p><br>
+<% @uni = DB[:universities].where(universityID: @post[:universityID]).first %>
+<p><strong>University:</strong> <%= h @uni[:university_name] %></p><br>
+<p><strong>Date created:</strong> <%= h @post[:date_posted] %></p><br>
+
+<!-- Modifiable info -->
+<form method="post">
+
+    <label><strong>Title</strong></label>
+    <input type="text" name="title" value="<%= h @post[:title] %>" >
+    <% if @post.errors.include?("title") %>
+        <% @post.errors["title"].each do |error| %>
+            <p class="error"><strong>Title <%= error %></strong></p>
+        <% end %>
+    <% end %>
+    <br>
+
+    <label><strong>Tags</strong></label>
+    <input type="text" name="tag" value="<%= h @post[:tags] %>" >
+    <% if @post.errors.include?("tags") %>
+        <% @post.errors["tags"].each do |error| %>
+            <p class="error"><strong>Tag <%= error %></strong></p>
+        <% end %>
+    <% end %>
+    <br>
+
+    <label><strong>Content</strong></label>
+    <textarea name="message" rows="10" cols="45"><%= h @post[:message] %></textarea> 
+    <% if @post.errors.include?("message") %>
+        <% @post.errors["message"].each do |error| %>
+            <p class="error"><strong>Message <%= error %></strong></p>
+        <% end %>
+    <% end %>
+    <br>
+
+    <% if @post[:is_image] == 1 %>
+        <label><strong>Image</strong></label>
+        <img src=" <%= h @post[:image_link] %>" alt="d" >
+        <input type="hidden" name="image_link" value="<%= h @post[:image_link] %>" > <!-- When checbox is unchecked, returns this image link param -->
+        <input type="checkbox" id="deleteimage" name="image_link" value="">          <!-- When checbox is checked, returns this image link param. Sequel take the latest as param -->
+        <label for="deleteimage">Delete this image</label>
+    <% end %>
+
+    <input type="hidden" name="postID" value="<%= @post[:postID] %>" >
+    <input id="approvebutton" type="submit" value="approve" formaction="/approve" >
+
+    <div>
+        <p>Rejected post will be <strong>deleted</strong>!</p>
+        <input id="rejectbutton" type="submit" value="reject" formaction="/reject" >
+    </div>
+
+</form>
+
+<%= erb :"common/footer" %>

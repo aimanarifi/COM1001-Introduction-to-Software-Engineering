@@ -1,41 +1,73 @@
-get "/moderation-feed" do
-    #Fetch the usertype from database (post table)
-    user_id = #the mod id
-    user_uni = #the mod university
-    user_type = User.select(account_type).where(username: user_id)
+#Author: Muhammad Kamaludin
+#TODO: validation and sanisation in this file and the erb(s)
+#TODO: Styling
 
-    if user_type == 2
-        #Fetch all the unmoderated posts that matches the mod's university
-        @posts = Post.where(is_moderated: 0).where(university: user_uni)
+get "/moderationfeed" do
+    #This route fetch the account_type from database to determine whether he/she is a mod or admin
+    #and display the unmoderated content to them
+    user_id = session[:userID]
 
-    elsif user_type == 3
-        #Fetch all unmoderated posts
-        @posts = Post.where(is_moderated: 0)
+    redirect "/login" unless session[:logged_in]
+
+    @user = User[user_id]
+
+=begin This is for feed filter 
+    if params["filter"].nil?
+        @filter = "All"
+    else
+        @filter = params["filter"]
+    end
+=end    
+
+    unless @user.nil?
+        #Display all unmoderated post to admin, while for moderator, display posts that matches their university only
+        if @user[:account_type] == 2
+
+            @user_type_query = "Moderator"
+            @posts = Post.where(universityID: @user[:universityID]).where(is_moderated: 0)
+
+        elsif @user[:account_type] == 3
+
+            @user_type_query = "Administrator"
+            @posts = Post.where(is_moderated: 0).all
+            
+        end
+
     end
 
-    erb :moderation_feed
+    erb :moderationfeed
 end
 
-get "/moderator-action" do
-    id = params[post_id]
-    @post = Post.where(post_id: id)
-    @user = User.where(username: @post.username)
-    erb :moderation_action
+get "/moderationaction" do
+
+    id = params["postID"]
+    @post = Post[id]
+    @post_user = User[@post[:userID]]
+
+    erb :moderationaction
 end
 
-post "/moderation-action/approve" do
+post "/approve" do
 
-    input = params["post_id"]
-    DB[:posts].filter(post_id: input).update(is_moderated: 1)
-    redirect "/moderation-feed"
+    id = params["postID"]
+
+    @post = Post[id]
+    @post.publish(params)
+
+    if @post.valid?
+        @post.save_changes
+        redirect "/moderationfeed"
+    end
+
+    erb :moderationaction
 
 end
 
-post "/moderation-action/reject" do
+post "/reject" do
 
-    input = params["post_id"]
-    DB[:posts].filter(post_id: input).update(is_moderated: 2)
-    
-    redirect "/moderation-feed"
-    
+    id = params["postID"]
+
+    route = "/delete_post?postID=" + id
+    redirect route
+
 end
