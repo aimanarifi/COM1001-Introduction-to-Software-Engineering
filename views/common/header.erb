@@ -3,18 +3,28 @@
 <head>
   <title>ACME | <%= @subtitle %></title>
 
-  <link rel="stylesheet" href="styles/com1001AssignmentStyleSheet.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
   <!---
   for dark mode use
-  <link rel="stylesheet" href="styles/darkMode.css">
+  <link rel="stylesheet" href="styles/dark_mode.css">
   --->
-  <link rel="stylesheet" href="styles/lightMode.css">
+  <link rel="stylesheet" href="styles/light_mode.css">
   <meta name="author" content="Albie Gray"></meta>
   <meta charset="utf-8"></meta>
 </head>
 
 <body>
-  <!-- TODO - ADD NAV BAR -->
+  <nav class="nav_wrapper">
+        <ul class="nav_bar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+
+            <% if session[:account_type] == 3 || session[:account_type] == 2 %>
+              <li><a href="/moderation-feed">Moderation Feed</a></li>
+            <% end %>
+        </ul>
+    </nav>
 
   <header>
     <h1><%= @page_title %></h1>
