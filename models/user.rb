@@ -1,15 +1,10 @@
 # A user record from the database
 class User < Sequel::Model
     def login(params)
-        username = params.fetch("username", "").strip
-        password = params.fetch("password", "").strip
-      end
-      
-    def load(params)
         self.username = params.fetch("username", "").strip
         self.password = params.fetch("password", "").strip
-    end
-    
+      end
+      
     def validate
      super
      errors.add("username", "cannot be empty") if username.empty?

@@ -4,14 +4,13 @@ get "/" do
 end
 
 get "/login" do
-<<<<<<< HEAD
   @user = User.new
   erb :login
 end
 
 post "/login" do
   @user = User.new
-  @user.load(params)
+  @user.login(params)
   @error = nil
 
   if @user.exist?
@@ -33,7 +32,6 @@ post "/login" do
     @error = "Please correct the information below"
   end
 
-
   erb :login
 end
 
@@ -41,7 +39,8 @@ get "/logout" do
   session.clear
   erb :login
 end
-=======
+
+
     # Temporary, until login is implemented:
     session[:logged_in] = true
     session[:is_guest] = 0 # Not a guest
