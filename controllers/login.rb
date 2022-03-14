@@ -7,5 +7,5 @@ get "/login" do
     session[:username] = "admin1"
     session[:universityID] = 1
     
-    erb :login_page
+    erb :login
 end

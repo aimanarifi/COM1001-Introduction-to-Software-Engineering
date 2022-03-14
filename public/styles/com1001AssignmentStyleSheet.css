@@ -46,7 +46,7 @@ form {
   border-radius: 25px;
   padding: 1%;
   padding-right: 2%;
-  width: 20%;
+  width: 50%;
   background-color: var(--colour-secondary);
 }
 
@@ -67,7 +67,6 @@ section {
   border: 2px solid var(--colour-outline);
   border-radius: 25px;
   padding: 1%;
-  padding-right: 2%;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -82,6 +81,7 @@ article{
   border-radius: 25px;
   border: 0px solid var(--colour-outline);
   background-color: var(--colour-accent2);
+  margin: 1%;
 }
 
 
