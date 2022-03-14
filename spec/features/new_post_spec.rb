@@ -1,9 +1,13 @@
 require_relative "../spec_helper"
 
 describe "the new post page" do
-    # TODO: check if it's accessible from other pages
-
     before(:all) { log_in }
+
+    it "is accessible from the feed" do
+        visit "/"
+        click_link "Create Post"
+        expect(page).to have_content "New Post"
+    end
 
     it "will not create a post with no details" do
         visit "/new-post"
