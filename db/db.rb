@@ -8,22 +8,22 @@ require "sequel"
 def create_users
     DB[:users].insert(username: "admin", password: "admin", email:"admin@admin.com",
                 first_name: "Admin", last_name: "Admin", is_suspended: 0, 
-                account_type: 3, universityID: 239)
+                account_type: 3, universityID: 304)
     DB[:users].insert(username: "reporter1", password: "reporter1", email:"reporter1@reporter.com",
                 first_name: "Reporter", last_name: "Reporter", is_suspended: 0, 
-                account_type: 0, universityID: 239)
+                account_type: 0, universityID: 304)
     DB[:users].insert(username: "reporter2", password: "reporter2", email:"reporter2@reporter.com",
                 first_name: "Reporter", last_name: "Reporter", is_suspended: 0, 
-                account_type: 0, universityID: 239)
+                account_type: 0, universityID: 304)
     DB[:users].insert(username: "moderator", password: "moderator", email:"moderator@moderator.com",
                 first_name: "Moderator", last_name: "Moderator", is_suspended: 0, 
-                account_type: 2, universityID: 239)
+                account_type: 2, universityID: 304)
     DB[:users].insert(username: "viewer1", password: "viewer1", email:"viewer1@viewer.com",
                 first_name: "Viewer", last_name: "Viewer", is_suspended: 0, 
-                account_type: 1, universityID: 239)
+                account_type: 1, universityID: 304)
     DB[:users].insert(username: "viewer2", password: "viewer2", email:"viewer2@viewer.com",
                 first_name: "Viewer", last_name: "Viewer", is_suspended: 0, 
-                account_type: 1, universityID: 239)
+                account_type: 1, universityID: 304)
 end
 
 # Create university records if they don't exist
