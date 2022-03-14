@@ -1,36 +1,40 @@
 <% @page_title = "New Post" %>
 <%= erb :"common/header" %>
 
+<a href="/" target="_parent"><button>Cancel</button></a>
+
 <% unless @post.errors.size.zero? %>
   <p><strong class="error">Please fix the errors below:</strong></p>
 <% end %>
 
-<form method="post">
-  <p class="label">Title</p>
-  <p class="field"><input type="text" name="title" value="<%= h @post.title %>"></p>
-  <% if @post.errors.include?("title") %>
-    <% @post.errors["title"].each do |error| %>
-      <p class="error"><strong>Title <%= error %></strong></p>
-    <% end %>
-  <% end %>
+<div class="flex-container">
+    <form method="post">
+        <label for="title"><p>Title:</p></title>
+        <input type="text" name="title" value="<%= h @post.title %>">
+        <% if @post.errors.include?("title") %>
+            <% @post.errors["title"].each do |error| %>
+                <p class="error"><strong>Title <%= error %></strong></p>
+            <% end %>
+        <% end %>
 
-  <p class="label">Message</p>
-  <p class="field"><input type="text" name="message" value="<%= h @post.message %>"></p>
-  <% if @post.errors.include?("message") %>
-    <% @post.errors["message"].each do |error| %>
-      <p class="error"><strong>Message <%= error %></strong></p>
-    <% end %>
-  <% end %>
+        <label for="message"><p>Message:</p></title>
+        <input type="text" name="message" value="<%= h @post.message %>">
+        <% if @post.errors.include?("message") %>
+            <% @post.errors["message"].each do |error| %>
+                <p class="error"><strong>Message <%= error %></strong></p>
+            <% end %>
+        <% end %>
 
-  <p class="label">Tags (Comma Separated)</p>
-  <p class="field"><input type="text" name="tags" value="<%= h @tags %>"></p>
+        <label for="tags"><p>Tags (Comma Separated):</p></label>
+        <input type="text" name="tags" value="<%= h @tags %>">
 
-  <p class="label">Image Link (Imgur)</p>
-  <p class="field"><input type="text" name="image_link" value="<%= h @post.image_link %>"></p>
-  
-  <p class="submit"><input type="submit" value="Submit"></p>
-</form>
+        <label for="image_link"><p>Image Link (Imgur):</p></label>
+        <input type="text" name="image_link" value="<%= h @post.image_link %>">
 
-<a href="/" target="_parent"><button>Cancel</button></a>
+        <p></p>
+
+        <input class="button" type="submit" value="Submit" id="submitButton">
+    </form>
+</div>
 
 <%= erb :"common/footer" %>

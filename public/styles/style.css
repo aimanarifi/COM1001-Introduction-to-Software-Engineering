@@ -148,21 +148,21 @@ article {
   margin: 1%;
 }
 
-
 #submitButton {
   color: var(--colour-accent2);
   background-color: var(--colour-contrast);
-  width: 20%;
+  width: auto;
   margin: auto;
+  padding: 1% 2%;
 }
 
-#invalidText {
+.error {
   color:red;
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
-  padding: 10%;
+  padding: 2% 10%;
   width: 35%;
 }
