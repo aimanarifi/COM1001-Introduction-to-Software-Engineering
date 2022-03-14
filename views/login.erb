@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles/com1001AssignmentStyleSheet.css">
+  <!---
+  for dark mode use
+  <link rel="stylesheet" href="styles/darkMode.css">
+  --->
+  <link rel="stylesheet" href="styles/lightMode.css">
+  <meta name="author" content="Albie Gray"></meta>
+  <meta charset="utf-8"></meta>
+</head>
+
+<body class="flex-container">
+  <header>
+    <h1>ACME and Uni</h1>
+    <p>at ACME we strive to connect uni students world wide i think</p>
+  </header>
+
+  <!---
+  validation required for form inputs(sinatra):
+    max characters(20?)
+  --->
+  
+
+  <form action="/login" method="post">
+  
+  <% unless @error.nil? %> 
+    <p style="color:red"><%= @error %></p>
+  <% end %>
+
+  <p>Username: <br /><input type="text" name="username" value="<%= @user.username %>"/></p>
+  <p>Password: <br /><input type="password" name="password" /></p>
+
+  <input type="submit" value="Submit" id="submitButton">
+  </form>
+
+
+</body>
