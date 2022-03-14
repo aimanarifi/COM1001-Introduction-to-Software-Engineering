@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <link rel="stylesheet" href="styles/com1001AssignmentStyleSheet.css">
-  <!---
-  for dark mode use
-  <link rel="stylesheet" href="styles/darkMode.css">
-  --->
-  <link rel="stylesheet" href="styles/lightMode.css">
-  <meta name="author" content="Albie Gray"></meta>
-  <meta charset="utf-8"></meta>
-</head>
-
-<body class="flex-container">
+<%= erb :"common/header" %>
+<div class="flex-container">
   <header>
     <h1>INSERT NAME HERE</h1>
     <p>at INSERT NAME HERE we strive to connect uni students world wide i think<p>
@@ -32,5 +19,5 @@
     <input type="submit" value="Submit" id="submitButton">
   </form>
 
-
-</body>
+</div>
+<%= erb :"common/footer" %>
