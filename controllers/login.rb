@@ -4,6 +4,7 @@ get "/" do
 end
 
 get "/login" do
+<<<<<<< HEAD
   @user = User.new
   erb :login
 end
@@ -40,3 +41,15 @@ get "/logout" do
   session.clear
   erb :login
 end
+=======
+    # Temporary, until login is implemented:
+    session[:logged_in] = true
+    session[:is_guest] = 0 # Not a guest
+    session[:account_type] = 3 # Admin
+    session[:userID] = 1
+    session[:username] = "admin1"
+    session[:universityID] = 1
+    
+    erb :login
+end
+>>>>>>> 4707b7108e0a35e5c62abfb82db3462f14dda066

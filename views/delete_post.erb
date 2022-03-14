@@ -1,0 +1,25 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<% @page_title = "Delete Post" %>
+<%= erb :"common/header" %>
+
+<p><strong>Post ID:</strong> <%= h @post[:postID] %></p>
+
+<form method="post" action="/delete_post">
+    <p>Why the post needs to be deleted?</p>
+    <div>
+        <% if @report_reason.count > 0 %>
+            <% @report_reason.each do |reason| %>
+                <input type="radio" id="reason<%= h reason[:report_reasonID] %>" name="report_reasonID" value="<%= h reason[:report_reasonID] %>" required="required">
+                <label for="reason<%= h reason[:report_reasonID] %>"> <%= reason[:report_name] %></label><br>
+            <% end %>
+        <% end %>
+    </div>
+    <br>
+
+    <input type="hidden" name="postID" value="<%= h @post[:postID] %>" >
+    <input type="submit" value="Delete post">
+
+</form>
+
+<%= erb :"common/footer" %>

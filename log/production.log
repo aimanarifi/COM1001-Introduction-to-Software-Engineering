@@ -1,250 +1,1416 @@
-w# Logfile created on 2022-02-23 23:28:09 +0000 by logger.rb/v1.5.0
-I, [2022-02-23T23:28:09.203132 #509]  INFO -- : (0.000178s) PRAGMA foreign_keys = 1
-I, [2022-02-23T23:28:09.203229 #509]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-23T23:28:09.203825 #509]  INFO -- : (0.000058s) SELECT sqlite_version()
-I, [2022-02-23T23:28:09.204072 #509]  INFO -- : (0.000121s) PRAGMA table_info('posts')
-I, [2022-02-23T23:28:09.204971 #509]  INFO -- : (0.000129s) PRAGMA table_info('users')
-I, [2022-02-23T23:28:38.898566 #509]  INFO -- : (0.000041s) BEGIN
-I, [2022-02-23T23:28:38.899183 #509]  INFO -- : (0.000316s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('username', 'title', 'message', 'uni', 'tag', 'image', '2022-02-23 23:28:38', 0, 1)
-I, [2022-02-23T23:28:38.899422 #509]  INFO -- : (0.000091s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-23T23:28:38.899590 #509]  INFO -- : (0.000099s) ROLLBACK
-I, [2022-02-23T23:43:41.988595 #522]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
-I, [2022-02-23T23:43:41.988699 #522]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
-I, [2022-02-23T23:43:41.989209 #522]  INFO -- : (0.000048s) SELECT sqlite_version()
-I, [2022-02-23T23:43:41.989354 #522]  INFO -- : (0.000028s) PRAGMA table_info('one_posts')
-E, [2022-02-23T23:43:41.989499 #522] ERROR -- : SQLite3::SQLException: no such table: one_posts: SELECT * FROM `one_posts` LIMIT 0
-I, [2022-02-23T23:50:41.349157 #526]  INFO -- : (0.000239s) PRAGMA foreign_keys = 1
-I, [2022-02-23T23:50:41.349284 #526]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
-I, [2022-02-23T23:50:41.350137 #526]  INFO -- : (0.000086s) SELECT sqlite_version()
-I, [2022-02-23T23:50:41.350520 #526]  INFO -- : (0.000191s) PRAGMA table_info('posts')
-I, [2022-02-23T23:50:41.351924 #526]  INFO -- : (0.000198s) PRAGMA table_info('users')
-I, [2022-02-23T23:50:57.084718 #526]  INFO -- : (0.000041s) BEGIN
-I, [2022-02-23T23:50:57.085247 #526]  INFO -- : (0.000283s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag', 'image', '2022-02-23 23:50:57', 0, 1)
-I, [2022-02-23T23:50:57.085479 #526]  INFO -- : (0.000092s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-23T23:50:57.085628 #526]  INFO -- : (0.000090s) ROLLBACK
-I, [2022-02-23T23:56:07.301843 #538]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
-I, [2022-02-23T23:56:07.301929 #538]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
-I, [2022-02-23T23:56:07.302512 #538]  INFO -- : (0.000053s) SELECT sqlite_version()
-I, [2022-02-23T23:56:07.302788 #538]  INFO -- : (0.000149s) PRAGMA table_info('posts')
-I, [2022-02-23T23:56:07.303781 #538]  INFO -- : (0.000148s) PRAGMA table_info('users')
-I, [2022-02-23T23:56:21.301059 #538]  INFO -- : (0.000038s) BEGIN
-I, [2022-02-23T23:56:21.301495 #538]  INFO -- : (0.000205s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag', 'image', '2022-02-23 23:56:21', 0, 1)
-I, [2022-02-23T23:56:21.301720 #538]  INFO -- : (0.000091s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-23T23:56:21.301857 #538]  INFO -- : (0.000084s) ROLLBACK
-I, [2022-02-24T00:01:55.917045 #550]  INFO -- : (0.000231s) PRAGMA foreign_keys = 1
-I, [2022-02-24T00:01:55.917312 #550]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T00:01:55.918266 #550]  INFO -- : (0.000080s) SELECT sqlite_version()
-I, [2022-02-24T00:01:55.918758 #550]  INFO -- : (0.000226s) PRAGMA table_info('posts')
-I, [2022-02-24T00:01:55.920170 #550]  INFO -- : (0.000209s) PRAGMA table_info('users')
-I, [2022-02-24T00:02:07.977431 #550]  INFO -- : (0.000050s) BEGIN
-I, [2022-02-24T00:02:07.978087 #550]  INFO -- : (0.000368s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('b', 'b', 'b', 'b', 'b', 'b', '2022-02-24 00:02:07', 0, 1)
-I, [2022-02-24T00:02:07.978382 #550]  INFO -- : (0.000124s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-24T00:02:07.978604 #550]  INFO -- : (0.000145s) ROLLBACK
-I, [2022-02-24T00:16:25.488811 #562]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
-I, [2022-02-24T00:16:25.488897 #562]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T00:16:25.489446 #562]  INFO -- : (0.000053s) SELECT sqlite_version()
-I, [2022-02-24T00:16:25.489770 #562]  INFO -- : (0.000174s) PRAGMA table_info('posts')
-I, [2022-02-24T00:16:25.491013 #562]  INFO -- : (0.000168s) PRAGMA table_info('users')
-I, [2022-02-24T00:16:43.029078 #562]  INFO -- : (0.000048s) BEGIN
-I, [2022-02-24T00:16:43.029589 #562]  INFO -- : (0.000272s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, /home/codio/workspace/project/controllers/new-post.rb in block in <top (required)>  `is_image`) VALUES ('p', 'p', 'p', 'p', 'p', 'p', '2022-02-24 00:16:43', 0, 1)
-I, [2022-02-24T00:16:43.029834 #562]  INFO -- : (0.000106s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-24T00:16:43.029989 #562]  INFO -- : (0.000096s) ROLLBACK
-I, [2022-02-24T00:23:55.631827 #582]  INFO -- : (0.000209s) PRAGMA foreign_keys = 1
-I, [2022-02-24T00:23:55.633111 #582]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T00:23:55.633819 #582]  INFO -- : (0.000059s) SELECT sqlite_version()
-I, [2022-02-24T00:23:55.634117 #582]  INFO -- : (0.000145s) PRAGMA table_info('posts')
-I, [2022-02-24T00:23:55.635070 #582]  INFO -- : (0.000128s) PRAGMA table_info('users')
-I, [2022-02-24T00:24:07.632737 #582]  INFO -- : (0.000039s) BEGIN
-I, [2022-02-24T00:24:07.633259 #582]  INFO -- : (0.000283s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('p', 'p', 'p', 'p', 'p', 'p', '2022-02-24 00:24:07', 0, 1)
-I, [2022-02-24T00:24:07.633484 #582]  INFO -- : (0.000089s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T00:24:07.633631 #582]  INFO -- : (0.000090s) ROLLBACK
-I, [2022-02-24T00:24:49.381538 #593]  INFO -- : (0.000198s) PRAGMA foreign_keys = 1
-I, [2022-02-24T00:24:49.381639 #593]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T00:24:49.382205 #593]  INFO -- : (0.000055s) SELECT sqlite_version()
-I, [2022-02-24T00:24:49.382466 #593]  INFO -- : (0.000125s) PRAGMA table_info('posts')
-I, [2022-02-24T00:24:49.383376 #593]  INFO -- : (0.000126s) PRAGMA table_info('users')
-I, [2022-02-24T00:25:00.491595 #593]  INFO -- : (0.000041s) BEGIN
-I, [2022-02-24T00:25:00.492089 #593]  INFO -- : (0.000219s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('p', 'p', 'p', 'p', 'p', 'p', '2022-02-24 00:25:00', 0, 1)
-I, [2022-02-24T00:25:00.492315 #593]  INFO -- : (0.000090s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T00:25:00.492460 #593]  INFO -- : (0.000089s) ROLLBACK
-I, [2022-02-24T00:25:46.848174 #604]  INFO -- : (0.000180s) PRAGMA foreign_keys = 1
-I, [2022-02-24T00:25:46.848262 #604]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T00:25:46.848794 #604]  INFO -- : (0.000053s) SELECT sqlite_version()
-I, [2022-02-24T00:25:46.849026 #604]  INFO -- : (0.000118s) PRAGMA table_info('posts')
-I, [2022-02-24T00:25:46.849949 #604]  INFO -- : (0.000136s) PRAGMA table_info('users')
-I, [2022-02-24T00:25:54.974341 #604]  INFO -- : (0.000040s) BEGIN
-I, [2022-02-24T00:25:54.974866 #604]  INFO -- : (0.000291s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('p', 'p', 'p', 'p', 'p', 'p', '2022-02-24 00:25:54', 0, 1)
-I, [2022-02-24T00:25:54.975089 #604]  INFO -- : (0.000089s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T00:25:54.975243 #604]  INFO -- : (0.000093s) ROLLBACK
-I, [2022-02-24T10:33:01.504544 #278]  INFO -- : (0.001405s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:33:01.514149 #278]  INFO -- : (0.000033s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:33:01.514854 #278]  INFO -- : (0.000075s) SELECT sqlite_version()
-I, [2022-02-24T10:33:01.515122 #278]  INFO -- : (0.000129s) PRAGMA table_info('posts')
-I, [2022-02-24T10:33:01.516106 #278]  INFO -- : (0.000129s) PRAGMA table_info('users')
-I, [2022-02-24T10:33:23.795976 #278]  INFO -- : (0.000042s) BEGIN
-I, [2022-02-24T10:33:23.796504 #278]  INFO -- : (0.000291s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:33:23', 0, 1)
-I, [2022-02-24T10:33:23.796735 #278]  INFO -- : (0.000089s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:33:23.796892 #278]  INFO -- : (0.000101s) ROLLBACK
-I, [2022-02-24T10:34:03.130688 #278]  INFO -- : (0.000038s) BEGIN
-I, [2022-02-24T10:34:03.131111 #278]  INFO -- : (0.000237s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:34:03', 0, 1)
-I, [2022-02-24T10:34:03.131309 #278]  INFO -- : (0.000087s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:34:03.131450 #278]  INFO -- : (0.000089s) ROLLBACK
-I, [2022-02-24T10:34:08.248858 #278]  INFO -- : (0.000040s) BEGIN
-I, [2022-02-24T10:34:08.249239 #278]  INFO -- : (0.000196s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:34:08', 0, 1)
-I, [2022-02-24T10:34:08.249433 #278]  INFO -- : (0.000084s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:34:08.249572 #278]  INFO -- : (0.000087s) ROLLBACK
-I, [2022-02-24T10:34:11.041670 #278]  INFO -- : (0.000039s) BEGIN
-I, [2022-02-24T10:34:11.042062 #278]  INFO -- : (0.000207s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:34:11', 0, 1)
-I, [2022-02-24T10:34:11.042251 #278]  INFO -- : (0.000082s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:34:11.042394 #278]  INFO -- : (0.000091s) ROLLBACK
-I, [2022-02-24T10:34:30.668074 #515]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:34:30.668165 #515]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:34:30.668706 #515]  INFO -- : (0.000052s) SELECT sqlite_version()
-I, [2022-02-24T10:34:30.668967 #515]  INFO -- : (0.000124s) PRAGMA table_info('posts')
-I, [2022-02-24T10:34:30.669808 #515]  INFO -- : (0.000108s) PRAGMA table_info('users')
-I, [2022-02-24T10:34:45.870562 #515]  INFO -- : (0.000048s) BEGIN
-I, [2022-02-24T10:34:45.871117 #515]  INFO -- : (0.000265s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:34:45', 0, 1)
-I, [2022-02-24T10:34:45.871395 #515]  INFO -- : (0.000120s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:34:45.871578 #515]  INFO -- : (0.000111s) ROLLBACK
-I, [2022-02-24T10:35:09.528612 #527]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:35:09.528711 #527]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:35:09.529281 #527]  INFO -- : (0.000056s) SELECT sqlite_version()
-I, [2022-02-24T10:35:09.529551 #527]  INFO -- : (0.000148s) PRAGMA table_info('posts')
-I, [2022-02-24T10:35:09.530444 #527]  INFO -- : (0.000111s) PRAGMA table_info('users')
-I, [2022-02-24T10:35:24.484713 #527]  INFO -- : (0.000039s) BEGIN
-I, [2022-02-24T10:35:24.485193 #527]  INFO -- : (0.000242s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:35:24', 0, 1)
-I, [2022-02-24T10:35:24.485426 #527]  INFO -- : (0.000091s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:35:24.485579 #527]  INFO -- : (0.000097s) ROLLBACK
-I, [2022-02-24T10:39:44.558946 #527]  INFO -- : (0.000040s) BEGIN
-I, [2022-02-24T10:39:44.559438 #527]  INFO -- : (0.000262s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:39:44', 0, 1)
-I, [2022-02-24T10:39:44.559712 #527]  INFO -- : (0.000135s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:39:44.559905 #527]  INFO -- : (0.000124s) ROLLBACK
-I, [2022-02-24T10:39:56.961447 #527]  INFO -- : (0.000043s) BEGIN
-I, [2022-02-24T10:39:56.961857 #527]  INFO -- : (0.000208s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:39:56', 0, 1)
-I, [2022-02-24T10:39:56.962068 #527]  INFO -- : (0.000089s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:39:56.962220 #527]  INFO -- : (0.000095s) ROLLBACK
-I, [2022-02-24T10:40:06.142025 #541]  INFO -- : (0.000179s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:40:06.142113 #541]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:40:06.149150 #541]  INFO -- : (0.000052s) SELECT sqlite_version()
-I, [2022-02-24T10:40:06.149384 #541]  INFO -- : (0.000120s) PRAGMA table_info('posts')
-I, [2022-02-24T10:40:06.150226 #541]  INFO -- : (0.000121s) PRAGMA table_info('users')
-I, [2022-02-24T10:40:36.064993 #541]  INFO -- : (0.000038s) BEGIN
-I, [2022-02-24T10:40:36.065588 #541]  INFO -- : (0.000315s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:40:36', 0, 1)
-I, [2022-02-24T10:40:36.065840 #541]  INFO -- : (0.000094s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:40:36.066010 #541]  INFO -- : (0.000107s) ROLLBACK
-I, [2022-02-24T10:40:56.597873 #552]  INFO -- : (0.000180s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:40:56.597975 #552]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:41:25.244453 #556]  INFO -- : (0.000167s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:41:25.244538 #556]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:41:25.245053 #556]  INFO -- : (0.000051s) SELECT sqlite_version()
-I, [2022-02-24T10:41:25.245290 #556]  INFO -- : (0.000118s) PRAGMA table_info('posts')
-I, [2022-02-24T10:41:25.246103 #556]  INFO -- : (0.000105s) PRAGMA table_info('users')
-I, [2022-02-24T10:41:38.787180 #556]  INFO -- : (0.000040s) BEGIN
-I, [2022-02-24T10:41:38.787717 #556]  INFO -- : (0.000299s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:41:38', 0, 1)
-I, [2022-02-24T10:41:38.787948 #556]  INFO -- : (0.000087s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-24T10:41:38.788094 #556]  INFO -- : (0.000090s) ROLLBACK
-I, [2022-02-24T10:43:59.494415 #569]  INFO -- : (0.000171s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:43:59.494503 #569]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:43:59.495038 #569]  INFO -- : (0.000062s) SELECT sqlite_version()
-I, [2022-02-24T10:43:59.495278 #569]  INFO -- : (0.000118s) PRAGMA table_info('posts')
-I, [2022-02-24T10:43:59.496101 #569]  INFO -- : (0.000108s) PRAGMA table_info('users')
-I, [2022-02-24T10:45:27.950800 #582]  INFO -- : (0.000190s) PRAGMA foreign_keys = 1
-I, [2022-02-24T10:45:27.950913 #582]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
-I, [2022-02-24T10:45:27.951483 #582]  INFO -- : (0.000052s) SELECT sqlite_version()
-I, [2022-02-24T10:45:27.951788 #582]  INFO -- : (0.000163s) PRAGMA table_info('posts')
-I, [2022-02-24T10:45:27.952632 #582]  INFO -- : (0.000112s) PRAGMA table_info('users')
-I, [2022-02-24T10:45:42.933843 #582]  INFO -- : (0.000041s) BEGIN
-I, [2022-02-24T10:45:42.934353 #582]  INFO -- : (0.000237s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user', 'title', 'message', 'uni', 'tag1, tag2', 'image.com', '2022-02-24 10:45:42', 0, 1)
-I, [2022-02-24T10:45:42.934630 #582]  INFO -- : (0.000117s) SELECT * FROM `posts` WHERE `post_id` = 1
-I, [2022-02-24T10:45:43.012919 #582]  INFO -- : (0.078188s) COMMIT
-I, [2022-02-25T13:51:12.814047 #281]  INFO -- : (0.001512s) PRAGMA foreign_keys = 1
-I, [2022-02-25T13:51:12.817242 #281]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
-I, [2022-02-25T13:51:12.817929 #281]  INFO -- : (0.000063s) SELECT sqlite_version()
-I, [2022-02-25T13:51:12.818204 #281]  INFO -- : (0.000125s) PRAGMA table_info('posts')
-I, [2022-02-25T13:51:12.819148 #281]  INFO -- : (0.000111s) PRAGMA table_info('users')
-I, [2022-02-25T13:51:40.214610 #281]  INFO -- : (0.000042s) BEGIN
-I, [2022-02-25T13:51:40.215143 #281]  INFO -- : (0.000253s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('user1', 'This is a title!', 'This is a post!', 'University Of Sheffield', 'tag, another tag, woah another tag', 'image.co.uk/image', '2022-02-25 13:51:40', 0, 1)
-I, [2022-02-25T13:51:40.215399 #281]  INFO -- : (0.000104s) SELECT * FROM `posts` WHERE `post_id` = 2
-I, [2022-02-25T13:51:40.286091 #281]  INFO -- : (0.070605s) COMMIT
-I, [2022-02-25T13:53:32.722755 #292]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
-I, [2022-02-25T13:53:32.722842 #292]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-25T13:53:32.723384 #292]  INFO -- : (0.000052s) SELECT sqlite_version()
-I, [2022-02-25T13:53:32.723629 #292]  INFO -- : (0.000120s) PRAGMA table_info('posts')
-I, [2022-02-25T13:53:32.724485 #292]  INFO -- : (0.000109s) PRAGMA table_info('users')
-I, [2022-02-25T14:17:31.406190 #321]  INFO -- : (0.000178s) PRAGMA foreign_keys = 1
-I, [2022-02-25T14:17:31.406281 #321]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-25T14:17:31.406839 #321]  INFO -- : (0.000055s) SELECT sqlite_version()
-I, [2022-02-25T14:17:31.407090 #321]  INFO -- : (0.000119s) PRAGMA table_info('posts')
-I, [2022-02-25T14:17:31.407980 #321]  INFO -- : (0.000114s) PRAGMA table_info('users')
-I, [2022-02-25T14:17:48.799766 #321]  INFO -- : (0.000042s) BEGIN
-I, [2022-02-25T14:17:48.800216 #321]  INFO -- : (0.000198s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('username', 'title', 'message', 'uni', 'tag', '', '2022-02-25 14:17:48', 0, 0)
-I, [2022-02-25T14:17:48.800451 #321]  INFO -- : (0.000104s) SELECT * FROM `posts` WHERE `post_id` = 3
-I, [2022-02-25T14:17:48.858722 #321]  INFO -- : (0.058198s) COMMIT
-I, [2022-02-27T15:19:57.850214 #427]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
-I, [2022-02-27T15:19:57.850373 #427]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2022-02-27T15:19:57.850904 #427]  INFO -- : (0.000051s) SELECT sqlite_version()
-I, [2022-02-27T15:19:57.851144 #427]  INFO -- : (0.000132s) PRAGMA table_info('posts')
-I, [2022-02-27T15:19:57.852018 #427]  INFO -- : (0.000112s) PRAGMA table_info('users')I, [2022-02-28T14:07:13.081033 #291]  INFO -- : (0.002096s) PRAGMA foreign_keys = 1
-I, [2022-02-28T14:07:13.085529 #291]  INFO -- : (0.000043s) PRAGMA case_sensitive_like = 1
-I, [2022-02-28T14:07:13.086657 #291]  INFO -- : (0.000113s) SELECT sqlite_version()
-I, [2022-02-28T14:07:13.087120 #291]  INFO -- : (0.000240s) PRAGMA table_info('posts')
-I, [2022-02-28T14:07:13.088600 #291]  INFO -- : (0.000171s) PRAGMA table_info('users')
-I, [2022-02-28T14:07:50.815381 #295]  INFO -- : (0.000181s) PRAGMA foreign_keys = 1
-I, [2022-02-28T14:07:50.815495 #295]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
-I, [2022-02-28T14:07:50.816210 #295]  INFO -- : (0.000071s) SELECT sqlite_version()
-I, [2022-02-28T14:07:50.816553 #295]  INFO -- : (0.000146s) PRAGMA table_info('posts')
-I, [2022-02-28T14:07:50.817530 #295]  INFO -- : (0.000117s) PRAGMA table_info('users')
-I, [2022-02-28T14:16:20.389592 #407]  INFO -- : (0.000177s) PRAGMA foreign_keys = 1
-I, [2022-02-28T14:16:20.389688 #407]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-02-28T14:16:20.390255 #407]  INFO -- : (0.000055s) SELECT sqlite_version()
-I, [2022-02-28T14:16:20.390520 #407]  INFO -- : (0.000119s) PRAGMA table_info('posts')
-I, [2022-02-28T14:16:20.391396 #407]  INFO -- : (0.000112s) PRAGMA table_info('users')
-I, [2022-03-01T08:58:39.646383 #282]  INFO -- : (0.003969s) PRAGMA foreign_keys = 1
-I, [2022-03-01T08:58:39.649358 #282]  INFO -- : (0.000025s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T08:58:39.650041 #282]  INFO -- : (0.000071s) SELECT sqlite_version()
-I, [2022-03-01T08:58:39.650330 #282]  INFO -- : (0.000129s) PRAGMA table_info('posts')
-I, [2022-03-01T08:58:39.651265 #282]  INFO -- : (0.000114s) PRAGMA table_info('users')
-I, [2022-03-01T09:04:43.771450 #331]  INFO -- : (0.000178s) PRAGMA foreign_keys = 1
-I, [2022-03-01T09:04:43.771551 #331]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T09:04:43.772168 #331]  INFO -- : (0.000060s) SELECT sqlite_version()
-I, [2022-03-01T09:04:43.772451 #331]  INFO -- : (0.000124s) PRAGMA table_info('posts')
-I, [2022-03-01T09:04:43.773336 #331]  INFO -- : (0.000113s) PRAGMA table_info('users')
-I, [2022-03-01T09:05:38.429839 #335]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
-I, [2022-03-01T09:05:38.429937 #335]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T09:05:38.430545 #335]  INFO -- : (0.000057s) SELECT sqlite_version()
-I, [2022-03-01T09:05:38.430820 #335]  INFO -- : (0.000125s) PRAGMA table_info('posts')
-I, [2022-03-01T09:05:38.431740 #335]  INFO -- : (0.000131s) PRAGMA table_info('users')
-I, [2022-03-01T09:08:12.159380 #340]  INFO -- : (0.000205s) PRAGMA foreign_keys = 1
-I, [2022-03-01T09:08:12.159476 #340]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T09:08:12.160109 #340]  INFO -- : (0.000062s) SELECT sqlite_version()
-I, [2022-03-01T09:08:12.160388 #340]  INFO -- : (0.000127s) PRAGMA table_info('posts')
-I, [2022-03-01T09:08:12.161295 #340]  INFO -- : (0.000113s) PRAGMA table_info('users')
-I, [2022-03-01T09:08:58.609304 #344]  INFO -- : (0.000187s) PRAGMA foreign_keys = 1
-I, [2022-03-01T09:08:58.609409 #344]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T09:08:58.610015 #344]  INFO -- : (0.000066s) SELECT sqlite_version()
-I, [2022-03-01T09:08:58.610296 #344]  INFO -- : (0.000127s) PRAGMA table_info('posts')
-I, [2022-03-01T09:08:58.611213 #344]  INFO -- : (0.000115s) PRAGMA table_info('users')
-I, [2022-03-01T11:06:26.971955 #216]  INFO -- : (0.000200s) PRAGMA foreign_keys = 1
-I, [2022-03-01T11:06:26.978532 #216]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
-I, [2022-03-01T11:06:26.979248 #216]  INFO -- : (0.000068s) SELECT sqlite_version()
-I, [2022-03-01T11:06:26.979577 #216]  INFO -- : (0.000141s) PRAGMA table_info('posts')
-I, [2022-03-01T11:06:26.980622 #216]  INFO -- : (0.000116s) PRAGMA table_info('users')
-I, [2022-03-01T11:06:39.233302 #216]  INFO -- : (0.000040s) BEGIN
-I, [2022-03-01T11:06:39.233787 #216]  INFO -- : (0.000250s) INSERT INTO `posts` (`username`, `title`, `message`, `university`, `tags`, `image_link`, `date_posted`, `is_moderated`, `is_image`) VALUES ('a', 'a', 'a', 'a', 'a', 'a', '2022-03-01 11:06:39', 0, 1)
-I, [2022-03-01T11:06:39.234028 #216]  INFO -- : (0.000106s) SELECT * FROM `posts` WHERE `post_id` = 4
-I, [2022-03-01T11:06:39.303014 #216]  INFO -- : (0.068906s) COMMIT
-I, [2022-03-02T09:58:09.276703 #277]  INFO -- : (0.001280s) PRAGMA foreign_keys = 1
-I, [2022-03-02T09:58:09.281715 #277]  INFO -- : (0.000026s) PRAGMA case_sensitive_like = 1
-I, [2022-03-02T09:58:09.282397 #277]  INFO -- : (0.000074s) SELECT sqlite_version()
-I, [2022-03-02T09:58:09.282689 #277]  INFO -- : (0.000131s) PRAGMA table_info('posts')
-I, [2022-03-02T09:58:09.283608 #277]  INFO -- : (0.000112s) PRAGMA table_info('users')
-I, [2022-03-02T10:04:17.539698 #299]  INFO -- : (0.000192s) PRAGMA foreign_keys = 1
-I, [2022-03-02T10:04:17.539795 #299]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
-I, [2022-03-02T10:04:17.540374 #299]  INFO -- : (0.000057s) SELECT sqlite_version()
-I, [2022-03-02T10:04:17.540639 #299]  INFO -- : (0.000120s) PRAGMA table_info('posts')
-I, [2022-03-02T10:04:17.541519 #299]  INFO -- : (0.000111s) PRAGMA table_info('users')
-I, [2022-03-02T10:05:13.335553 #310]  INFO -- : (0.000173s) PRAGMA foreign_keys = 1
-I, [2022-03-02T10:05:13.335671 #310]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
-I, [2022-03-02T10:05:13.336256 #310]  INFO -- : (0.000057s) SELECT sqlite_version()
-I, [2022-03-02T10:05:13.336523 #310]  INFO -- : (0.000122s) PRAGMA table_info('posts')
-I, [2022-03-02T10:05:13.337405 #310]  INFO -- : (0.000110s) PRAGMA table_info('users')
+# Logfile created on 2022-03-08 18:22:32 +0000 by logger.rb/66358
+I, [2022-03-08T18:22:32.341131 #698]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2022-03-08T18:22:32.341236 #698]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2022-03-08T18:22:32.341440 #698]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2022-03-08T18:22:32.341663 #698]  INFO -- : (0.000066s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-08T18:22:32.341848 #698]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-08T18:22:32.342001 #698]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-08T18:22:32.342148 #698]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-08T18:22:32.342323 #698]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-08T18:22:32.342466 #698]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-08T18:22:32.342652 #698]  INFO -- : (0.000076s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-08T18:22:32.342808 #698]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-08T18:22:32.342968 #698]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-08T18:22:32.343593 #698]  INFO -- : (0.000117s) PRAGMA table_info('posts')
+I, [2022-03-08T18:22:32.344438 #698]  INFO -- : (0.000089s) PRAGMA table_info('post_tags')
+I, [2022-03-08T18:22:32.345001 #698]  INFO -- : (0.000093s) PRAGMA table_info('tags')
+I, [2022-03-08T18:22:32.345628 #698]  INFO -- : (0.000126s) PRAGMA table_info('users')
+I, [2022-03-08T18:22:33.833354 #698]  INFO -- : (0.000179s) SELECT * FROM `posts`
+I, [2022-03-10T15:56:49.709641 #259]  INFO -- : (0.000221s) PRAGMA foreign_keys = 1
+I, [2022-03-10T15:56:49.709748 #259]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2022-03-10T15:56:49.709931 #259]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2022-03-10T15:56:49.710149 #259]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-10T15:56:49.710308 #259]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-10T15:56:49.710444 #259]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-10T15:56:49.710572 #259]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-10T15:56:49.710779 #259]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-10T15:56:49.710909 #259]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-10T15:56:49.711028 #259]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-10T15:56:49.711154 #259]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-10T15:56:49.711354 #259]  INFO -- : (0.000071s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-10T15:56:49.712033 #259]  INFO -- : (0.000137s) PRAGMA table_info('posts')
+I, [2022-03-10T15:56:49.712886 #259]  INFO -- : (0.000075s) PRAGMA table_info('post_tags')
+I, [2022-03-10T15:56:49.713409 #259]  INFO -- : (0.000069s) PRAGMA table_info('tags')
+I, [2022-03-10T15:56:49.714011 #259]  INFO -- : (0.000109s) PRAGMA table_info('users')
+I, [2022-03-10T15:56:52.040163 #259]  INFO -- : (0.000173s) SELECT * FROM `posts`
+I, [2022-03-10T15:56:52.049833 #259]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T15:56:52.050072 #259]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T15:59:26.235855 #259]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE `userID` = 1
+I, [2022-03-10T15:59:26.236241 #259]  INFO -- : (0.000120s) SELECT * FROM `posts` WHERE (`is_moderated` = 0)
+I, [2022-03-10T15:59:26.237741 #259]  INFO -- : (0.000104s) SELECT * FROM `tags`
+I, [2022-03-10T15:59:26.237972 #259]  INFO -- : (0.000071s) SELECT * FROM `universities` WHERE (`universityID` = 1) LIMIT 1
+I, [2022-03-10T15:59:26.238125 #259]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE `userID` = 7
+I, [2022-03-10T16:06:20.171767 #276]  INFO -- : (0.000212s) PRAGMA foreign_keys = 1
+I, [2022-03-10T16:06:20.171868 #276]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-03-10T16:06:20.172079 #276]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2022-03-10T16:06:20.172341 #276]  INFO -- : (0.000069s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-10T16:06:20.172532 #276]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-10T16:06:20.172696 #276]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-10T16:06:20.172874 #276]  INFO -- : (0.000070s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-10T16:06:20.173049 #276]  INFO -- : (0.000053s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-10T16:06:20.173202 #276]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-10T16:06:20.173349 #276]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-10T16:06:20.173494 #276]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-10T16:06:20.173659 #276]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-10T16:06:20.174358 #276]  INFO -- : (0.000124s) PRAGMA table_info('posts')
+I, [2022-03-10T16:06:20.175300 #276]  INFO -- : (0.000079s) PRAGMA table_info('post_tags')
+I, [2022-03-10T16:06:20.175862 #276]  INFO -- : (0.000088s) PRAGMA table_info('tags')
+I, [2022-03-10T16:06:20.176517 #276]  INFO -- : (0.000160s) PRAGMA table_info('users')
+I, [2022-03-10T16:06:22.147388 #276]  INFO -- : (0.000187s) SELECT * FROM `posts`
+I, [2022-03-10T16:06:22.157159 #276]  INFO -- : (0.000193s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:06:22.157424 #276]  INFO -- : (0.000078s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:06:28.631336 #276]  INFO -- : (0.000202s) SELECT * FROM `users` WHERE `userID` = 1
+I, [2022-03-10T16:06:28.631697 #276]  INFO -- : (0.000121s) SELECT * FROM `posts` WHERE (`is_moderated` = 0)
+I, [2022-03-10T16:06:28.633109 #276]  INFO -- : (0.000088s) SELECT * FROM `tags`
+I, [2022-03-10T16:06:28.633331 #276]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 1) LIMIT 1
+I, [2022-03-10T16:06:28.633470 #276]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE `userID` = 7
+I, [2022-03-10T16:06:30.731271 #276]  INFO -- : (0.000167s) SELECT * FROM `posts` WHERE `postID` = '2'
+I, [2022-03-10T16:06:30.731482 #276]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE `userID` = 7
+I, [2022-03-10T16:06:30.732994 #276]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE `userID` = 7
+I, [2022-03-10T16:06:30.733243 #276]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 1) LIMIT 1
+I, [2022-03-10T16:11:37.386178 #276]  INFO -- : (0.000177s) SELECT * FROM `posts` WHERE `postID` = '2'
+I, [2022-03-10T16:11:37.386432 #276]  INFO -- : (0.000022s) BEGIN
+I, [2022-03-10T16:11:37.391978 #276]  INFO -- : (0.005310s) UPDATE `posts` SET `is_moderated` = 1 WHERE (`postID` = 2)
+I, [2022-03-10T16:11:37.452071 #276]  INFO -- : (0.059960s) COMMIT
+I, [2022-03-10T16:11:37.589841 #276]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE `userID` = 1
+I, [2022-03-10T16:11:37.590161 #276]  INFO -- : (0.000122s) SELECT * FROM `posts` WHERE (`is_moderated` = 0)
+I, [2022-03-10T16:11:37.591686 #276]  INFO -- : (0.000092s) SELECT * FROM `tags`
+I, [2022-03-10T16:11:54.791435 #276]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-10T16:11:54.792478 #276]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:11:54.792680 #276]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:11:54.792935 #276]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:11:54.793176 #276]  INFO -- : (0.000091s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:19:22.420706 #350]  INFO -- : (0.000208s) PRAGMA foreign_keys = 1
+I, [2022-03-10T16:19:22.420829 #350]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-03-10T16:19:22.421019 #350]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2022-03-10T16:19:22.421244 #350]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-10T16:19:22.421432 #350]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-10T16:19:22.421573 #350]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-10T16:19:22.421705 #350]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-10T16:19:22.421836 #350]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-10T16:19:22.421974 #350]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-10T16:19:22.422097 #350]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-10T16:19:22.422221 #350]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-10T16:19:22.422351 #350]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-10T16:19:22.423090 #350]  INFO -- : (0.000162s) PRAGMA table_info('posts')
+I, [2022-03-10T16:19:22.423904 #350]  INFO -- : (0.000078s) PRAGMA table_info('post_tags')
+I, [2022-03-10T16:19:22.424425 #350]  INFO -- : (0.000073s) PRAGMA table_info('tags')
+I, [2022-03-10T16:19:22.425101 #350]  INFO -- : (0.000117s) PRAGMA table_info('users')
+I, [2022-03-10T16:19:24.933884 #350]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-10T16:19:24.943160 #350]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:19:24.943406 #350]  INFO -- : (0.000074s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:19:24.943647 #350]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:19:24.943854 #350]  INFO -- : (0.000085s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:20:09.323972 #361]  INFO -- : (0.000237s) PRAGMA foreign_keys = 1
+I, [2022-03-10T16:20:09.324070 #361]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2022-03-10T16:20:09.324249 #361]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2022-03-10T16:20:09.324458 #361]  INFO -- : (0.000063s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-10T16:20:09.324644 #361]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-10T16:20:09.324808 #361]  INFO -- : (0.000057s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-10T16:20:09.324950 #361]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-10T16:20:09.325082 #361]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-10T16:20:09.325225 #361]  INFO -- : (0.000042s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-10T16:20:09.325348 #361]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-10T16:20:09.325466 #361]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-10T16:20:09.325607 #361]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-10T16:20:09.326337 #361]  INFO -- : (0.000150s) PRAGMA table_info('posts')
+I, [2022-03-10T16:20:09.327198 #361]  INFO -- : (0.000080s) PRAGMA table_info('post_tags')
+I, [2022-03-10T16:20:09.327731 #361]  INFO -- : (0.000074s) PRAGMA table_info('tags')
+I, [2022-03-10T16:20:09.328345 #361]  INFO -- : (0.000119s) PRAGMA table_info('users')
+I, [2022-03-10T16:20:11.724190 #361]  INFO -- : (0.000177s) SELECT * FROM `posts`
+I, [2022-03-10T16:20:11.735899 #361]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:20:11.736163 #361]  INFO -- : (0.000085s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:20:11.736374 #361]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:20:11.736610 #361]  INFO -- : (0.000094s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:20:57.839482 #372]  INFO -- : (0.000231s) PRAGMA foreign_keys = 1
+I, [2022-03-10T16:20:57.839584 #372]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-03-10T16:20:57.839821 #372]  INFO -- : (0.000069s) SELECT sqlite_version()
+I, [2022-03-10T16:20:57.840095 #372]  INFO -- : (0.000078s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-10T16:20:57.840322 #372]  INFO -- : (0.000070s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-10T16:20:57.840525 #372]  INFO -- : (0.000069s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-10T16:20:57.840702 #372]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-10T16:20:57.840898 #372]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-10T16:20:57.841060 #372]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-10T16:20:57.841206 #372]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-10T16:20:57.841348 #372]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-10T16:20:57.841517 #372]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-10T16:20:57.842212 #372]  INFO -- : (0.000121s) PRAGMA table_info('posts')
+I, [2022-03-10T16:20:57.843174 #372]  INFO -- : (0.000080s) PRAGMA table_info('post_tags')
+I, [2022-03-10T16:20:57.843880 #372]  INFO -- : (0.000115s) PRAGMA table_info('tags')
+I, [2022-03-10T16:20:57.844532 #372]  INFO -- : (0.000130s) PRAGMA table_info('users')
+I, [2022-03-10T16:21:01.109294 #372]  INFO -- : (0.000217s) SELECT * FROM `posts`
+I, [2022-03-10T16:21:01.121123 #372]  INFO -- : (0.000193s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:21:01.121428 #372]  INFO -- : (0.000090s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:21:01.121671 #372]  INFO -- : (0.000108s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:21:01.121846 #372]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:28:36.882860 #372]  INFO -- : (0.000311s) SELECT * FROM `posts`
+I, [2022-03-10T16:28:36.884576 #372]  INFO -- : (0.000189s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:28:36.884894 #372]  INFO -- : (0.000108s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-10T16:28:36.885206 #372]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-10T16:28:36.885440 #372]  INFO -- : (0.000097s) SELECT * FROM `universities` WHERE (`universityID` = 239) LIMIT 1
+I, [2022-03-14T00:57:48.894729 #134]  INFO -- : (0.003972s) PRAGMA foreign_keys = 1
+I, [2022-03-14T00:57:48.897437 #134]  INFO -- : (0.000033s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T00:57:48.897686 #134]  INFO -- : (0.000072s) SELECT sqlite_version()
+E, [2022-03-14T00:57:48.897907 #134] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T00:57:48.964741 #134]  INFO -- : (0.066572s) CREATE TABLE `tags` (`tagID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `tag_name` varchar(255))
+E, [2022-03-14T00:57:48.965059 #134] ERROR -- : SQLite3::SQLException: no such table: universities: SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T00:57:49.036546 #134]  INFO -- : (0.071230s) CREATE TABLE `universities` (`universityID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `university_name` varchar(255))
+I, [2022-03-14T00:57:49.099151 #134]  INFO -- : (0.062026s) INSERT INTO `universities` (`university_name`) VALUES ('University of Aberdeen')
+I, [2022-03-14T00:57:49.157681 #134]  INFO -- : (0.058287s) INSERT INTO `universities` (`university_name`) VALUES ('Abertay University')
+I, [2022-03-14T00:57:49.219391 #134]  INFO -- : (0.061460s) INSERT INTO `universities` (`university_name`) VALUES ('Aberystwyth University')
+I, [2022-03-14T00:57:49.286378 #134]  INFO -- : (0.066771s) INSERT INTO `universities` (`university_name`) VALUES ('The Academy of Contemporary Music')
+I, [2022-03-14T00:57:49.352500 #134]  INFO -- : (0.065845s) INSERT INTO `universities` (`university_name`) VALUES ('Academy of Live and Recorded Arts')
+I, [2022-03-14T00:57:49.413912 #134]  INFO -- : (0.061225s) INSERT INTO `universities` (`university_name`) VALUES ('Activate Learning')
+I, [2022-03-14T00:57:49.476633 #134]  INFO -- : (0.062524s) INSERT INTO `universities` (`university_name`) VALUES ('Al-Maktoum College of Higher Education')
+I, [2022-03-14T00:57:49.541276 #134]  INFO -- : (0.064466s) INSERT INTO `universities` (`university_name`) VALUES ('Amity University London')
+I, [2022-03-14T00:57:49.599473 #134]  INFO -- : (0.057955s) INSERT INTO `universities` (`university_name`) VALUES ('Anglia Ruskin University')
+I, [2022-03-14T00:57:49.662314 #134]  INFO -- : (0.062645s) INSERT INTO `universities` (`university_name`) VALUES ('AECC University College')
+I, [2022-03-14T00:57:49.726818 #134]  INFO -- : (0.064273s) INSERT INTO `universities` (`university_name`) VALUES ('Architechtural Association School of Architecture')
+I, [2022-03-14T00:57:49.792703 #134]  INFO -- : (0.065685s) INSERT INTO `universities` (`university_name`) VALUES ('Arden University')
+I, [2022-03-14T00:57:49.849864 #134]  INFO -- : (0.056938s) INSERT INTO `universities` (`university_name`) VALUES ('Arts Educational Schools')
+I, [2022-03-14T00:57:49.914088 #134]  INFO -- : (0.064026s) INSERT INTO `universities` (`university_name`) VALUES ('Arts University Bournemouth')
+I, [2022-03-14T00:57:49.969073 #134]  INFO -- : (0.054766s) INSERT INTO `universities` (`university_name`) VALUES ('ARU London')
+I, [2022-03-14T00:57:50.026923 #134]  INFO -- : (0.057608s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Askham Bryan')
+I, [2022-03-14T00:57:50.087614 #134]  INFO -- : (0.060397s) INSERT INTO `universities` (`university_name`) VALUES ('Astone University Birmingham')
+I, [2022-03-14T00:57:50.144440 #134]  INFO -- : (0.056583s) INSERT INTO `universities` (`university_name`) VALUES ('Backstage Academy')
+I, [2022-03-14T00:57:50.201443 #134]  INFO -- : (0.056808s) INSERT INTO `universities` (`university_name`) VALUES ('Bangor University')
+I, [2022-03-14T00:57:50.264633 #134]  INFO -- : (0.062896s) INSERT INTO `universities` (`university_name`) VALUES ('Barking an Dagenham College')
+I, [2022-03-14T00:57:50.323936 #134]  INFO -- : (0.059029s) INSERT INTO `universities` (`university_name`) VALUES ('Barnet an Southgate College')
+I, [2022-03-14T00:57:50.393484 #134]  INFO -- : (0.069374s) INSERT INTO `universities` (`university_name`) VALUES ('Barnfield College Luton')
+I, [2022-03-14T00:57:50.458567 #134]  INFO -- : (0.064903s) INSERT INTO `universities` (`university_name`) VALUES ('Barnsley College Higher Education')
+I, [2022-03-14T00:57:50.517848 #134]  INFO -- : (0.059043s) INSERT INTO `universities` (`university_name`) VALUES ('Bath Spa University')
+I, [2022-03-14T00:57:50.580314 #134]  INFO -- : (0.062256s) INSERT INTO `universities` (`university_name`) VALUES ('Bath College')
+I, [2022-03-14T00:57:50.646510 #134]  INFO -- : (0.066002s) INSERT INTO `universities` (`university_name`) VALUES ('University of Bath')
+I, [2022-03-14T00:57:50.714390 #134]  INFO -- : (0.067701s) INSERT INTO `universities` (`university_name`) VALUES ('Bedford College Group')
+I, [2022-03-14T00:57:50.772129 #134]  INFO -- : (0.057575s) INSERT INTO `universities` (`university_name`) VALUES ('University of Bedfordshire')
+I, [2022-03-14T00:57:50.831281 #134]  INFO -- : (0.059000s) INSERT INTO `universities` (`university_name`) VALUES ('BIMM Institute')
+I, [2022-03-14T00:57:50.898109 #134]  INFO -- : (0.066633s) INSERT INTO `universities` (`university_name`) VALUES ('Birkbeck University of London')
+I, [2022-03-14T00:57:50.965293 #134]  INFO -- : (0.066945s) INSERT INTO `universities` (`university_name`) VALUES ('Birmingham City University')
+I, [2022-03-14T00:57:51.028030 #134]  INFO -- : (0.062475s) INSERT INTO `universities` (`university_name`) VALUES ('Birmingham Metropolitan College')
+I, [2022-03-14T00:57:51.087864 #134]  INFO -- : (0.059586s) INSERT INTO `universities` (`university_name`) VALUES ('University College Birmingham')
+I, [2022-03-14T00:57:51.144928 #134]  INFO -- : (0.056815s) INSERT INTO `universities` (`university_name`) VALUES ('University of Birmingham')
+I, [2022-03-14T00:57:51.209514 #134]  INFO -- : (0.064367s) INSERT INTO `universities` (`university_name`) VALUES ('Bishop Auckland College')
+I, [2022-03-14T00:57:51.267769 #134]  INFO -- : (0.058014s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Bishop Burton')
+I, [2022-03-14T00:57:51.327024 #134]  INFO -- : (0.058977s) INSERT INTO `universities` (`university_name`) VALUES ('Bishop Grosseteste University')
+I, [2022-03-14T00:57:51.391938 #134]  INFO -- : (0.064685s) INSERT INTO `universities` (`university_name`) VALUES ('Blackburn College')
+I, [2022-03-14T00:57:51.453704 #134]  INFO -- : (0.061528s) INSERT INTO `universities` (`university_name`) VALUES ('Blackpool and the Flyde College')
+I, [2022-03-14T00:57:51.516178 #134]  INFO -- : (0.062242s) INSERT INTO `universities` (`university_name`) VALUES ('Bloomsbury Institute')
+I, [2022-03-14T00:57:51.576514 #134]  INFO -- : (0.060050s) INSERT INTO `universities` (`university_name`) VALUES ('University of Bolton')
+I, [2022-03-14T00:57:51.634973 #134]  INFO -- : (0.058198s) INSERT INTO `universities` (`university_name`) VALUES ('Bournemouth and Poole College')
+I, [2022-03-14T00:57:51.693225 #134]  INFO -- : (0.058002s) INSERT INTO `universities` (`university_name`) VALUES ('Bournemouth University')
+I, [2022-03-14T00:57:51.760643 #134]  INFO -- : (0.067152s) INSERT INTO `universities` (`university_name`) VALUES ('BPP University')
+I, [2022-03-14T00:57:51.824984 #134]  INFO -- : (0.064104s) INSERT INTO `universities` (`university_name`) VALUES ('Bradford College')
+I, [2022-03-14T00:57:51.889219 #134]  INFO -- : (0.063979s) INSERT INTO `universities` (`university_name`) VALUES ('University of Bradford')
+I, [2022-03-14T00:57:51.954333 #134]  INFO -- : (0.064883s) INSERT INTO `universities` (`university_name`) VALUES ('Bridgend College')
+I, [2022-03-14T00:57:52.018756 #134]  INFO -- : (0.064193s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Somerset - Bridgwater & Taunton College')
+I, [2022-03-14T00:57:52.081278 #134]  INFO -- : (0.062280s) INSERT INTO `universities` (`university_name`) VALUES ('Brighton and Sussex Medical School')
+I, [2022-03-14T00:57:52.140679 #134]  INFO -- : (0.059206s) INSERT INTO `universities` (`university_name`) VALUES ('University of Brighton')
+I, [2022-03-14T00:57:52.202083 #134]  INFO -- : (0.061212s) INSERT INTO `universities` (`university_name`) VALUES ('Bristol Old Vic Theatre School')
+I, [2022-03-14T00:57:52.262542 #134]  INFO -- : (0.060299s) INSERT INTO `universities` (`university_name`) VALUES ('City of Bristol College')
+I, [2022-03-14T00:57:52.324216 #134]  INFO -- : (0.061470s) INSERT INTO `universities` (`university_name`) VALUES ('Trinity College Bristol')
+I, [2022-03-14T00:57:52.382730 #134]  INFO -- : (0.058335s) INSERT INTO `universities` (`university_name`) VALUES ('University of Bristol')
+I, [2022-03-14T00:57:52.441930 #134]  INFO -- : (0.058972s) INSERT INTO `universities` (`university_name`) VALUES ('University of the West of England Bristol')
+I, [2022-03-14T00:57:52.505672 #134]  INFO -- : (0.063504s) INSERT INTO `universities` (`university_name`) VALUES ('British College of Osteopathic Medicine')
+I, [2022-03-14T00:57:52.564531 #134]  INFO -- : (0.058573s) INSERT INTO `universities` (`university_name`) VALUES ('Brooklands College')
+I, [2022-03-14T00:57:52.624149 #134]  INFO -- : (0.059424s) INSERT INTO `universities` (`university_name`) VALUES ('Brunel University London')
+I, [2022-03-14T00:57:52.690454 #134]  INFO -- : (0.066099s) INSERT INTO `universities` (`university_name`) VALUES ('University of Buckingham')
+I, [2022-03-14T00:57:52.750861 #134]  INFO -- : (0.060150s) INSERT INTO `universities` (`university_name`) VALUES ('Buckinghamshire New University')
+I, [2022-03-14T00:57:52.821638 #134]  INFO -- : (0.070567s) INSERT INTO `universities` (`university_name`) VALUES ('Burnley College')
+I, [2022-03-14T00:57:52.881527 #134]  INFO -- : (0.059637s) INSERT INTO `universities` (`university_name`) VALUES ('Bury College')
+I, [2022-03-14T00:57:52.938756 #134]  INFO -- : (0.056917s) INSERT INTO `universities` (`university_name`) VALUES ('Cambridge Regional College')
+I, [2022-03-14T00:57:52.999402 #134]  INFO -- : (0.060417s) INSERT INTO `universities` (`university_name`) VALUES ('Cambridge School of Visual and Performing Arts')
+I, [2022-03-14T00:57:53.061576 #134]  INFO -- : (0.061854s) INSERT INTO `universities` (`university_name`) VALUES ('University of Cambridge')
+I, [2022-03-14T00:57:53.122912 #134]  INFO -- : (0.061040s) INSERT INTO `universities` (`university_name`) VALUES ('Canterybury Christ Church University')
+I, [2022-03-14T00:57:53.186483 #134]  INFO -- : (0.063315s) INSERT INTO `universities` (`university_name`) VALUES ('Cardiff and Vale College')
+I, [2022-03-14T00:57:53.256522 #134]  INFO -- : (0.069695s) INSERT INTO `universities` (`university_name`) VALUES ('Cardiff Metropolitan University')
+I, [2022-03-14T00:57:53.313946 #134]  INFO -- : (0.057186s) INSERT INTO `universities` (`university_name`) VALUES ('Cardiff University')
+I, [2022-03-14T00:57:53.381552 #134]  INFO -- : (0.067383s) INSERT INTO `universities` (`university_name`) VALUES ('Central Bedfordshire College')
+I, [2022-03-14T00:57:53.439249 #134]  INFO -- : (0.057441s) INSERT INTO `universities` (`university_name`) VALUES ('Central Film School London')
+I, [2022-03-14T00:57:53.496905 #134]  INFO -- : (0.057433s) INSERT INTO `universities` (`university_name`) VALUES ('University of Central Lancashire')
+I, [2022-03-14T00:57:53.558849 #134]  INFO -- : (0.061693s) INSERT INTO `universities` (`university_name`) VALUES ('Centre for Alternative Technology')
+I, [2022-03-14T00:57:53.622318 #134]  INFO -- : (0.063227s) INSERT INTO `universities` (`university_name`) VALUES ('University of Chester ')
+I, [2022-03-14T00:57:53.684344 #134]  INFO -- : (0.061757s) INSERT INTO `universities` (`university_name`) VALUES ('Chesterfield College')
+I, [2022-03-14T00:57:53.747415 #134]  INFO -- : (0.062858s) INSERT INTO `universities` (`university_name`) VALUES ('Chichester College Group')
+I, [2022-03-14T00:57:53.808324 #134]  INFO -- : (0.060694s) INSERT INTO `universities` (`university_name`) VALUES ('University of Chichester')
+I, [2022-03-14T00:57:53.869667 #134]  INFO -- : (0.061075s) INSERT INTO `universities` (`university_name`) VALUES ('City & Guilds of London Arts School')
+I, [2022-03-14T00:57:53.930221 #134]  INFO -- : (0.060317s) INSERT INTO `universities` (`university_name`) VALUES ('City College Norwich')
+I, [2022-03-14T00:57:53.992064 #134]  INFO -- : (0.061614s) INSERT INTO `universities` (`university_name`) VALUES ('City University of London')
+I, [2022-03-14T00:57:54.055310 #134]  INFO -- : (0.063029s) INSERT INTO `universities` (`university_name`) VALUES ('Cliff College')
+I, [2022-03-14T00:57:54.121135 #134]  INFO -- : (0.065593s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Colchester at Colchester Institute')
+I, [2022-03-14T00:57:54.184603 #134]  INFO -- : (0.063254s) INSERT INTO `universities` (`university_name`) VALUES ('College of Agriculture, Food and Rural Enterprise')
+I, [2022-03-14T00:57:54.244478 #134]  INFO -- : (0.059681s) INSERT INTO `universities` (`university_name`) VALUES ('College of Esports')
+I, [2022-03-14T00:57:54.307003 #134]  INFO -- : (0.062304s) INSERT INTO `universities` (`university_name`) VALUES ('Community Revival')
+I, [2022-03-14T00:57:54.371990 #134]  INFO -- : (0.064759s) INSERT INTO `universities` (`university_name`) VALUES ('Condé Nast College of Fashion & Design')
+I, [2022-03-14T00:57:54.432215 #134]  INFO -- : (0.059964s) INSERT INTO `universities` (`university_name`) VALUES ('Cornwall College')
+I, [2022-03-14T00:57:54.492827 #134]  INFO -- : (0.060346s) INSERT INTO `universities` (`university_name`) VALUES ('Courtauld Institute of Art University of London')
+I, [2022-03-14T00:57:54.557339 #134]  INFO -- : (0.064259s) INSERT INTO `universities` (`university_name`) VALUES ('Coventry University')
+I, [2022-03-14T00:57:54.615301 #134]  INFO -- : (0.057716s) INSERT INTO `universities` (`university_name`) VALUES ('Coventry College')
+I, [2022-03-14T00:57:54.677152 #134]  INFO -- : (0.061626s) INSERT INTO `universities` (`university_name`) VALUES ('Cranfield University')
+I, [2022-03-14T00:57:54.740253 #134]  INFO -- : (0.062875s) INSERT INTO `universities` (`university_name`) VALUES ('Craven College')
+I, [2022-03-14T00:57:54.805796 #134]  INFO -- : (0.065376s) INSERT INTO `universities` (`university_name`) VALUES ('University for the Creative Arts')
+I, [2022-03-14T00:57:54.866985 #134]  INFO -- : (0.061010s) INSERT INTO `universities` (`university_name`) VALUES ('Croydon University Centre')
+I, [2022-03-14T00:57:54.928376 #134]  INFO -- : (0.061228s) INSERT INTO `universities` (`university_name`) VALUES ('University of Cumbria')
+I, [2022-03-14T00:57:54.991518 #134]  INFO -- : (0.062870s) INSERT INTO `universities` (`university_name`) VALUES ('Dartington Trust')
+I, [2022-03-14T00:57:55.050580 #134]  INFO -- : (0.058912s) INSERT INTO `universities` (`university_name`) VALUES ('David Game College Higher Education Centre')
+I, [2022-03-14T00:57:55.113116 #134]  INFO -- : (0.062390s) INSERT INTO `universities` (`university_name`) VALUES ('De Montfort University')
+I, [2022-03-14T00:57:55.174288 #134]  INFO -- : (0.061041s) INSERT INTO `universities` (`university_name`) VALUES ('Derby College')
+I, [2022-03-14T00:57:55.240740 #134]  INFO -- : (0.066265s) INSERT INTO `universities` (`university_name`) VALUES ('University of Derby')
+I, [2022-03-14T00:57:55.307263 #134]  INFO -- : (0.066359s) INSERT INTO `universities` (`university_name`) VALUES ('DN Colleges Group')
+I, [2022-03-14T00:57:55.371855 #134]  INFO -- : (0.064423s) INSERT INTO `universities` (`university_name`) VALUES ('Dudley College')
+I, [2022-03-14T00:57:55.437386 #134]  INFO -- : (0.065371s) INSERT INTO `universities` (`university_name`) VALUES ('University of Dundee')
+I, [2022-03-14T00:57:55.501788 #134]  INFO -- : (0.064203s) INSERT INTO `universities` (`university_name`) VALUES ('Durham University')
+I, [2022-03-14T00:57:55.565293 #134]  INFO -- : (0.063316s) INSERT INTO `universities` (`university_name`) VALUES ('New College Durham')
+I, [2022-03-14T00:57:55.629657 #134]  INFO -- : (0.064193s) INSERT INTO `universities` (`university_name`) VALUES ('Dyslexia Action')
+I, [2022-03-14T00:57:55.690518 #134]  INFO -- : (0.060672s) INSERT INTO `universities` (`university_name`) VALUES ('East 15 Acting School')
+I, [2022-03-14T00:57:55.754638 #134]  INFO -- : (0.063796s) INSERT INTO `universities` (`university_name`) VALUES ('University of East Anglia')
+I, [2022-03-14T00:57:55.825567 #134]  INFO -- : (0.070791s) INSERT INTO `universities` (`university_name`) VALUES ('EKC Group')
+I, [2022-03-14T00:57:55.892087 #134]  INFO -- : (0.066383s) INSERT INTO `universities` (`university_name`) VALUES ('University of East London')
+I, [2022-03-14T00:57:55.952906 #134]  INFO -- : (0.060557s) INSERT INTO `universities` (`university_name`) VALUES ('East Riding College')
+I, [2022-03-14T00:57:56.011254 #134]  INFO -- : (0.058205s) INSERT INTO `universities` (`university_name`) VALUES ('East Surrey College')
+I, [2022-03-14T00:57:56.073770 #134]  INFO -- : (0.062380s) INSERT INTO `universities` (`university_name`) VALUES ('East Sussex College')
+I, [2022-03-14T00:57:56.140645 #134]  INFO -- : (0.066708s) INSERT INTO `universities` (`university_name`) VALUES ('Edge Hill University')
+I, [2022-03-14T00:57:56.203267 #134]  INFO -- : (0.062461s) INSERT INTO `universities` (`university_name`) VALUES ('Edinburgh Napier University')
+I, [2022-03-14T00:57:56.263851 #134]  INFO -- : (0.060296s) INSERT INTO `universities` (`university_name`) VALUES ('The University of Edinburgh')
+I, [2022-03-14T00:57:56.326766 #134]  INFO -- : (0.062728s) INSERT INTO `universities` (`university_name`) VALUES ('ESCP Business School')
+I, [2022-03-14T00:57:56.387924 #134]  INFO -- : (0.060964s) INSERT INTO `universities` (`university_name`) VALUES ('University of Essex')
+I, [2022-03-14T00:57:56.446880 #134]  INFO -- : (0.058633s) INSERT INTO `universities` (`university_name`) VALUES ('European School of Osteopathy')
+I, [2022-03-14T00:57:56.506914 #134]  INFO -- : (0.059868s) INSERT INTO `universities` (`university_name`) VALUES ('Exeter College')
+I, [2022-03-14T00:57:56.566825 #134]  INFO -- : (0.059744s) INSERT INTO `universities` (`university_name`) VALUES ('University of Exeter')
+I, [2022-03-14T00:57:56.624914 #134]  INFO -- : (0.057918s) INSERT INTO `universities` (`university_name`) VALUES ('Falmouth University')
+I, [2022-03-14T00:57:56.685093 #134]  INFO -- : (0.060041s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Farnborough')
+I, [2022-03-14T00:57:56.748381 #134]  INFO -- : (0.063144s) INSERT INTO `universities` (`university_name`) VALUES ('Fashion Retail Academy')
+I, [2022-03-14T00:57:56.815582 #134]  INFO -- : (0.067038s) INSERT INTO `universities` (`university_name`) VALUES ('Furness College')
+I, [2022-03-14T00:57:56.876463 #134]  INFO -- : (0.060746s) INSERT INTO `universities` (`university_name`) VALUES ('Futureworks')
+I, [2022-03-14T00:57:56.936651 #134]  INFO -- : (0.060037s) INSERT INTO `universities` (`university_name`) VALUES ('Gateshead College')
+I, [2022-03-14T00:57:56.996772 #134]  INFO -- : (0.059967s) INSERT INTO `universities` (`university_name`) VALUES ('Glasgow Caledonian University')
+I, [2022-03-14T00:57:57.055992 #134]  INFO -- : (0.059003s) INSERT INTO `universities` (`university_name`) VALUES ('City of Glasgow College')
+I, [2022-03-14T00:57:57.116190 #134]  INFO -- : (0.059914s) INSERT INTO `universities` (`university_name`) VALUES ('Glasgow School of Art')
+I, [2022-03-14T00:57:57.176984 #134]  INFO -- : (0.060627s) INSERT INTO `universities` (`university_name`) VALUES ('University of Glasgow')
+I, [2022-03-14T00:57:57.240694 #134]  INFO -- : (0.063566s) INSERT INTO `universities` (`university_name`) VALUES ('Gloucestershire College')
+I, [2022-03-14T00:57:57.299324 #134]  INFO -- : (0.058498s) INSERT INTO `universities` (`university_name`) VALUES ('University of Gloucestershire')
+I, [2022-03-14T00:57:57.360200 #134]  INFO -- : (0.060730s) INSERT INTO `universities` (`university_name`) VALUES ('Glyndwr University Wrexham')
+I, [2022-03-14T00:57:57.422857 #134]  INFO -- : (0.062432s) INSERT INTO `universities` (`university_name`) VALUES ('Goldsmiths University of London')
+I, [2022-03-14T00:57:57.485231 #134]  INFO -- : (0.062139s) INSERT INTO `universities` (`university_name`) VALUES ('Gower College Swansea')
+I, [2022-03-14T00:57:57.550840 #134]  INFO -- : (0.065378s) INSERT INTO `universities` (`university_name`) VALUES ('Greater Brighton Metropolitan College')
+I, [2022-03-14T00:57:57.613530 #134]  INFO -- : (0.062452s) INSERT INTO `universities` (`university_name`) VALUES ('University of Greenwich')
+I, [2022-03-14T00:57:57.674175 #134]  INFO -- : (0.060363s) INSERT INTO `universities` (`university_name`) VALUES ('Halesowen College')
+I, [2022-03-14T00:57:57.733884 #134]  INFO -- : (0.059517s) INSERT INTO `universities` (`university_name`) VALUES ('Harlow College')
+I, [2022-03-14T00:57:57.791842 #134]  INFO -- : (0.057812s) INSERT INTO `universities` (`university_name`) VALUES ('Harper Adams University')
+I, [2022-03-14T00:57:57.852285 #134]  INFO -- : (0.060301s) INSERT INTO `universities` (`university_name`) VALUES ('Harper and Keele Veterinary School')
+I, [2022-03-14T00:57:57.916305 #134]  INFO -- : (0.063833s) INSERT INTO `universities` (`university_name`) VALUES ('Hartpury University')
+I, [2022-03-14T00:57:57.978063 #134]  INFO -- : (0.061561s) INSERT INTO `universities` (`university_name`) VALUES ('Havant and South Downs College')
+I, [2022-03-14T00:57:58.034762 #134]  INFO -- : (0.056492s) INSERT INTO `universities` (`university_name`) VALUES ('New City College')
+I, [2022-03-14T00:57:58.095404 #134]  INFO -- : (0.060358s) INSERT INTO `universities` (`university_name`) VALUES ('Haybridge Alliance School Centred Initial Teacher Training')
+I, [2022-03-14T00:57:58.155062 #134]  INFO -- : (0.059388s) INSERT INTO `universities` (`university_name`) VALUES ('HCUC')
+I, [2022-03-14T00:57:58.216594 #134]  INFO -- : (0.061264s) INSERT INTO `universities` (`university_name`) VALUES ('Heart of Worcestershire College')
+I, [2022-03-14T00:57:58.276821 #134]  INFO -- : (0.059981s) INSERT INTO `universities` (`university_name`) VALUES ('Hereford College of Arts')
+I, [2022-03-14T00:57:58.339926 #134]  INFO -- : (0.062843s) INSERT INTO `universities` (`university_name`) VALUES ('Heriot-Watt University')
+I, [2022-03-14T00:57:58.404478 #134]  INFO -- : (0.064301s) INSERT INTO `universities` (`university_name`) VALUES ('Hertford Regional College')
+I, [2022-03-14T00:57:58.464769 #134]  INFO -- : (0.060066s) INSERT INTO `universities` (`university_name`) VALUES ('University of Hertfordshire')
+I, [2022-03-14T00:57:58.524953 #134]  INFO -- : (0.059915s) INSERT INTO `universities` (`university_name`) VALUES ('University of the Highlands and Islands')
+I, [2022-03-14T00:57:58.585561 #134]  INFO -- : (0.060366s) INSERT INTO `universities` (`university_name`) VALUES ('Holy Cross Sixth Form College and University Centre')
+I, [2022-03-14T00:57:58.644850 #134]  INFO -- : (0.059120s) INSERT INTO `universities` (`university_name`) VALUES ('Hopwood Hall College')
+I, [2022-03-14T00:57:58.703092 #134]  INFO -- : (0.058071s) INSERT INTO `universities` (`university_name`) VALUES ('University of Huddersfield')
+I, [2022-03-14T00:57:58.765536 #134]  INFO -- : (0.062237s) INSERT INTO `universities` (`university_name`) VALUES ('Hugh Baird College')
+I, [2022-03-14T00:57:58.824923 #134]  INFO -- : (0.059220s) INSERT INTO `universities` (`university_name`) VALUES ('Hull College')
+I, [2022-03-14T00:57:58.884956 #134]  INFO -- : (0.059853s) INSERT INTO `universities` (`university_name`) VALUES ('Hull York Medical School')
+I, [2022-03-14T00:57:58.947231 #134]  INFO -- : (0.062118s) INSERT INTO `universities` (`university_name`) VALUES ('University of Hull')
+I, [2022-03-14T00:57:59.007802 #134]  INFO -- : (0.060404s) INSERT INTO `universities` (`university_name`) VALUES ('Hult International Business School')
+I, [2022-03-14T00:57:59.065153 #134]  INFO -- : (0.057187s) INSERT INTO `universities` (`university_name`) VALUES ('ICON College of Technology and Management')
+I, [2022-03-14T00:57:59.125315 #134]  INFO -- : (0.059973s) INSERT INTO `universities` (`university_name`) VALUES ('Imperial College London')
+I, [2022-03-14T00:57:59.185209 #134]  INFO -- : (0.059752s) INSERT INTO `universities` (`university_name`) VALUES ('Institute of Contemporary Music Performance')
+I, [2022-03-14T00:57:59.244425 #134]  INFO -- : (0.059033s) INSERT INTO `universities` (`university_name`) VALUES ('Institute of Development Studies')
+I, [2022-03-14T00:57:59.305910 #134]  INFO -- : (0.061335s) INSERT INTO `universities` (`university_name`) VALUES ('Institute of Modern Languages Research')
+I, [2022-03-14T00:57:59.365798 #134]  INFO -- : (0.059701s) INSERT INTO `universities` (`university_name`) VALUES ('Irish Baptist College')
+I, [2022-03-14T00:57:59.424808 #134]  INFO -- : (0.058854s) INSERT INTO `universities` (`university_name`) VALUES ('Islamic College for Advanced Studies')
+I, [2022-03-14T00:57:59.489701 #134]  INFO -- : (0.064765s) INSERT INTO `universities` (`university_name`) VALUES ('Istituto Marangoni London')
+I, [2022-03-14T00:57:59.548978 #134]  INFO -- : (0.059102s) INSERT INTO `universities` (`university_name`) VALUES ('JCA | London Fashion Academy')
+I, [2022-03-14T00:57:59.613363 #134]  INFO -- : (0.064097s) INSERT INTO `universities` (`university_name`) VALUES ('Keele University')
+I, [2022-03-14T00:57:59.676898 #134]  INFO -- : (0.063390s) INSERT INTO `universities` (`university_name`) VALUES ('Kent and Medway Medical School')
+I, [2022-03-14T00:57:59.738848 #134]  INFO -- : (0.061814s) INSERT INTO `universities` (`university_name`) VALUES ('University of Kent')
+I, [2022-03-14T00:57:59.802549 #134]  INFO -- : (0.063526s) INSERT INTO `universities` (`university_name`) VALUES ('King Stage')
+I, [2022-03-14T00:57:59.868460 #134]  INFO -- : (0.065557s) INSERT INTO `universities` (`university_name`) VALUES ('King''s College London')
+I, [2022-03-14T00:57:59.933795 #134]  INFO -- : (0.065121s) INSERT INTO `universities` (`university_name`) VALUES ('Kingston Maurward College')
+I, [2022-03-14T00:57:59.997255 #134]  INFO -- : (0.063310s) INSERT INTO `universities` (`university_name`) VALUES ('Kingston University')
+I, [2022-03-14T00:58:00.062859 #134]  INFO -- : (0.065341s) INSERT INTO `universities` (`university_name`) VALUES ('KLC School of Design')
+I, [2022-03-14T00:58:00.124813 #134]  INFO -- : (0.061825s) INSERT INTO `universities` (`university_name`) VALUES ('London Academy of Music and Dramatic Art')
+I, [2022-03-14T00:58:00.191151 #134]  INFO -- : (0.066220s) INSERT INTO `universities` (`university_name`) VALUES ('Lancaster University')
+I, [2022-03-14T00:58:00.252664 #134]  INFO -- : (0.061393s) INSERT INTO `universities` (`university_name`) VALUES ('The University of Law')
+I, [2022-03-14T00:58:00.313868 #134]  INFO -- : (0.061081s) INSERT INTO `universities` (`university_name`) VALUES ('London College of Creative Media')
+I, [2022-03-14T00:58:00.375794 #134]  INFO -- : (0.061772s) INSERT INTO `universities` (`university_name`) VALUES ('Leeds Arts University')
+I, [2022-03-14T00:58:00.436512 #134]  INFO -- : (0.060575s) INSERT INTO `universities` (`university_name`) VALUES ('Leeds Beckett University')
+I, [2022-03-14T00:58:00.498778 #134]  INFO -- : (0.062078s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Leeds')
+I, [2022-03-14T00:58:00.564854 #134]  INFO -- : (0.065795s) INSERT INTO `universities` (`university_name`) VALUES ('Leeds Conservatoire')
+I, [2022-03-14T00:58:00.624372 #134]  INFO -- : (0.059272s) INSERT INTO `universities` (`university_name`) VALUES ('Leeds Trinity University')
+I, [2022-03-14T00:58:00.686775 #134]  INFO -- : (0.062157s) INSERT INTO `universities` (`university_name`) VALUES ('University of Leeds')
+I, [2022-03-14T00:58:00.751304 #134]  INFO -- : (0.064344s) INSERT INTO `universities` (`university_name`) VALUES ('Leicester College')
+I, [2022-03-14T00:58:00.814281 #134]  INFO -- : (0.062821s) INSERT INTO `universities` (`university_name`) VALUES ('University of Leicester')
+I, [2022-03-14T00:58:00.878927 #134]  INFO -- : (0.064494s) INSERT INTO `universities` (`university_name`) VALUES ('Lincoln College')
+I, [2022-03-14T00:58:00.941364 #134]  INFO -- : (0.062289s) INSERT INTO `universities` (`university_name`) VALUES ('University of Lincoln')
+I, [2022-03-14T00:58:01.002783 #134]  INFO -- : (0.061269s) INSERT INTO `universities` (`university_name`) VALUES ('City of Liverpool College University Centre')
+I, [2022-03-14T00:58:01.065193 #134]  INFO -- : (0.062185s) INSERT INTO `universities` (`university_name`) VALUES ('Liverpool Hope University')
+I, [2022-03-14T00:58:01.130791 #134]  INFO -- : (0.065428s) INSERT INTO `universities` (`university_name`) VALUES ('Liverpool Institute for Performing Arts')
+I, [2022-03-14T00:58:01.199637 #134]  INFO -- : (0.068626s) INSERT INTO `universities` (`university_name`) VALUES ('Liverpool John Moores University')
+I, [2022-03-14T00:58:01.262650 #134]  INFO -- : (0.062783s) INSERT INTO `universities` (`university_name`) VALUES ('Liverpool School of Tropical Medicine')
+I, [2022-03-14T00:58:01.329573 #134]  INFO -- : (0.066715s) INSERT INTO `universities` (`university_name`) VALUES ('University of Liverpool')
+I, [2022-03-14T00:58:01.392680 #134]  INFO -- : (0.062868s) INSERT INTO `universities` (`university_name`) VALUES ('LMA')
+I, [2022-03-14T00:58:01.458713 #134]  INFO -- : (0.065756s) INSERT INTO `universities` (`university_name`) VALUES ('London Business School')
+I, [2022-03-14T00:58:01.521531 #134]  INFO -- : (0.062531s) INSERT INTO `universities` (`university_name`) VALUES ('London College')
+I, [2022-03-14T00:58:01.583252 #134]  INFO -- : (0.061451s) INSERT INTO `universities` (`university_name`) VALUES ('London College of Contemporary Arts')
+I, [2022-03-14T00:58:01.643105 #134]  INFO -- : (0.059544s) INSERT INTO `universities` (`university_name`) VALUES ('London Film Academy')
+I, [2022-03-14T00:58:01.706771 #134]  INFO -- : (0.063409s) INSERT INTO `universities` (`university_name`) VALUES ('The London Institute of Banking & Finance')
+I, [2022-03-14T00:58:01.771042 #134]  INFO -- : (0.063998s) INSERT INTO `universities` (`university_name`) VALUES ('London Metropolitan University')
+I, [2022-03-14T00:58:01.835131 #134]  INFO -- : (0.063794s) INSERT INTO `universities` (`university_name`) VALUES ('London School of Economics and Political Science')
+I, [2022-03-14T00:58:01.893600 #134]  INFO -- : (0.058181s) INSERT INTO `universities` (`university_name`) VALUES ('London School of Hygiene & Tropical Medicine')
+I, [2022-03-14T00:58:01.952978 #134]  INFO -- : (0.059142s) INSERT INTO `universities` (`university_name`) VALUES ('London School of Management Education')
+I, [2022-03-14T00:58:02.010183 #134]  INFO -- : (0.056914s) INSERT INTO `universities` (`university_name`) VALUES ('London South Bank University')
+I, [2022-03-14T00:58:02.066686 #134]  INFO -- : (0.056228s) INSERT INTO `universities` (`university_name`) VALUES ('London South East Colleges')
+I, [2022-03-14T00:58:02.127989 #134]  INFO -- : (0.061035s) INSERT INTO `universities` (`university_name`) VALUES ('Loughborough College')
+I, [2022-03-14T00:58:02.188569 #134]  INFO -- : (0.060305s) INSERT INTO `universities` (`university_name`) VALUES ('Loughborough University')
+I, [2022-03-14T00:58:02.250141 #134]  INFO -- : (0.061310s) INSERT INTO `universities` (`university_name`) VALUES ('Manchester Metropolitan University')
+I, [2022-03-14T00:58:02.311993 #134]  INFO -- : (0.061627s) INSERT INTO `universities` (`university_name`) VALUES ('University of Manchester')
+I, [2022-03-14T00:58:02.373936 #134]  INFO -- : (0.061715s) INSERT INTO `universities` (`university_name`) VALUES ('McTimoney College of Chiropractic')
+I, [2022-03-14T00:58:02.434485 #134]  INFO -- : (0.060304s) INSERT INTO `universities` (`university_name`) VALUES ('Medway School of Pharmacy')
+I, [2022-03-14T00:58:02.495581 #134]  INFO -- : (0.060802s) INSERT INTO `universities` (`university_name`) VALUES ('Met Film School')
+I, [2022-03-14T00:58:02.560364 #134]  INFO -- : (0.064548s) INSERT INTO `universities` (`university_name`) VALUES ('Middlesbrough College')
+I, [2022-03-14T00:58:02.624924 #134]  INFO -- : (0.064312s) INSERT INTO `universities` (`university_name`) VALUES ('Middlesex University')
+I, [2022-03-14T00:58:02.688752 #134]  INFO -- : (0.063567s) INSERT INTO `universities` (`university_name`) VALUES ('Morley College London')
+I, [2022-03-14T00:58:02.749723 #134]  INFO -- : (0.060754s) INSERT INTO `universities` (`university_name`) VALUES ('Moulton College')
+I, [2022-03-14T00:58:02.808259 #134]  INFO -- : (0.058305s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Myerscough')
+I, [2022-03-14T00:58:02.870231 #134]  INFO -- : (0.061746s) INSERT INTO `universities` (`university_name`) VALUES ('National Film and Television School')
+I, [2022-03-14T00:58:02.930856 #134]  INFO -- : (0.060399s) INSERT INTO `universities` (`university_name`) VALUES ('Nazarene Theological College')
+I, [2022-03-14T00:58:02.993941 #134]  INFO -- : (0.062804s) INSERT INTO `universities` (`university_name`) VALUES ('Nelson and Colne College Group')
+I, [2022-03-14T00:58:03.057183 #134]  INFO -- : (0.063022s) INSERT INTO `universities` (`university_name`) VALUES ('NESCOT')
+I, [2022-03-14T00:58:03.120702 #134]  INFO -- : (0.063244s) INSERT INTO `universities` (`university_name`) VALUES ('New College of the Humanities')
+I, [2022-03-14T00:58:03.185248 #134]  INFO -- : (0.064282s) INSERT INTO `universities` (`university_name`) VALUES ('New Model Institute for Technology and Engineering')
+I, [2022-03-14T00:58:03.240967 #134]  INFO -- : (0.055487s) INSERT INTO `universities` (`university_name`) VALUES ('New School of Psychotherapy and Counselling')
+I, [2022-03-14T00:58:03.306808 #134]  INFO -- : (0.065613s) INSERT INTO `universities` (`university_name`) VALUES ('Newbold College')
+I, [2022-03-14T00:58:03.369835 #134]  INFO -- : (0.062755s) INSERT INTO `universities` (`university_name`) VALUES ('Newcastle College University Centre')
+I, [2022-03-14T00:58:03.433117 #134]  INFO -- : (0.063054s) INSERT INTO `universities` (`university_name`) VALUES ('Newcastle University')
+I, [2022-03-14T00:58:03.494662 #134]  INFO -- : (0.061271s) INSERT INTO `universities` (`university_name`) VALUES ('Newman University Birmingham')
+I, [2022-03-14T00:58:03.553298 #134]  INFO -- : (0.058378s) INSERT INTO `universities` (`university_name`) VALUES ('Norland')
+I, [2022-03-14T00:58:03.612739 #134]  INFO -- : (0.059175s) INSERT INTO `universities` (`university_name`) VALUES ('North Hertfordshire College')
+I, [2022-03-14T00:58:03.674444 #134]  INFO -- : (0.061480s) INSERT INTO `universities` (`university_name`) VALUES ('North Kent College')
+I, [2022-03-14T00:58:03.734021 #134]  INFO -- : (0.059270s) INSERT INTO `universities` (`university_name`) VALUES ('North Warwickshire and South Leicestershire College')
+I, [2022-03-14T00:58:03.793318 #134]  INFO -- : (0.059030s) INSERT INTO `universities` (`university_name`) VALUES ('University of Northampton')
+I, [2022-03-14T00:58:03.852012 #134]  INFO -- : (0.058460s) INSERT INTO `universities` (`university_name`) VALUES ('Northern College of Acupuncture')
+I, [2022-03-14T00:58:03.914188 #134]  INFO -- : (0.061917s) INSERT INTO `universities` (`university_name`) VALUES ('The Northern School of Art')
+I, [2022-03-14T00:58:03.972269 #134]  INFO -- : (0.057795s) INSERT INTO `universities` (`university_name`) VALUES ('Northern School of Contemporary Dance')
+I, [2022-03-14T00:58:04.036525 #134]  INFO -- : (0.063984s) INSERT INTO `universities` (`university_name`) VALUES ('Northumbria University Newcastle')
+I, [2022-03-14T00:58:04.098793 #134]  INFO -- : (0.062009s) INSERT INTO `universities` (`university_name`) VALUES ('Norwich University of the Arts')
+I, [2022-03-14T00:58:04.160410 #134]  INFO -- : (0.061350s) INSERT INTO `universities` (`university_name`) VALUES ('Nottingham Trent University')
+I, [2022-03-14T00:58:04.221115 #134]  INFO -- : (0.060439s) INSERT INTO `universities` (`university_name`) VALUES ('Nottingham College')
+I, [2022-03-14T00:58:04.281079 #134]  INFO -- : (0.059735s) INSERT INTO `universities` (`university_name`) VALUES ('University of Nottingham')
+I, [2022-03-14T00:58:04.340326 #134]  INFO -- : (0.058943s) INSERT INTO `universities` (`university_name`) VALUES ('NPTC Group')
+I, [2022-03-14T00:58:04.401292 #134]  INFO -- : (0.060719s) INSERT INTO `universities` (`university_name`) VALUES ('Oak Hill Theological College')
+I, [2022-03-14T00:58:04.459036 #134]  INFO -- : (0.057496s) INSERT INTO `universities` (`university_name`) VALUES ('University Campus Oldham')
+I, [2022-03-14T00:58:04.523040 #134]  INFO -- : (0.063771s) INSERT INTO `universities` (`university_name`) VALUES ('Open University')
+I, [2022-03-14T00:58:04.584603 #134]  INFO -- : (0.061313s) INSERT INTO `universities` (`university_name`) VALUES ('Oxford Brookes University')
+I, [2022-03-14T00:58:04.645285 #134]  INFO -- : (0.060461s) INSERT INTO `universities` (`university_name`) VALUES ('University of Oxford')
+I, [2022-03-14T00:58:04.709398 #134]  INFO -- : (0.063895s) INSERT INTO `universities` (`university_name`) VALUES ('Pearson College London')
+I, [2022-03-14T00:58:04.769091 #134]  INFO -- : (0.059472s) INSERT INTO `universities` (`university_name`) VALUES ('Pembrokeshire College')
+I, [2022-03-14T00:58:04.831685 #134]  INFO -- : (0.062372s) INSERT INTO `universities` (`university_name`) VALUES ('Peter Symonds'' College')
+I, [2022-03-14T00:58:04.893603 #134]  INFO -- : (0.061689s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Peterborough')
+I, [2022-03-14T00:58:04.960782 #134]  INFO -- : (0.066924s) INSERT INTO `universities` (`university_name`) VALUES ('Petroc')
+I, [2022-03-14T00:58:05.021168 #134]  INFO -- : (0.060165s) INSERT INTO `universities` (`university_name`) VALUES ('Plumpton College')
+I, [2022-03-14T00:58:05.082367 #134]  INFO -- : (0.060969s) INSERT INTO `universities` (`university_name`) VALUES ('Plymouth College of Art')
+I, [2022-03-14T00:58:05.139725 #134]  INFO -- : (0.057137s) INSERT INTO `universities` (`university_name`) VALUES ('Plymouth Marjon University')
+I, [2022-03-14T00:58:05.202525 #134]  INFO -- : (0.062542s) INSERT INTO `universities` (`university_name`) VALUES ('University of Plymouth')
+I, [2022-03-14T00:58:05.264396 #134]  INFO -- : (0.061597s) INSERT INTO `universities` (`university_name`) VALUES ('City College Plymouth')
+I, [2022-03-14T00:58:05.329564 #134]  INFO -- : (0.064840s) INSERT INTO `universities` (`university_name`) VALUES ('Point Blank Music School')
+I, [2022-03-14T00:58:05.391633 #134]  INFO -- : (0.061832s) INSERT INTO `universities` (`university_name`) VALUES ('University of Portsmouth')
+I, [2022-03-14T00:58:05.453886 #134]  INFO -- : (0.062014s) INSERT INTO `universities` (`university_name`) VALUES ('Queen Margaret University Edinburgh')
+I, [2022-03-14T00:58:05.515439 #134]  INFO -- : (0.061330s) INSERT INTO `universities` (`university_name`) VALUES ('Queen Mary University of London')
+I, [2022-03-14T00:58:05.577150 #134]  INFO -- : (0.061447s) INSERT INTO `universities` (`university_name`) VALUES ('Queen''s University Belfast')
+I, [2022-03-14T00:58:05.637394 #134]  INFO -- : (0.060023s) INSERT INTO `universities` (`university_name`) VALUES ('Ravensbourne University London')
+I, [2022-03-14T00:58:05.696616 #134]  INFO -- : (0.058986s) INSERT INTO `universities` (`university_name`) VALUES ('University of Reading')
+I, [2022-03-14T00:58:05.761890 #134]  INFO -- : (0.065040s) INSERT INTO `universities` (`university_name`) VALUES ('Real Training')
+I, [2022-03-14T00:58:05.822693 #134]  INFO -- : (0.060578s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Reaseheath')
+I, [2022-03-14T00:58:05.889128 #134]  INFO -- : (0.066198s) INSERT INTO `universities` (`university_name`) VALUES ('Refugee Law Initiative')
+I, [2022-03-14T00:58:05.946553 #134]  INFO -- : (0.057180s) INSERT INTO `universities` (`university_name`) VALUES ('Regent''s University London')
+I, [2022-03-14T00:58:06.009580 #134]  INFO -- : (0.062736s) INSERT INTO `universities` (`university_name`) VALUES ('Regents Theological College')
+I, [2022-03-14T00:58:06.078900 #134]  INFO -- : (0.069065s) INSERT INTO `universities` (`university_name`) VALUES ('Richmond The American International University in London')
+I, [2022-03-14T00:58:06.150002 #134]  INFO -- : (0.070839s) INSERT INTO `universities` (`university_name`) VALUES ('Robert Gordon University')
+I, [2022-03-14T00:58:06.212687 #134]  INFO -- : (0.062440s) INSERT INTO `universities` (`university_name`) VALUES ('University of Roehampton')
+I, [2022-03-14T00:58:06.274449 #134]  INFO -- : (0.061502s) INSERT INTO `universities` (`university_name`) VALUES ('Rose Bruford College')
+I, [2022-03-14T00:58:06.334871 #134]  INFO -- : (0.060162s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Academy of Dance')
+I, [2022-03-14T00:58:06.398646 #134]  INFO -- : (0.063500s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Academy of Dramatic Art')
+I, [2022-03-14T00:58:06.464110 #134]  INFO -- : (0.065238s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Academy of Music')
+I, [2022-03-14T00:58:06.524729 #134]  INFO -- : (0.060389s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Agricultural University')
+I, [2022-03-14T00:58:06.588036 #134]  INFO -- : (0.063016s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Birmingham Conservatoire')
+I, [2022-03-14T00:58:06.646699 #134]  INFO -- : (0.058401s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Central School of Speech and Drama')
+I, [2022-03-14T00:58:06.706563 #134]  INFO -- : (0.059610s) INSERT INTO `universities` (`university_name`) VALUES ('Royal College of Art')
+I, [2022-03-14T00:58:06.769824 #134]  INFO -- : (0.062968s) INSERT INTO `universities` (`university_name`) VALUES ('Royal College of Music')
+I, [2022-03-14T00:58:06.829079 #134]  INFO -- : (0.059028s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Conservatoire of Scotland')
+I, [2022-03-14T00:58:06.891448 #134]  INFO -- : (0.062150s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Holloway')
+I, [2022-03-14T00:58:06.953050 #134]  INFO -- : (0.061363s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Northern College of Music')
+I, [2022-03-14T00:58:07.012398 #134]  INFO -- : (0.059109s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Veterinary College')
+I, [2022-03-14T00:58:07.077919 #134]  INFO -- : (0.065281s) INSERT INTO `universities` (`university_name`) VALUES ('Royal Welsh College of Music and Drama')
+I, [2022-03-14T00:58:07.138851 #134]  INFO -- : (0.060710s) INSERT INTO `universities` (`university_name`) VALUES ('SAE Institute')
+I, [2022-03-14T00:58:07.205079 #134]  INFO -- : (0.065996s) INSERT INTO `universities` (`university_name`) VALUES ('University of St Andrews')
+I, [2022-03-14T00:58:07.271068 #134]  INFO -- : (0.065759s) INSERT INTO `universities` (`university_name`) VALUES ('St George''s')
+I, [2022-03-14T00:58:07.334050 #134]  INFO -- : (0.062751s) INSERT INTO `universities` (`university_name`) VALUES ('St Mary''s University College Belfast')
+I, [2022-03-14T00:58:07.399550 #134]  INFO -- : (0.065254s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre at Salford City College')
+I, [2022-03-14T00:58:07.460288 #134]  INFO -- : (0.060501s) INSERT INTO `universities` (`university_name`) VALUES ('University of Salford')
+I, [2022-03-14T00:58:07.516053 #134]  INFO -- : (0.055487s) INSERT INTO `universities` (`university_name`) VALUES ('Scarborough TEC')
+I, [2022-03-14T00:58:07.574887 #134]  INFO -- : (0.058593s) INSERT INTO `universities` (`university_name`) VALUES ('School Centred Initial Teacher Training in East London Schools')
+I, [2022-03-14T00:58:07.642915 #134]  INFO -- : (0.067790s) INSERT INTO `universities` (`university_name`) VALUES ('Selby College')
+I, [2022-03-14T00:58:07.712944 #134]  INFO -- : (0.069707s) INSERT INTO `universities` (`university_name`) VALUES ('South Gloucestershire and Stroud College')
+I, [2022-03-14T00:58:07.770433 #134]  INFO -- : (0.057264s) INSERT INTO `universities` (`university_name`) VALUES ('Sheffield College')
+I, [2022-03-14T00:58:07.831631 #134]  INFO -- : (0.060928s) INSERT INTO `universities` (`university_name`) VALUES ('Sheffield Hallam University')
+I, [2022-03-14T00:58:07.890857 #134]  INFO -- : (0.058984s) INSERT INTO `universities` (`university_name`) VALUES ('University of Sheffield')
+I, [2022-03-14T00:58:07.948716 #134]  INFO -- : (0.057638s) INSERT INTO `universities` (`university_name`) VALUES ('Shrewsbury Colleges Group')
+I, [2022-03-14T00:58:08.015110 #134]  INFO -- : (0.066160s) INSERT INTO `universities` (`university_name`) VALUES ('Coleg Sir Gar')
+I, [2022-03-14T00:58:08.074442 #134]  INFO -- : (0.059041s) INSERT INTO `universities` (`university_name`) VALUES ('SMB College Group')
+I, [2022-03-14T00:58:08.139880 #134]  INFO -- : (0.065158s) INSERT INTO `universities` (`university_name`) VALUES ('SOAS University of London')
+I, [2022-03-14T00:58:08.207138 #134]  INFO -- : (0.066986s) INSERT INTO `universities` (`university_name`) VALUES ('Solihull College & University Centre')
+I, [2022-03-14T00:58:08.268589 #134]  INFO -- : (0.061220s) INSERT INTO `universities` (`university_name`) VALUES ('Sotheby''s Institute of Art')
+I, [2022-03-14T00:58:08.332348 #134]  INFO -- : (0.063530s) INSERT INTO `universities` (`university_name`) VALUES ('South and City College Birmingham')
+I, [2022-03-14T00:58:08.395080 #134]  INFO -- : (0.062456s) INSERT INTO `universities` (`university_name`) VALUES ('South Thames College Group')
+I, [2022-03-14T00:58:08.456791 #134]  INFO -- : (0.061439s) INSERT INTO `universities` (`university_name`) VALUES ('University of South Wales')
+I, [2022-03-14T00:58:08.514794 #134]  INFO -- : (0.057719s) INSERT INTO `universities` (`university_name`) VALUES ('Solent University')
+I, [2022-03-14T00:58:08.575553 #134]  INFO -- : (0.060510s) INSERT INTO `universities` (`university_name`) VALUES ('University of Southampton')
+I, [2022-03-14T00:58:08.643517 #134]  INFO -- : (0.067694s) INSERT INTO `universities` (`university_name`) VALUES ('Southport College')
+I, [2022-03-14T00:58:08.708453 #134]  INFO -- : (0.064626s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Sparsholt')
+I, [2022-03-14T00:58:08.774933 #134]  INFO -- : (0.066195s) INSERT INTO `universities` (`university_name`) VALUES ('Spurgeon''s College')
+I, [2022-03-14T00:58:08.838859 #134]  INFO -- : (0.063656s) INSERT INTO `universities` (`university_name`) VALUES ('SRUC Scotland''s Rural College')
+I, [2022-03-14T00:58:08.901626 #134]  INFO -- : (0.062496s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre St Helens')
+I, [2022-03-14T00:58:08.959229 #134]  INFO -- : (0.057374s) INSERT INTO `universities` (`university_name`) VALUES ('St Mary''s University Twickenham')
+I, [2022-03-14T00:58:09.017232 #134]  INFO -- : (0.057780s) INSERT INTO `universities` (`university_name`) VALUES ('Staffordshire University')
+I, [2022-03-14T00:58:09.082504 #134]  INFO -- : (0.065012s) INSERT INTO `universities` (`university_name`) VALUES ('University of Stirling')
+I, [2022-03-14T00:58:09.149786 #134]  INFO -- : (0.067028s) INSERT INTO `universities` (`university_name`) VALUES ('Stranmillis University College')
+I, [2022-03-14T00:58:09.214269 #134]  INFO -- : (0.064245s) INSERT INTO `universities` (`university_name`) VALUES ('University of Strathclyde')
+I, [2022-03-14T00:58:09.278147 #134]  INFO -- : (0.063634s) INSERT INTO `universities` (`university_name`) VALUES ('University of Suffolk')
+I, [2022-03-14T00:58:09.337799 #134]  INFO -- : (0.059301s) INSERT INTO `universities` (`university_name`) VALUES ('City of Sunderland College')
+I, [2022-03-14T00:58:09.399293 #134]  INFO -- : (0.061274s) INSERT INTO `universities` (`university_name`) VALUES ('University of Sunderland')
+I, [2022-03-14T00:58:09.464340 #134]  INFO -- : (0.064829s) INSERT INTO `universities` (`university_name`) VALUES ('University of Surrey')
+I, [2022-03-14T00:58:09.530837 #134]  INFO -- : (0.066229s) INSERT INTO `universities` (`university_name`) VALUES ('University of Sussex')
+I, [2022-03-14T00:58:09.593412 #134]  INFO -- : (0.062321s) INSERT INTO `universities` (`university_name`) VALUES ('Swansea University')
+I, [2022-03-14T00:58:09.658691 #134]  INFO -- : (0.065030s) INSERT INTO `universities` (`university_name`) VALUES ('New College Swindon')
+I, [2022-03-14T00:58:09.718537 #134]  INFO -- : (0.059603s) INSERT INTO `universities` (`university_name`) VALUES ('Tameside College')
+I, [2022-03-14T00:58:09.777300 #134]  INFO -- : (0.058512s) INSERT INTO `universities` (`university_name`) VALUES ('The Engineering & Design Institute London')
+I, [2022-03-14T00:58:09.837209 #134]  INFO -- : (0.059694s) INSERT INTO `universities` (`university_name`) VALUES ('Teesside University Middlesbrough')
+I, [2022-03-14T00:58:09.898750 #134]  INFO -- : (0.061310s) INSERT INTO `universities` (`university_name`) VALUES ('ThinkSpace Education')
+I, [2022-03-14T00:58:09.958455 #134]  INFO -- : (0.059465s) INSERT INTO `universities` (`university_name`) VALUES ('Trafford College Group')
+I, [2022-03-14T00:58:10.018446 #134]  INFO -- : (0.059749s) INSERT INTO `universities` (`university_name`) VALUES ('Trinity Laban Conservatoire of Music and Dance')
+I, [2022-03-14T00:58:10.080714 #134]  INFO -- : (0.061994s) INSERT INTO `universities` (`university_name`) VALUES ('Truro and Penwith College')
+I, [2022-03-14T00:58:10.147503 #134]  INFO -- : (0.066555s) INSERT INTO `universities` (`university_name`) VALUES ('Two Mile Ash School Centred Initial Teacher Training')
+I, [2022-03-14T00:58:10.211905 #134]  INFO -- : (0.064162s) INSERT INTO `universities` (`university_name`) VALUES ('Tyne Coast College')
+I, [2022-03-14T00:58:10.273596 #134]  INFO -- : (0.061467s) INSERT INTO `universities` (`university_name`) VALUES ('UCEN Manchester')
+I, [2022-03-14T00:58:10.337647 #134]  INFO -- : (0.063766s) INSERT INTO `universities` (`university_name`) VALUES ('UCFB')
+I, [2022-03-14T00:58:10.404619 #134]  INFO -- : (0.066702s) INSERT INTO `universities` (`university_name`) VALUES ('University College London')
+I, [2022-03-14T00:58:11.620641 #134]  INFO -- : (1.215758s) INSERT INTO `universities` (`university_name`) VALUES ('Ulster University')
+I, [2022-03-14T00:58:11.693740 #134]  INFO -- : (0.072852s) INSERT INTO `universities` (`university_name`) VALUES ('University Academy 92')
+I, [2022-03-14T00:58:11.762380 #134]  INFO -- : (0.068369s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Calderdale College')
+I, [2022-03-14T00:58:11.841890 #134]  INFO -- : (0.079279s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Grimsby')
+I, [2022-03-14T00:58:11.907819 #134]  INFO -- : (0.065711s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Rotherham')
+I, [2022-03-14T00:58:11.970828 #134]  INFO -- : (0.062778s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre South Devon')
+I, [2022-03-14T00:58:12.032780 #134]  INFO -- : (0.061690s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre South Essex')
+I, [2022-03-14T00:58:12.095364 #134]  INFO -- : (0.062361s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre at Wakefield College')
+I, [2022-03-14T00:58:12.159358 #134]  INFO -- : (0.063751s) INSERT INTO `universities` (`university_name`) VALUES ('University College of Estate Management')
+I, [2022-03-14T00:58:12.225081 #134]  INFO -- : (0.065485s) INSERT INTO `universities` (`university_name`) VALUES ('University College of Osteopathy')
+I, [2022-03-14T00:58:12.291767 #134]  INFO -- : (0.063861s) INSERT INTO `universities` (`university_name`) VALUES ('University of London Institute in Paris')
+I, [2022-03-14T00:58:12.358929 #134]  INFO -- : (0.066934s) INSERT INTO `universities` (`university_name`) VALUES ('University of the Arts London')
+I, [2022-03-14T00:58:12.419486 #134]  INFO -- : (0.060307s) INSERT INTO `universities` (`university_name`) VALUES ('University of Westminster')
+I, [2022-03-14T00:58:12.479760 #134]  INFO -- : (0.060049s) INSERT INTO `universities` (`university_name`) VALUES ('University of Wales Trinity Saint David')
+I, [2022-03-14T00:58:12.541262 #134]  INFO -- : (0.061254s) INSERT INTO `universities` (`university_name`) VALUES ('Walsall College')
+I, [2022-03-14T00:58:12.603289 #134]  INFO -- : (0.061815s) INSERT INTO `universities` (`university_name`) VALUES ('University of Warwick')
+I, [2022-03-14T00:58:12.664303 #134]  INFO -- : (0.060788s) INSERT INTO `universities` (`university_name`) VALUES ('Warwickshire College and University Centre')
+I, [2022-03-14T00:58:12.722530 #134]  INFO -- : (0.057999s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre West Anglia')
+I, [2022-03-14T00:58:12.781949 #134]  INFO -- : (0.059140s) INSERT INTO `universities` (`university_name`) VALUES ('West Dean College of Arts and Conservation')
+I, [2022-03-14T00:58:12.845524 #134]  INFO -- : (0.063353s) INSERT INTO `universities` (`university_name`) VALUES ('West Herts College')
+I, [2022-03-14T00:58:12.910411 #134]  INFO -- : (0.064596s) INSERT INTO `universities` (`university_name`) VALUES ('University of West London')
+I, [2022-03-14T00:58:12.987129 #134]  INFO -- : (0.076426s) INSERT INTO `universities` (`university_name`) VALUES ('University of the West of Scotland')
+I, [2022-03-14T00:58:13.051373 #134]  INFO -- : (0.064027s) INSERT INTO `universities` (`university_name`) VALUES ('West Suffolk College')
+I, [2022-03-14T00:58:13.115370 #134]  INFO -- : (0.063780s) INSERT INTO `universities` (`university_name`) VALUES ('West Thames College')
+I, [2022-03-14T00:58:13.178457 #134]  INFO -- : (0.062865s) INSERT INTO `universities` (`university_name`) VALUES ('Capital City College Group')
+I, [2022-03-14T00:58:13.241263 #134]  INFO -- : (0.062550s) INSERT INTO `universities` (`university_name`) VALUES ('United Colleges Group')
+I, [2022-03-14T00:58:13.304394 #134]  INFO -- : (0.062916s) INSERT INTO `universities` (`university_name`) VALUES ('University Centre Weston')
+I, [2022-03-14T00:58:13.370135 #134]  INFO -- : (0.065480s) INSERT INTO `universities` (`university_name`) VALUES ('Weymouth College')
+I, [2022-03-14T00:58:13.428391 #134]  INFO -- : (0.058005s) INSERT INTO `universities` (`university_name`) VALUES ('Wigan and Leigh College')
+I, [2022-03-14T00:58:13.490910 #134]  INFO -- : (0.062279s) INSERT INTO `universities` (`university_name`) VALUES ('Wiltshire College and University Centre')
+I, [2022-03-14T00:58:13.551645 #134]  INFO -- : (0.060465s) INSERT INTO `universities` (`university_name`) VALUES ('University of Winchester')
+I, [2022-03-14T00:58:13.613221 #134]  INFO -- : (0.061353s) INSERT INTO `universities` (`university_name`) VALUES ('Wirral Metropolitan College')
+I, [2022-03-14T00:58:13.679626 #134]  INFO -- : (0.066173s) INSERT INTO `universities` (`university_name`) VALUES ('University of Wolverhampton')
+I, [2022-03-14T00:58:13.749098 #134]  INFO -- : (0.069244s) INSERT INTO `universities` (`university_name`) VALUES ('University of Worcester')
+I, [2022-03-14T00:58:13.815270 #134]  INFO -- : (0.065925s) INSERT INTO `universities` (`university_name`) VALUES ('Writtle University College')
+I, [2022-03-14T00:58:13.880313 #134]  INFO -- : (0.064770s) INSERT INTO `universities` (`university_name`) VALUES ('Yeovil College University Centre')
+I, [2022-03-14T00:58:13.944292 #134]  INFO -- : (0.063735s) INSERT INTO `universities` (`university_name`) VALUES ('York College University Centre')
+I, [2022-03-14T00:58:14.008853 #134]  INFO -- : (0.064324s) INSERT INTO `universities` (`university_name`) VALUES ('York St John University')
+I, [2022-03-14T00:58:14.074231 #134]  INFO -- : (0.065128s) INSERT INTO `universities` (`university_name`) VALUES ('University of York')
+E, [2022-03-14T00:58:14.074701 #134] ERROR -- : SQLite3::SQLException: no such table: users: SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T00:58:14.139055 #134]  INFO -- : (0.063962s) CREATE TABLE `users` (`userID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `username` varchar(255), `password` varchar(255), `email` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `is_suspended` integer, `account_type` integer, `universityID` integer REFERENCES `universities`)
+I, [2022-03-14T00:58:14.204783 #134]  INFO -- : (0.065447s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('admin', 'admin', 'admin@admin.com', 'Admin', 'Admin', 0, 3, 304)
+I, [2022-03-14T00:58:14.269655 #134]  INFO -- : (0.064573s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('reporter1', 'reporter1', 'reporter1@reporter.com', 'Reporter', 'Reporter', 0, 0, 304)
+I, [2022-03-14T00:58:14.337761 #134]  INFO -- : (0.067850s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('reporter2', 'reporter2', 'reporter2@reporter.com', 'Reporter', 'Reporter', 0, 0, 304)
+I, [2022-03-14T00:58:14.402463 #134]  INFO -- : (0.064445s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('moderator', 'moderator', 'moderator@moderator.com', 'Moderator', 'Moderator', 0, 2, 304)
+I, [2022-03-14T00:58:14.471004 #134]  INFO -- : (0.068208s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('viewer1', 'viewer1', 'viewer1@viewer.com', 'Viewer', 'Viewer', 0, 1, 304)
+I, [2022-03-14T00:58:14.535429 #134]  INFO -- : (0.064147s) INSERT INTO `users` (`username`, `password`, `email`, `first_name`, `last_name`, `is_suspended`, `account_type`, `universityID`) VALUES ('viewer2', 'viewer2', 'viewer2@viewer.com', 'Viewer', 'Viewer', 0, 1, 304)
+E, [2022-03-14T00:58:14.535857 #134] ERROR -- : SQLite3::SQLException: no such table: posts: SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T00:58:14.601737 #134]  INFO -- : (0.065426s) CREATE TABLE `posts` (`postID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `userID` integer REFERENCES `users`, `title` varchar(255), `message` varchar(255), `date_posted` varchar(255), `is_moderated` integer, `is_image` integer, `image_link` varchar(255), `universityID` integer REFERENCES `universities`)
+E, [2022-03-14T00:58:14.602076 #134] ERROR -- : SQLite3::SQLException: no such table: post_tags: SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T00:58:14.667948 #134]  INFO -- : (0.065594s) CREATE TABLE `post_tags` (`postID` integer NOT NULL REFERENCES `posts`, `tagID` integer NOT NULL REFERENCES `tags`, PRIMARY KEY (`postID`, `tagID`))
+E, [2022-03-14T00:58:14.668282 #134] ERROR -- : SQLite3::SQLException: no such table: deleted_users: SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T00:58:14.731833 #134]  INFO -- : (0.063288s) CREATE TABLE `deleted_users` (`deleteID_user` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `userID` integer REFERENCES `users`, `date_deleted` varchar(255))
+E, [2022-03-14T00:58:14.732153 #134] ERROR -- : SQLite3::SQLException: no such table: deleted_posts: SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T00:58:14.797140 #134]  INFO -- : (0.064736s) CREATE TABLE `deleted_posts` (`deleteID_post` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `userID` integer REFERENCES `users`, `date_deleted` varchar(255))
+E, [2022-03-14T00:58:14.797452 #134] ERROR -- : SQLite3::SQLException: no such table: reported_posts: SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T00:58:14.858764 #134]  INFO -- : (0.061018s) CREATE TABLE `reported_posts` (`reported_postID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `postID` integer REFERENCES `posts`, `report_reasonID` integer REFERENCES `report_reasons`, `report_count` integer)
+E, [2022-03-14T00:58:14.859138 #134] ERROR -- : SQLite3::SQLException: no such table: report_reasons: SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T00:58:14.918852 #134]  INFO -- : (0.059403s) CREATE TABLE `report_reasons` (`report_reasonID` integer NOT NULL PRIMARY KEY AUTOINCREMENT, `report_name` varchar(255))
+I, [2022-03-14T00:58:14.919839 #134]  INFO -- : (0.000172s) PRAGMA table_info('posts')
+I, [2022-03-14T00:58:14.920779 #134]  INFO -- : (0.000086s) PRAGMA table_info('post_tags')
+I, [2022-03-14T00:58:14.921511 #134]  INFO -- : (0.000105s) PRAGMA table_info('tags')
+I, [2022-03-14T00:58:14.922379 #134]  INFO -- : (0.000171s) PRAGMA table_info('users')
+I, [2022-03-14T00:58:26.962002 #134]  INFO -- : (0.000185s) SELECT * FROM `posts`
+I, [2022-03-14T11:41:11.959546 #261]  INFO -- : (0.000229s) PRAGMA foreign_keys = 1
+I, [2022-03-14T11:41:11.967955 #261]  INFO -- : (0.000041s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T11:41:11.968219 #261]  INFO -- : (0.000077s) SELECT sqlite_version()
+I, [2022-03-14T11:41:11.968569 #261]  INFO -- : (0.000161s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T11:41:11.972458 #261]  INFO -- : (0.003733s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T11:41:11.982786 #261]  INFO -- : (0.010178s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T11:41:11.985326 #261]  INFO -- : (0.002344s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T11:41:11.985625 #261]  INFO -- : (0.000078s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T11:41:11.988136 #261]  INFO -- : (0.002382s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T11:41:11.988356 #261]  INFO -- : (0.000064s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T11:41:11.988499 #261]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T11:41:11.988659 #261]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T11:41:11.989489 #261]  INFO -- : (0.000145s) PRAGMA table_info('posts')
+I, [2022-03-14T11:41:11.990370 #261]  INFO -- : (0.000078s) PRAGMA table_info('post_tags')
+I, [2022-03-14T11:41:11.990959 #261]  INFO -- : (0.000094s) PRAGMA table_info('tags')
+I, [2022-03-14T11:41:11.991572 #261]  INFO -- : (0.000130s) PRAGMA table_info('users')
+I, [2022-03-14T11:41:18.449471 #261]  INFO -- : (0.000148s) SELECT * FROM `posts`
+I, [2022-03-14T12:02:05.498767 #261]  INFO -- : (0.000059s) BEGIN
+I, [2022-03-14T12:02:05.499306 #261]  INFO -- : (0.000289s) INSERT INTO `posts` (`userID`, `title`, `message`, `date_posted`, `is_moderated`, `image_link`, `is_image`, `universityID`) VALUES (1, 'this is the title of my post', 'this is the content of my post', '2022-03-14 12:02:05', 1, '', 0, 1)
+I, [2022-03-14T12:02:05.499568 #261]  INFO -- : (0.000115s) SELECT * FROM `posts` WHERE `postID` = 1
+I, [2022-03-14T12:02:05.561672 #261]  INFO -- : (0.062012s) COMMIT
+I, [2022-03-14T12:02:05.562065 #261]  INFO -- : (0.000152s) SELECT * FROM `tags`
+I, [2022-03-14T12:02:05.562300 #261]  INFO -- : (0.000021s) BEGIN
+I, [2022-03-14T12:02:05.562685 #261]  INFO -- : (0.000220s) INSERT INTO `tags` (`tag_name`) VALUES ('TAG')
+I, [2022-03-14T12:02:05.562884 #261]  INFO -- : (0.000071s) SELECT * FROM `tags` WHERE `tagID` = 1
+I, [2022-03-14T12:02:05.626397 #261]  INFO -- : (0.063418s) COMMIT
+I, [2022-03-14T12:02:05.627164 #261]  INFO -- : (0.000211s) SELECT * FROM `tags` WHERE ((`tag_name` = 'TAG') AND `tagID`) LIMIT 1
+I, [2022-03-14T12:02:05.627400 #261]  INFO -- : (0.000023s) BEGIN
+I, [2022-03-14T12:02:05.627813 #261]  INFO -- : (0.000234s) INSERT INTO `post_tags` (`postID`, `tagID`) VALUES (1, 1)
+I, [2022-03-14T12:02:05.628158 #261]  INFO -- : (0.000087s) SELECT * FROM `post_tags` WHERE ((`postID` = 1) AND (`tagID` = 1)) LIMIT 1
+I, [2022-03-14T12:02:05.692125 #261]  INFO -- : (0.063845s) COMMIT
+I, [2022-03-14T12:02:05.908652 #261]  INFO -- : (0.000184s) SELECT * FROM `posts`
+I, [2022-03-14T12:02:05.910141 #261]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:02:05.910351 #261]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:02:27.414119 #261]  INFO -- : (0.000038s) BEGIN
+I, [2022-03-14T12:02:27.416982 #261]  INFO -- : (0.000400s) INSERT INTO `posts` (`userID`, `title`, `message`, `date_posted`, `is_moderated`, `image_link`, `is_image`, `universityID`) VALUES (1, 'this is another post', 'conent of my post!', '2022-03-14 12:02:27', 1, '', 0, 1)
+I, [2022-03-14T12:02:27.417219 #261]  INFO -- : (0.000107s) SELECT * FROM `posts` WHERE `postID` = 2
+I, [2022-03-14T12:02:27.483063 #261]  INFO -- : (0.065740s) COMMIT
+I, [2022-03-14T12:02:27.483533 #261]  INFO -- : (0.000238s) SELECT * FROM `tags`
+I, [2022-03-14T12:02:27.483763 #261]  INFO -- : (0.000024s) BEGIN
+I, [2022-03-14T12:02:27.484228 #261]  INFO -- : (0.000266s) INSERT INTO `tags` (`tag_name`) VALUES ('TAGGGGG')
+I, [2022-03-14T12:02:27.484495 #261]  INFO -- : (0.000095s) SELECT * FROM `tags` WHERE `tagID` = 2
+I, [2022-03-14T12:02:27.547775 #261]  INFO -- : (0.063182s) COMMIT
+I, [2022-03-14T12:02:27.548222 #261]  INFO -- : (0.000147s) SELECT * FROM `tags` WHERE ((`tag_name` = 'TAGGGGG') AND `tagID`) LIMIT 1
+I, [2022-03-14T12:02:27.548393 #261]  INFO -- : (0.000018s) BEGIN
+I, [2022-03-14T12:02:27.548713 #261]  INFO -- : (0.000193s) INSERT INTO `post_tags` (`postID`, `tagID`) VALUES (2, 2)
+I, [2022-03-14T12:02:27.548944 #261]  INFO -- : (0.000063s) SELECT * FROM `post_tags` WHERE ((`postID` = 2) AND (`tagID` = 2)) LIMIT 1
+I, [2022-03-14T12:02:27.609437 #261]  INFO -- : (0.060389s) COMMIT
+I, [2022-03-14T12:02:27.805038 #261]  INFO -- : (0.000304s) SELECT * FROM `posts`
+I, [2022-03-14T12:02:27.807721 #261]  INFO -- : (0.000250s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:02:27.808081 #261]  INFO -- : (0.000108s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:02:27.808384 #261]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:02:27.808599 #261]  INFO -- : (0.000086s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:21:11.016724 #295]  INFO -- : (0.000202s) PRAGMA foreign_keys = 1
+I, [2022-03-14T12:21:11.016822 #295]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T12:21:11.016987 #295]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2022-03-14T12:21:11.017178 #295]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T12:21:11.017385 #295]  INFO -- : (0.000057s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T12:21:11.017536 #295]  INFO -- : (0.000055s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T12:21:11.017670 #295]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T12:21:11.017801 #295]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T12:21:11.017943 #295]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T12:21:11.018068 #295]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T12:21:11.018185 #295]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T12:21:11.018304 #295]  INFO -- : (0.000037s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T12:21:11.018972 #295]  INFO -- : (0.000135s) PRAGMA table_info('posts')
+I, [2022-03-14T12:21:11.019767 #295]  INFO -- : (0.000073s) PRAGMA table_info('post_tags')
+I, [2022-03-14T12:21:11.020278 #295]  INFO -- : (0.000071s) PRAGMA table_info('tags')
+I, [2022-03-14T12:21:11.020876 #295]  INFO -- : (0.000111s) PRAGMA table_info('users')
+I, [2022-03-14T12:21:13.256346 #295]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T12:21:13.265924 #295]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:21:13.266181 #295]  INFO -- : (0.000079s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:21:13.266388 #295]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:21:13.266549 #295]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:21:34.999101 #295]  INFO -- : (0.000180s) SELECT * FROM `posts`
+I, [2022-03-14T12:21:35.000637 #295]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:21:35.000850 #295]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:21:35.001034 #295]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:21:35.001169 #295]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:23:00.667297 #309]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2022-03-14T12:23:00.667391 #309]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T12:23:00.667582 #309]  INFO -- : (0.000053s) SELECT sqlite_version()
+I, [2022-03-14T12:23:00.667800 #309]  INFO -- : (0.000066s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T12:23:00.667990 #309]  INFO -- : (0.000061s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T12:23:00.668152 #309]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T12:23:00.668306 #309]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T12:23:00.668478 #309]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T12:23:00.668628 #309]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T12:23:00.668772 #309]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T12:23:00.668917 #309]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T12:23:00.669080 #309]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T12:23:00.669740 #309]  INFO -- : (0.000121s) PRAGMA table_info('posts')
+I, [2022-03-14T12:23:00.670549 #309]  INFO -- : (0.000077s) PRAGMA table_info('post_tags')
+I, [2022-03-14T12:23:00.671129 #309]  INFO -- : (0.000095s) PRAGMA table_info('tags')
+I, [2022-03-14T12:23:00.671760 #309]  INFO -- : (0.000150s) PRAGMA table_info('users')
+I, [2022-03-14T12:23:02.838855 #309]  INFO -- : (0.000182s) SELECT * FROM `posts`
+I, [2022-03-14T12:23:02.849900 #309]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:23:02.850178 #309]  INFO -- : (0.000076s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:23:02.850364 #309]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:23:02.850498 #309]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:25:34.954867 #320]  INFO -- : (0.000203s) PRAGMA foreign_keys = 1
+I, [2022-03-14T12:25:34.954961 #320]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T12:25:34.955118 #320]  INFO -- : (0.000048s) SELECT sqlite_version()
+I, [2022-03-14T12:25:34.955319 #320]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T12:25:34.955516 #320]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T12:25:34.955663 #320]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T12:25:34.955794 #320]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T12:25:34.955962 #320]  INFO -- : (0.000066s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T12:25:34.956102 #320]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T12:25:34.956225 #320]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T12:25:34.956348 #320]  INFO -- : (0.000042s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T12:25:34.956468 #320]  INFO -- : (0.000037s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T12:25:34.957092 #320]  INFO -- : (0.000130s) PRAGMA table_info('posts')
+I, [2022-03-14T12:25:34.957855 #320]  INFO -- : (0.000073s) PRAGMA table_info('post_tags')
+I, [2022-03-14T12:25:34.958345 #320]  INFO -- : (0.000071s) PRAGMA table_info('tags')
+I, [2022-03-14T12:25:34.958959 #320]  INFO -- : (0.000124s) PRAGMA table_info('users')
+I, [2022-03-14T12:25:37.279630 #320]  INFO -- : (0.000177s) SELECT * FROM `posts`
+I, [2022-03-14T12:25:37.289387 #320]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:25:37.289666 #320]  INFO -- : (0.000085s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:25:37.289903 #320]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:25:37.290082 #320]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:26:48.044617 #320]  INFO -- : (0.000176s) SELECT * FROM `posts`
+I, [2022-03-14T12:26:48.046264 #320]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:26:48.046452 #320]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:26:48.046660 #320]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:26:48.046808 #320]  INFO -- : (0.000059s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:26:57.452183 #332]  INFO -- : (0.000207s) PRAGMA foreign_keys = 1
+I, [2022-03-14T12:26:57.452285 #332]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T12:26:57.452470 #332]  INFO -- : (0.000057s) SELECT sqlite_version()
+I, [2022-03-14T12:26:57.452708 #332]  INFO -- : (0.000066s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T12:26:57.452870 #332]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T12:26:57.453008 #332]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T12:26:57.453136 #332]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T12:26:57.453293 #332]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T12:26:57.453423 #332]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T12:26:57.453542 #332]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T12:26:57.453697 #332]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T12:26:57.453838 #332]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T12:26:57.454503 #332]  INFO -- : (0.000122s) PRAGMA table_info('posts')
+I, [2022-03-14T12:26:57.455368 #332]  INFO -- : (0.000076s) PRAGMA table_info('post_tags')
+I, [2022-03-14T12:26:57.455939 #332]  INFO -- : (0.000093s) PRAGMA table_info('tags')
+I, [2022-03-14T12:26:57.456542 #332]  INFO -- : (0.000131s) PRAGMA table_info('users')
+I, [2022-03-14T12:26:58.833203 #332]  INFO -- : (0.000182s) SELECT * FROM `posts`
+I, [2022-03-14T12:26:58.843074 #332]  INFO -- : (0.000147s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:26:58.843310 #332]  INFO -- : (0.000071s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:26:58.843496 #332]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:26:58.843640 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:17.241131 #332]  INFO -- : (0.000167s) SELECT * FROM `posts`
+I, [2022-03-14T12:27:17.242581 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:17.242811 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:17.242996 #332]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:17.243132 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:30.735079 #332]  INFO -- : (0.000178s) SELECT * FROM `posts`
+I, [2022-03-14T12:27:30.736669 #332]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:30.736864 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:30.737052 #332]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:30.737245 #332]  INFO -- : (0.000079s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:31.495538 #332]  INFO -- : (0.000237s) SELECT * FROM `posts`
+I, [2022-03-14T12:27:31.497675 #332]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:31.497947 #332]  INFO -- : (0.000092s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:31.498203 #332]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:31.498406 #332]  INFO -- : (0.000080s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:57.295418 #332]  INFO -- : (0.000174s) SELECT * FROM `posts`
+I, [2022-03-14T12:27:57.296931 #332]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:57.297121 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:57.297298 #332]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:57.297432 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:58.859883 #332]  INFO -- : (0.000163s) SELECT * FROM `posts`
+I, [2022-03-14T12:27:58.861377 #332]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:58.861559 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:27:58.861731 #332]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:27:58.861864 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:28:27.140563 #332]  INFO -- : (0.000248s) SELECT * FROM `posts`
+I, [2022-03-14T12:28:27.142869 #332]  INFO -- : (0.000202s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:28:27.143229 #332]  INFO -- : (0.000113s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:28:27.143529 #332]  INFO -- : (0.000136s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:28:27.143756 #332]  INFO -- : (0.000092s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:28:28.439522 #332]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T12:28:28.441612 #332]  INFO -- : (0.000184s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:28:28.441915 #332]  INFO -- : (0.000097s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:28:28.442193 #332]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:28:28.442402 #332]  INFO -- : (0.000084s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:19.939856 #332]  INFO -- : (0.000172s) SELECT * FROM `posts`
+I, [2022-03-14T12:29:19.941319 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:19.941529 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:19.941714 #332]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:19.941847 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:43.165771 #332]  INFO -- : (0.000170s) SELECT * FROM `posts`
+I, [2022-03-14T12:29:43.167289 #332]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:43.167479 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:43.167654 #332]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:43.167787 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:45.283119 #332]  INFO -- : (0.000174s) SELECT * FROM `posts`
+I, [2022-03-14T12:29:45.284559 #332]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:45.284738 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:29:45.285005 #332]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:29:45.285190 #332]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:30:57.551661 #332]  INFO -- : (0.000181s) SELECT * FROM `posts`
+I, [2022-03-14T12:30:57.553091 #332]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:30:57.553269 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:30:57.553444 #332]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:30:57.553577 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:30:58.849553 #332]  INFO -- : (0.000172s) SELECT * FROM `posts`
+I, [2022-03-14T12:30:58.851039 #332]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:30:58.851217 #332]  INFO -- : (0.000061s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:30:58.853215 #332]  INFO -- : (0.000289s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:30:58.853387 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:00.070863 #332]  INFO -- : (0.000187s) SELECT * FROM `posts`
+I, [2022-03-14T12:31:00.072320 #332]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:00.072503 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:00.072684 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:00.072847 #332]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:07.638512 #332]  INFO -- : (0.000178s) SELECT * FROM `posts`
+I, [2022-03-14T12:31:07.640093 #332]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:07.640324 #332]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:07.640512 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:07.640647 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:08.808446 #332]  INFO -- : (0.000172s) SELECT * FROM `posts`
+I, [2022-03-14T12:31:08.809890 #332]  INFO -- : (0.000135s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:08.810088 #332]  INFO -- : (0.000066s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:08.810267 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:08.810402 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:55.571461 #332]  INFO -- : (0.000183s) SELECT * FROM `posts`
+I, [2022-03-14T12:31:55.572912 #332]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:55.573100 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:55.573280 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:55.573415 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:57.613527 #332]  INFO -- : (0.000186s) SELECT * FROM `posts`
+I, [2022-03-14T12:31:57.614948 #332]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:57.615127 #332]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:31:57.615302 #332]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:31:57.615433 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:32:54.628981 #332]  INFO -- : (0.000180s) SELECT * FROM `posts`
+I, [2022-03-14T12:32:54.630682 #332]  INFO -- : (0.000184s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:32:54.630922 #332]  INFO -- : (0.000075s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:32:54.631113 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:32:54.631247 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:06.491157 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T12:33:06.494416 #332]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:06.494665 #332]  INFO -- : (0.000099s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:06.494865 #332]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:06.495007 #332]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:24.977598 #332]  INFO -- : (0.000177s) SELECT * FROM `posts`
+I, [2022-03-14T12:33:24.979152 #332]  INFO -- : (0.000135s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:24.979337 #332]  INFO -- : (0.000066s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:24.979524 #332]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:24.979664 #332]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:31.663304 #332]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T12:33:31.664806 #332]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:31.665002 #332]  INFO -- : (0.000067s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:33:31.665184 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:33:31.665324 #332]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:35:14.342249 #332]  INFO -- : (0.000168s) SELECT * FROM `posts`
+I, [2022-03-14T12:35:14.343820 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:35:14.344006 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:35:14.344198 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:35:14.344337 #332]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:36:26.027491 #332]  INFO -- : (0.000171s) SELECT * FROM `posts`
+I, [2022-03-14T12:36:26.028993 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:36:26.029198 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:36:26.029399 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:36:26.029565 #332]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:21.265745 #332]  INFO -- : (0.000240s) SELECT * FROM `posts`
+I, [2022-03-14T12:37:21.268028 #332]  INFO -- : (0.000192s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:21.268281 #332]  INFO -- : (0.000089s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:21.268546 #332]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:21.268746 #332]  INFO -- : (0.000079s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:23.437815 #332]  INFO -- : (0.000185s) SELECT * FROM `posts`
+I, [2022-03-14T12:37:23.439556 #332]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:23.439783 #332]  INFO -- : (0.000080s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:23.440045 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:23.440240 #332]  INFO -- : (0.000079s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:31.160631 #332]  INFO -- : (0.000201s) SELECT * FROM `posts`
+I, [2022-03-14T12:37:31.163896 #332]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:31.164113 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:31.164305 #332]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:31.164445 #332]  INFO -- : (0.000057s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:54.534761 #332]  INFO -- : (0.000206s) SELECT * FROM `posts`
+I, [2022-03-14T12:37:54.536222 #332]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:54.536408 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:37:54.536587 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:37:54.536722 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:38:12.930753 #332]  INFO -- : (0.000201s) SELECT * FROM `posts`
+I, [2022-03-14T12:38:12.932192 #332]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:38:12.932375 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:38:12.932577 #332]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:38:12.932714 #332]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:38:51.229733 #332]  INFO -- : (0.000165s) SELECT * FROM `posts`
+I, [2022-03-14T12:38:51.231230 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:38:51.231408 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:38:51.231587 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:38:51.231719 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:40:16.089161 #332]  INFO -- : (0.000167s) SELECT * FROM `posts`
+I, [2022-03-14T12:40:16.090639 #332]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:40:16.090841 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:40:16.091021 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:40:16.091169 #332]  INFO -- : (0.000067s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:40:42.333135 #332]  INFO -- : (0.000170s) SELECT * FROM `posts`
+I, [2022-03-14T12:40:42.334584 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:40:42.334815 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:40:42.334996 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:40:42.335128 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:47:48.324122 #332]  INFO -- : (0.000224s) SELECT * FROM `posts`
+I, [2022-03-14T12:47:48.325607 #332]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:47:48.325816 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:47:48.326022 #332]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:47:48.326195 #332]  INFO -- : (0.000077s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:47:50.132163 #332]  INFO -- : (0.000202s) SELECT * FROM `posts`
+I, [2022-03-14T12:47:50.133811 #332]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:47:50.134066 #332]  INFO -- : (0.000079s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:47:50.134294 #332]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:47:50.134463 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:16.790734 #332]  INFO -- : (0.000208s) SELECT * FROM `posts`
+I, [2022-03-14T12:49:16.792194 #332]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:16.792383 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:16.792562 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:16.792695 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:41.100661 #332]  INFO -- : (0.000163s) SELECT * FROM `posts`
+I, [2022-03-14T12:49:41.102092 #332]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:41.102284 #332]  INFO -- : (0.000067s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:41.102482 #332]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:41.102681 #332]  INFO -- : (0.000089s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:52.850108 #332]  INFO -- : (0.000165s) SELECT * FROM `posts`
+I, [2022-03-14T12:49:52.851552 #332]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:52.851738 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:49:52.851916 #332]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:49:52.852048 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:50:29.241417 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T12:50:29.242869 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:50:29.243049 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:50:29.243223 #332]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:50:29.243355 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:51:19.108212 #332]  INFO -- : (0.000171s) SELECT * FROM `posts`
+I, [2022-03-14T12:51:19.109769 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:51:19.109962 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:51:19.110143 #332]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:51:19.110278 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:53:41.417294 #332]  INFO -- : (0.000159s) SELECT * FROM `posts`
+I, [2022-03-14T12:53:41.420572 #332]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:53:41.420753 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:53:41.420929 #332]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:53:41.421060 #332]  INFO -- : (0.000053s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:53:42.865471 #332]  INFO -- : (0.000231s) SELECT * FROM `posts`
+I, [2022-03-14T12:53:42.867080 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:53:42.867266 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:53:42.867449 #332]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:53:42.867598 #332]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:55:51.196428 #332]  INFO -- : (0.000172s) SELECT * FROM `posts`
+I, [2022-03-14T12:55:51.197903 #332]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:55:51.198097 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:55:51.198276 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:55:51.198411 #332]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:57:01.677426 #332]  INFO -- : (0.000164s) SELECT * FROM `posts`
+I, [2022-03-14T12:57:01.678911 #332]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:57:01.679095 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T12:57:01.679273 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T12:57:01.679406 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:06.093185 #332]  INFO -- : (0.000170s) SELECT * FROM `posts`
+I, [2022-03-14T13:00:06.094730 #332]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:06.094937 #332]  INFO -- : (0.000067s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:06.095137 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:06.095287 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:09.449262 #332]  INFO -- : (0.000208s) SELECT * FROM `posts`
+I, [2022-03-14T13:00:09.450697 #332]  INFO -- : (0.000155s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:09.450886 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:09.451065 #332]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:09.451197 #332]  INFO -- : (0.000053s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:20.125174 #332]  INFO -- : (0.000158s) SELECT * FROM `posts`
+I, [2022-03-14T13:00:20.126567 #332]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:20.126799 #332]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:20.127003 #332]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:20.127158 #332]  INFO -- : (0.000060s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:21.690115 #332]  INFO -- : (0.000181s) SELECT * FROM `posts`
+I, [2022-03-14T13:00:21.691671 #332]  INFO -- : (0.000135s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:21.691888 #332]  INFO -- : (0.000072s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:00:21.692100 #332]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:00:21.692258 #332]  INFO -- : (0.000060s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:12.847374 #332]  INFO -- : (0.000167s) SELECT * FROM `posts`
+I, [2022-03-14T13:02:12.848953 #332]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:12.849176 #332]  INFO -- : (0.000077s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:12.849406 #332]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:12.849583 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:25.279558 #332]  INFO -- : (0.000220s) SELECT * FROM `posts`
+I, [2022-03-14T13:02:25.281035 #332]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:25.281244 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:25.281446 #332]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:25.281601 #332]  INFO -- : (0.000060s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:26.096524 #332]  INFO -- : (0.000181s) SELECT * FROM `posts`
+I, [2022-03-14T13:02:26.097975 #332]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:26.098180 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:26.098379 #332]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:26.098545 #332]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:26.689895 #332]  INFO -- : (0.000167s) SELECT * FROM `posts`
+I, [2022-03-14T13:02:26.691374 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:26.691561 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:26.691767 #332]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:26.691904 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:44.759951 #332]  INFO -- : (0.000174s) SELECT * FROM `posts`
+I, [2022-03-14T13:02:44.761411 #332]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:44.761604 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:02:44.761781 #332]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:02:44.761916 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:10:07.582977 #332]  INFO -- : (0.005106s) SELECT * FROM `posts`
+I, [2022-03-14T13:10:07.584715 #332]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:10:07.584934 #332]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:10:07.585638 #332]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:10:07.585826 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:12:07.879454 #332]  INFO -- : (0.000217s) SELECT * FROM `posts`
+I, [2022-03-14T13:12:07.881278 #332]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:12:07.881467 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:12:07.881650 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:12:07.881783 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:13:24.250941 #332]  INFO -- : (0.000177s) SELECT * FROM `posts`
+I, [2022-03-14T13:13:24.252482 #332]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:13:24.252696 #332]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:13:24.252898 #332]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:13:24.253055 #332]  INFO -- : (0.000061s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:13:38.937438 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T13:13:38.938902 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:13:38.939085 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:13:38.939264 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:13:38.939398 #332]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:14:19.980603 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T13:14:19.982126 #332]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:14:19.982319 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:14:19.982497 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:14:19.982676 #332]  INFO -- : (0.000095s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:15:55.904362 #332]  INFO -- : (0.000166s) SELECT * FROM `posts`
+I, [2022-03-14T13:15:55.905818 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:15:55.906036 #332]  INFO -- : (0.000068s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:15:55.906234 #332]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:15:55.906387 #332]  INFO -- : (0.000060s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:14.704288 #332]  INFO -- : (0.000165s) SELECT * FROM `posts`
+I, [2022-03-14T13:16:14.705780 #332]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:14.705972 #332]  INFO -- : (0.000066s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:14.706152 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:14.708122 #332]  INFO -- : (0.001883s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:23.019430 #332]  INFO -- : (0.000176s) SELECT * FROM `posts`
+I, [2022-03-14T13:16:23.020936 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:23.021130 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:23.021336 #332]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:23.021493 #332]  INFO -- : (0.000061s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:35.376736 #332]  INFO -- : (0.000180s) SELECT * FROM `posts`
+I, [2022-03-14T13:16:35.378270 #332]  INFO -- : (0.000152s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:35.378465 #332]  INFO -- : (0.000067s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:16:35.378679 #332]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:16:35.378829 #332]  INFO -- : (0.000059s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:17:02.560180 #332]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:17:02.561716 #332]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:17:02.561912 #332]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:17:02.562110 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:17:02.562260 #332]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:14.815626 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T13:18:14.817094 #332]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:14.817281 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:14.817465 #332]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:14.817600 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:34.648991 #332]  INFO -- : (0.000171s) SELECT * FROM `posts`
+I, [2022-03-14T13:18:34.650462 #332]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:34.650704 #332]  INFO -- : (0.000114s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:34.650892 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:34.651028 #332]  INFO -- : (0.000057s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:40.484153 #332]  INFO -- : (0.000262s) SELECT * FROM `posts`
+I, [2022-03-14T13:18:40.486511 #332]  INFO -- : (0.000198s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:40.486831 #332]  INFO -- : (0.000095s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:40.487124 #332]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:40.487356 #332]  INFO -- : (0.000091s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:55.709330 #332]  INFO -- : (0.000173s) SELECT * FROM `posts`
+I, [2022-03-14T13:18:55.712673 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:55.712961 #332]  INFO -- : (0.000080s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:18:55.713170 #332]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:18:55.713329 #332]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:19:24.500619 #332]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:19:24.502117 #332]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:19:24.502301 #332]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:19:24.502485 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:19:24.502651 #332]  INFO -- : (0.000084s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:20:21.959466 #332]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:20:21.960987 #332]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:20:21.961198 #332]  INFO -- : (0.000082s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:20:21.961381 #332]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:20:21.961520 #332]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:20:42.947436 #332]  INFO -- : (0.000169s) SELECT * FROM `posts`
+I, [2022-03-14T13:20:42.948894 #332]  INFO -- : (0.000128s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:20:42.949076 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:20:42.949253 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:20:42.949389 #332]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:21:08.023240 #332]  INFO -- : (0.000170s) SELECT * FROM `posts`
+I, [2022-03-14T13:21:08.024705 #332]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:21:08.024891 #332]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:21:08.025068 #332]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:21:08.025202 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:21:44.353375 #332]  INFO -- : (0.000158s) SELECT * FROM `posts`
+I, [2022-03-14T13:21:44.355377 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:21:44.355558 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:21:44.355736 #332]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:21:44.355870 #332]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:22:07.212859 #332]  INFO -- : (0.000186s) SELECT * FROM `posts`
+I, [2022-03-14T13:22:07.214286 #332]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:22:07.214471 #332]  INFO -- : (0.000062s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:22:07.214703 #332]  INFO -- : (0.000129s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:22:07.214857 #332]  INFO -- : (0.000059s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:23:20.957141 #332]  INFO -- : (0.000179s) SELECT * FROM `posts`
+I, [2022-03-14T13:23:20.958697 #332]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:23:20.958908 #332]  INFO -- : (0.000071s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:23:20.959139 #332]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:23:20.959302 #332]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:28:43.039251 #726]  INFO -- : (0.000203s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:28:43.039348 #726]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:28:43.039525 #726]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:28:43.039757 #726]  INFO -- : (0.000069s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:28:43.039941 #726]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:28:43.040127 #726]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:28:43.040284 #726]  INFO -- : (0.000053s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:28:43.040439 #726]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:28:43.040584 #726]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:28:43.040740 #726]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:28:43.040884 #726]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:28:43.041022 #726]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:28:43.041626 #726]  INFO -- : (0.000115s) PRAGMA table_info('posts')
+I, [2022-03-14T13:28:43.042373 #726]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:28:43.042891 #726]  INFO -- : (0.000072s) PRAGMA table_info('tags')
+I, [2022-03-14T13:28:43.043512 #726]  INFO -- : (0.000125s) PRAGMA table_info('users')
+I, [2022-03-14T13:28:45.553470 #726]  INFO -- : (0.000202s) SELECT * FROM `posts`
+I, [2022-03-14T13:28:45.562347 #726]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:28:45.562639 #726]  INFO -- : (0.000088s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:28:45.562891 #726]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:28:45.563074 #726]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:28:48.709809 #726]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:28:48.711231 #726]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:28:48.711406 #726]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:28:48.711581 #726]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:28:48.711766 #726]  INFO -- : (0.000071s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:29:01.478426 #737]  INFO -- : (0.000202s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:29:01.478517 #737]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:29:01.478715 #737]  INFO -- : (0.000056s) SELECT sqlite_version()
+I, [2022-03-14T13:29:01.478932 #737]  INFO -- : (0.000070s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:29:01.479130 #737]  INFO -- : (0.000064s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:29:01.479329 #737]  INFO -- : (0.000059s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:29:01.479502 #737]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:29:01.479699 #737]  INFO -- : (0.000085s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:29:01.479873 #737]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:29:01.480058 #737]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:29:01.480231 #737]  INFO -- : (0.000061s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:29:01.480393 #737]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:29:01.481156 #737]  INFO -- : (0.000125s) PRAGMA table_info('posts')
+I, [2022-03-14T13:29:01.482038 #737]  INFO -- : (0.000077s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:29:01.482622 #737]  INFO -- : (0.000083s) PRAGMA table_info('tags')
+I, [2022-03-14T13:29:01.483262 #737]  INFO -- : (0.000116s) PRAGMA table_info('users')
+I, [2022-03-14T13:29:02.986881 #737]  INFO -- : (0.000173s) SELECT * FROM `posts`
+I, [2022-03-14T13:29:02.994460 #737]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:29:02.994680 #737]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:29:02.994867 #737]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:29:02.995003 #737]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:29:08.471728 #737]  INFO -- : (0.000314s) SELECT * FROM `posts`
+I, [2022-03-14T13:29:08.474270 #737]  INFO -- : (0.000195s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:29:08.474560 #737]  INFO -- : (0.000101s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:29:08.474859 #737]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:29:08.475081 #737]  INFO -- : (0.000088s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:30:02.721474 #779]  INFO -- : (0.000205s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:30:02.721563 #779]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:30:02.721732 #779]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:30:02.721936 #779]  INFO -- : (0.000071s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:30:02.722111 #779]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:30:02.722297 #779]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:30:02.722454 #779]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:30:02.722610 #779]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:30:02.722765 #779]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:30:02.722930 #779]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:30:02.723081 #779]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:30:02.723225 #779]  INFO -- : (0.000042s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:30:02.723861 #779]  INFO -- : (0.000118s) PRAGMA table_info('posts')
+I, [2022-03-14T13:30:02.724633 #779]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:30:02.725160 #779]  INFO -- : (0.000084s) PRAGMA table_info('tags')
+I, [2022-03-14T13:30:02.725768 #779]  INFO -- : (0.000115s) PRAGMA table_info('users')
+I, [2022-03-14T13:30:04.469524 #779]  INFO -- : (0.000300s) SELECT * FROM `posts`
+I, [2022-03-14T13:30:04.480915 #779]  INFO -- : (0.000203s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:30:04.481250 #779]  INFO -- : (0.000117s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:30:04.481563 #779]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:30:04.481789 #779]  INFO -- : (0.000090s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:02.444567 #790]  INFO -- : (0.000207s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:31:02.444659 #790]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:31:02.444824 #790]  INFO -- : (0.000051s) SELECT sqlite_version()
+I, [2022-03-14T13:31:02.445007 #790]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:31:02.445166 #790]  INFO -- : (0.000055s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:31:02.445344 #790]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:31:02.445481 #790]  INFO -- : (0.000046s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:31:02.445618 #790]  INFO -- : (0.000053s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:31:02.445744 #790]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:31:02.445879 #790]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:31:02.446001 #790]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:31:02.446121 #790]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:31:02.446743 #790]  INFO -- : (0.000118s) PRAGMA table_info('posts')
+I, [2022-03-14T13:31:02.447496 #790]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:31:02.448030 #790]  INFO -- : (0.000072s) PRAGMA table_info('tags')
+I, [2022-03-14T13:31:02.448625 #790]  INFO -- : (0.000111s) PRAGMA table_info('users')
+I, [2022-03-14T13:31:04.203934 #790]  INFO -- : (0.000315s) SELECT * FROM `posts`
+I, [2022-03-14T13:31:04.212101 #790]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:04.212302 #790]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:04.212531 #790]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:04.212781 #790]  INFO -- : (0.000110s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:18.832977 #801]  INFO -- : (0.000205s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:31:18.833068 #801]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:31:18.833224 #801]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:31:18.833405 #801]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:31:18.833572 #801]  INFO -- : (0.000055s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:31:18.833748 #801]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:31:18.833898 #801]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:31:18.834049 #801]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:31:18.834190 #801]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:31:18.834343 #801]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:31:18.834478 #801]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:31:18.834622 #801]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:31:18.835228 #801]  INFO -- : (0.000117s) PRAGMA table_info('posts')
+I, [2022-03-14T13:31:18.836032 #801]  INFO -- : (0.000077s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:31:18.836550 #801]  INFO -- : (0.000073s) PRAGMA table_info('tags')
+I, [2022-03-14T13:31:18.837166 #801]  INFO -- : (0.000115s) PRAGMA table_info('users')
+I, [2022-03-14T13:31:20.440771 #801]  INFO -- : (0.000178s) SELECT * FROM `posts`
+I, [2022-03-14T13:31:20.447016 #801]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:20.447241 #801]  INFO -- : (0.000074s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:20.447452 #801]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:20.447617 #801]  INFO -- : (0.000064s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:29.429631 #812]  INFO -- : (0.000197s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:31:29.429726 #812]  INFO -- : (0.000022s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:31:29.429879 #812]  INFO -- : (0.000047s) SELECT sqlite_version()
+I, [2022-03-14T13:31:29.430047 #812]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:31:29.430225 #812]  INFO -- : (0.000057s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:31:29.430387 #812]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:31:29.430521 #812]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:31:29.430655 #812]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:31:29.430778 #812]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:31:29.430911 #812]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:31:29.431030 #812]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:31:29.431149 #812]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:31:29.431800 #812]  INFO -- : (0.000158s) PRAGMA table_info('posts')
+I, [2022-03-14T13:31:29.432576 #812]  INFO -- : (0.000076s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:31:29.433084 #812]  INFO -- : (0.000071s) PRAGMA table_info('tags')
+I, [2022-03-14T13:31:29.433669 #812]  INFO -- : (0.000110s) PRAGMA table_info('users')
+I, [2022-03-14T13:31:31.735356 #812]  INFO -- : (0.000182s) SELECT * FROM `posts`
+I, [2022-03-14T13:31:31.742322 #812]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:31.742619 #812]  INFO -- : (0.000101s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:31.742848 #812]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:31.743012 #812]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:55.334618 #823]  INFO -- : (0.000211s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:31:55.334734 #823]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:31:55.334930 #823]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2022-03-14T13:31:55.335146 #823]  INFO -- : (0.000064s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:31:55.335329 #823]  INFO -- : (0.000063s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:31:55.335531 #823]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:31:55.335702 #823]  INFO -- : (0.000071s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:31:55.335855 #823]  INFO -- : (0.000057s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:31:55.335985 #823]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:31:55.336120 #823]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:31:55.336289 #823]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:31:55.336450 #823]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:31:55.337226 #823]  INFO -- : (0.000150s) PRAGMA table_info('posts')
+I, [2022-03-14T13:31:55.338081 #823]  INFO -- : (0.000105s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:31:55.338858 #823]  INFO -- : (0.000110s) PRAGMA table_info('tags')
+I, [2022-03-14T13:31:55.339554 #823]  INFO -- : (0.000116s) PRAGMA table_info('users')
+I, [2022-03-14T13:31:57.011310 #823]  INFO -- : (0.000190s) SELECT * FROM `posts`
+I, [2022-03-14T13:31:57.017670 #823]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:57.017891 #823]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:31:57.018083 #823]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:31:57.018219 #823]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:32:08.702557 #834]  INFO -- : (0.000196s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:32:08.702644 #834]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:32:08.702816 #834]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:32:08.703002 #834]  INFO -- : (0.000061s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:32:08.703160 #834]  INFO -- : (0.000053s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:32:08.703318 #834]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:32:08.703452 #834]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:32:08.703586 #834]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:32:08.703742 #834]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:32:08.703884 #834]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:32:08.704007 #834]  INFO -- : (0.000039s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:32:08.704132 #834]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:32:08.704729 #834]  INFO -- : (0.000116s) PRAGMA table_info('posts')
+I, [2022-03-14T13:32:08.705494 #834]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:32:08.705995 #834]  INFO -- : (0.000071s) PRAGMA table_info('tags')
+I, [2022-03-14T13:32:08.706582 #834]  INFO -- : (0.000117s) PRAGMA table_info('users')
+I, [2022-03-14T13:32:11.457503 #834]  INFO -- : (0.000174s) SELECT * FROM `posts`
+I, [2022-03-14T13:32:11.463789 #834]  INFO -- : (0.000146s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:32:11.463983 #834]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:32:11.464165 #834]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:32:11.464300 #834]  INFO -- : (0.000055s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:33:14.940714 #878]  INFO -- : (0.000333s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:33:14.940857 #878]  INFO -- : (0.000022s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:33:14.941111 #878]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2022-03-14T13:33:14.941396 #878]  INFO -- : (0.000091s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:33:14.941646 #878]  INFO -- : (0.000086s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:33:14.941910 #878]  INFO -- : (0.000078s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:33:14.942125 #878]  INFO -- : (0.000067s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:33:14.942345 #878]  INFO -- : (0.000079s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:33:14.942547 #878]  INFO -- : (0.000063s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:33:14.942774 #878]  INFO -- : (0.000067s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:33:14.942971 #878]  INFO -- : (0.000059s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:33:14.943129 #878]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:33:14.943842 #878]  INFO -- : (0.000213s) PRAGMA table_info('posts')
+I, [2022-03-14T13:33:14.944884 #878]  INFO -- : (0.000082s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:33:14.945422 #878]  INFO -- : (0.000072s) PRAGMA table_info('tags')
+I, [2022-03-14T13:33:14.946325 #878]  INFO -- : (0.000122s) PRAGMA table_info('users')
+I, [2022-03-14T13:33:16.542430 #878]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:33:16.548641 #878]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:33:16.548836 #878]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:33:16.549017 #878]  INFO -- : (0.000076s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:33:16.549155 #878]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:34:19.161073 #920]  INFO -- : (0.000200s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:34:19.161179 #920]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:34:19.161327 #920]  INFO -- : (0.000047s) SELECT sqlite_version()
+I, [2022-03-14T13:34:19.161497 #920]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:34:19.161646 #920]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:34:19.161794 #920]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:34:19.161924 #920]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:34:19.162050 #920]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:34:19.162171 #920]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:34:19.162308 #920]  INFO -- : (0.000055s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:34:19.162428 #920]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:34:19.162546 #920]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:34:19.163134 #920]  INFO -- : (0.000115s) PRAGMA table_info('posts')
+I, [2022-03-14T13:34:19.163895 #920]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:34:19.164404 #920]  INFO -- : (0.000072s) PRAGMA table_info('tags')
+I, [2022-03-14T13:34:19.164980 #920]  INFO -- : (0.000110s) PRAGMA table_info('users')
+I, [2022-03-14T13:34:20.536470 #920]  INFO -- : (0.000171s) SELECT * FROM `posts`
+I, [2022-03-14T13:34:20.542726 #920]  INFO -- : (0.000116s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:34:20.542931 #920]  INFO -- : (0.000069s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:34:20.543116 #920]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:34:20.543252 #920]  INFO -- : (0.000056s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:35:07.316591 #931]  INFO -- : (0.000204s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:35:07.316680 #931]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:35:07.316851 #931]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:35:07.317046 #931]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:35:07.317238 #931]  INFO -- : (0.000061s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:35:07.317438 #931]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:35:07.317615 #931]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:35:07.317791 #931]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:35:07.317948 #931]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:35:07.318117 #931]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:35:07.318264 #931]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:35:07.318412 #931]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:35:07.319028 #931]  INFO -- : (0.000117s) PRAGMA table_info('posts')
+I, [2022-03-14T13:35:07.319921 #931]  INFO -- : (0.000077s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:35:07.320502 #931]  INFO -- : (0.000081s) PRAGMA table_info('tags')
+I, [2022-03-14T13:35:07.321185 #931]  INFO -- : (0.000130s) PRAGMA table_info('users')
+I, [2022-03-14T13:35:08.909416 #931]  INFO -- : (0.000181s) SELECT * FROM `posts`
+I, [2022-03-14T13:35:08.915682 #931]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:35:08.915894 #931]  INFO -- : (0.000073s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:35:08.916082 #931]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:35:08.916241 #931]  INFO -- : (0.000058s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:35:50.973116 #931]  INFO -- : (0.000175s) SELECT * FROM `posts`
+I, [2022-03-14T13:35:50.974686 #931]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:35:50.974910 #931]  INFO -- : (0.000075s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:35:50.975136 #931]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:35:50.975316 #931]  INFO -- : (0.000070s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:36:03.899486 #931]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:36:03.900968 #931]  INFO -- : (0.000091s) SELECT count(*) AS 'count' FROM `posts` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:36:03.901204 #931]  INFO -- : (0.000137s) SELECT * FROM `posts` WHERE (`userID` = 1)
+I, [2022-03-14T13:36:34.417688 #944]  INFO -- : (0.000280s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:36:34.417800 #944]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:36:34.418039 #944]  INFO -- : (0.000074s) SELECT sqlite_version()
+I, [2022-03-14T13:36:34.418345 #944]  INFO -- : (0.000097s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:36:34.418608 #944]  INFO -- : (0.000084s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:36:34.418873 #944]  INFO -- : (0.000079s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:36:34.419104 #944]  INFO -- : (0.000078s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:36:34.419306 #944]  INFO -- : (0.000066s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:36:34.419517 #944]  INFO -- : (0.000068s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:36:34.419805 #944]  INFO -- : (0.000079s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:36:34.420026 #944]  INFO -- : (0.000068s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:36:34.420254 #944]  INFO -- : (0.000074s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:36:34.421162 #944]  INFO -- : (0.000177s) PRAGMA table_info('posts')
+I, [2022-03-14T13:36:34.422313 #944]  INFO -- : (0.000104s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:36:34.423066 #944]  INFO -- : (0.000105s) PRAGMA table_info('tags')
+I, [2022-03-14T13:36:34.424044 #944]  INFO -- : (0.000173s) PRAGMA table_info('users')
+I, [2022-03-14T13:36:36.947182 #944]  INFO -- : (0.000293s) SELECT * FROM `posts`
+I, [2022-03-14T13:36:36.953688 #944]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:36:36.953908 #944]  INFO -- : (0.000071s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:36:36.954107 #944]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:36:36.954285 #944]  INFO -- : (0.000074s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:37:07.832943 #944]  INFO -- : (0.000177s) SELECT * FROM `posts`
+I, [2022-03-14T13:37:07.834383 #944]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:37:07.834559 #944]  INFO -- : (0.000063s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:37:07.834736 #944]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:37:07.834868 #944]  INFO -- : (0.000054s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:37:40.337902 #956]  INFO -- : (0.000212s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:37:40.337989 #956]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:37:40.338160 #956]  INFO -- : (0.000049s) SELECT sqlite_version()
+I, [2022-03-14T13:37:40.338354 #956]  INFO -- : (0.000063s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:37:40.338553 #956]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:37:40.338737 #956]  INFO -- : (0.000053s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:37:40.338898 #956]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:37:40.339061 #956]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:37:40.339209 #956]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:37:40.339371 #956]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:37:40.339532 #956]  INFO -- : (0.000059s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:37:40.339724 #956]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:37:40.340420 #956]  INFO -- : (0.000157s) PRAGMA table_info('posts')
+I, [2022-03-14T13:37:40.341213 #956]  INFO -- : (0.000074s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:37:40.341727 #956]  INFO -- : (0.000071s) PRAGMA table_info('tags')
+I, [2022-03-14T13:37:40.342321 #956]  INFO -- : (0.000113s) PRAGMA table_info('users')
+I, [2022-03-14T13:37:41.747239 #956]  INFO -- : (0.000174s) SELECT * FROM `posts`
+I, [2022-03-14T13:37:41.753469 #956]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:37:41.753689 #956]  INFO -- : (0.000072s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:37:41.753896 #956]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:37:41.754049 #956]  INFO -- : (0.000059s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:38:16.850686 #967]  INFO -- : (0.000217s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:38:16.850775 #967]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:38:16.850927 #967]  INFO -- : (0.000047s) SELECT sqlite_version()
+I, [2022-03-14T13:38:16.851103 #967]  INFO -- : (0.000059s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:38:16.851261 #967]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:38:16.851419 #967]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:38:16.851550 #967]  INFO -- : (0.000044s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:38:16.851705 #967]  INFO -- : (0.000069s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:38:16.851850 #967]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:38:16.851988 #967]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:38:16.852109 #967]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:38:16.852229 #967]  INFO -- : (0.000038s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:38:16.852832 #967]  INFO -- : (0.000121s) PRAGMA table_info('posts')
+I, [2022-03-14T13:38:16.853593 #967]  INFO -- : (0.000076s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:38:16.854103 #967]  INFO -- : (0.000073s) PRAGMA table_info('tags')
+I, [2022-03-14T13:38:16.854706 #967]  INFO -- : (0.000123s) PRAGMA table_info('users')
+I, [2022-03-14T13:38:18.491299 #967]  INFO -- : (0.000173s) SELECT * FROM `posts`
+I, [2022-03-14T13:38:18.497720 #967]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:38:18.497940 #967]  INFO -- : (0.000072s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:38:18.498153 #967]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:38:18.498310 #967]  INFO -- : (0.000060s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:40:59.795570 #985]  INFO -- : (0.000209s) PRAGMA foreign_keys = 1
+I, [2022-03-14T13:40:59.795691 #985]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2022-03-14T13:40:59.795904 #985]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2022-03-14T13:40:59.796121 #985]  INFO -- : (0.000065s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-14T13:40:59.796306 #985]  INFO -- : (0.000056s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-14T13:40:59.796494 #985]  INFO -- : (0.000054s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-14T13:40:59.796652 #985]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-14T13:40:59.796804 #985]  INFO -- : (0.000051s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-14T13:40:59.796953 #985]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-14T13:40:59.797117 #985]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-14T13:40:59.797261 #985]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-14T13:40:59.797407 #985]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-14T13:40:59.798049 #985]  INFO -- : (0.000119s) PRAGMA table_info('posts')
+I, [2022-03-14T13:40:59.798844 #985]  INFO -- : (0.000076s) PRAGMA table_info('post_tags')
+I, [2022-03-14T13:40:59.799390 #985]  INFO -- : (0.000072s) PRAGMA table_info('tags')
+I, [2022-03-14T13:40:59.800061 #985]  INFO -- : (0.000141s) PRAGMA table_info('users')
+I, [2022-03-14T13:41:02.198596 #985]  INFO -- : (0.000172s) SELECT * FROM `posts`
+I, [2022-03-14T13:41:02.205350 #985]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:41:02.205549 #985]  INFO -- : (0.000065s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:41:02.205730 #985]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:41:02.205863 #985]  INFO -- : (0.000053s) SELECT * FROM `universities` WHERE (`universityID` = 304) LIMIT 1
+I, [2022-03-14T13:41:14.533105 #985]  INFO -- : (0.000164s) SELECT * FROM `users` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:41:14.534424 #985]  INFO -- : (0.000090s) SELECT count(*) AS 'count' FROM `posts` WHERE (`userID` = 1) LIMIT 1
+I, [2022-03-14T13:41:14.534621 #985]  INFO -- : (0.000103s) SELECT * FROM `posts` WHERE (`userID` = 1)
+I, [2022-03-14T13:41:21.111682 #985]  INFO -- : (0.000271s) SELECT * FROM `users` WHERE `userID` = 1
+I, [2022-03-14T13:41:21.112203 #985]  INFO -- : (0.000174s) SELECT * FROM `posts` WHERE (`is_moderated` = 0)
+I, [2022-03-14T13:41:21.115418 #985]  INFO -- : (0.000137s) SELECT * FROM `tags`

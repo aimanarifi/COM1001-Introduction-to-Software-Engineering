@@ -1,0 +1,21 @@
+<% @page_title = "Profile" %>
+<%= erb :"common/header" %>
+
+<h1>Hello <%= h @user[:first_name] %> <%= h @user[:last_name] %></h1>
+
+<section>
+    <% if @posts.count > 0 %>
+        <% @posts.each do |post| %>
+            <article class="feed_post">
+                <p><b><%= h post[:title] %></b></p>
+                <p><%= h post[:message] %></p>
+                <p>Tags: </p>
+            </article>
+            <br>
+        <% end %>
+    <% else %>
+        <p> No posts were found.</p>
+    <% end %>
+</section>
+
+<%= erb :"common/footer" %>

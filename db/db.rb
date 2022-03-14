@@ -4,7 +4,55 @@
 require "logger"
 require "sequel"
 
+# Create required users if they don't exist
+def create_users
+    DB[:users].insert(username: "admin", password: "admin", email:"admin@admin.com",
+                first_name: "Admin", last_name: "Admin", is_suspended: 0, 
+                account_type: 3, universityID: 304)
+    DB[:users].insert(username: "reporter1", password: "reporter1", email:"reporter1@reporter.com",
+                first_name: "Reporter", last_name: "Reporter", is_suspended: 0, 
+                account_type: 0, universityID: 304)
+    DB[:users].insert(username: "reporter2", password: "reporter2", email:"reporter2@reporter.com",
+                first_name: "Reporter", last_name: "Reporter", is_suspended: 0, 
+                account_type: 0, universityID: 304)
+    DB[:users].insert(username: "moderator", password: "moderator", email:"moderator@moderator.com",
+                first_name: "Moderator", last_name: "Moderator", is_suspended: 0, 
+                account_type: 2, universityID: 304)
+    DB[:users].insert(username: "viewer1", password: "viewer1", email:"viewer1@viewer.com",
+                first_name: "Viewer", last_name: "Viewer", is_suspended: 0, 
+                account_type: 1, universityID: 304)
+    DB[:users].insert(username: "viewer2", password: "viewer2", email:"viewer2@viewer.com",
+                first_name: "Viewer", last_name: "Viewer", is_suspended: 0, 
+                account_type: 1, universityID: 304)
+end
+
+# Create university records if they don't exist
+def create_universities
+    File.open("db/universities.txt") do |university_list|
+        university_list.each do |university|
+            DB[:universities].insert(university_name: university.chomp)
+        end
+    end
+end
+
+# Create tables if they don't exist
 def create_tables
+    unless DB.table_exists?(:tags)
+        DB.create_table :tags do
+            primary_key :tagID
+            column :tag_name, String
+        end
+    end
+
+    unless DB.table_exists?(:universities)
+        DB.create_table :universities do
+            primary_key :universityID
+            column :university_name, String
+        end
+
+        create_universities
+    end
+
     unless DB.table_exists?(:users)
         DB.create_table :users do
             primary_key :userID
@@ -17,6 +65,8 @@ def create_tables
             column :account_type, Integer
             foreign_key :universityID, :universities
         end
+
+        create_users
     end
 
     unless DB.table_exists?(:posts)
@@ -38,20 +88,6 @@ def create_tables
             primary_key [:postID, :tagID]
             foreign_key :postID, :posts
             foreign_key :tagID, :tags
-        end
-    end
-
-    unless DB.table_exists?(:tags)
-        DB.create_table :tags do
-            primary_key :tagID
-            column :tag_name, String
-        end
-    end
-
-    unless DB.table_exists?(:universities)
-        DB.create_table :universities do
-            primary_key :universityID
-            column :university_Name, String
         end
     end
 
@@ -86,7 +122,6 @@ def create_tables
             column :report_name, String
         end
     end
-
 end
 
 unless defined?(DB)
