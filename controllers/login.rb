@@ -15,7 +15,7 @@ post "/login" do
 
   if @user.exist?
     session[:logged_in] = true
-    redirect "/profile"
+    redirect "/"
   else
     @error = "The username or password that you entered is incorrect, please try again"
   end
@@ -24,7 +24,7 @@ post "/login" do
   if @user.valid?
     if @user.exist?
       session[:logged_in] = true
-      redirect "/profile"
+      redirect "/"
     else
       @error = "The username or password that you entered is incorrect, please try again"
     end
