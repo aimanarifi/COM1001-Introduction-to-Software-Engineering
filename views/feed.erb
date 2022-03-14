@@ -4,22 +4,24 @@
 <a href="/new-post" target="_parent"><button>Create Post</button></a>
 
 <!-- TODO - MAKE IT AUTOMATICALLY GET USERNAME, UNI AND TAGS -->
-<% if @posts.count > 0 %>
-    <% @posts.each do |post| %>
-        <% if post.is_moderated == 1 %>
-            <% @user = DB[:users].where(userID: session[:userID]).first %>
-            <% @university = DB[:universities].where(universityID: @user[:universityID]).first %>
-            <article class="feed_post">
-                <p><b>'<%= h post.title %>'</b></p>
-                <p><em>By <%= h @user[:username] %></em></p>
-                <p><%= h post.message %></p>
-                <p><%= h @university[:university_name] %>. Tags: </p>
-            </article>
-            <br>
+<section>
+    <% if @posts.count > 0 %>
+        <% @posts.each do |post| %>
+            <% if post.is_moderated == 1 %>
+                <% @user = DB[:users].where(userID: session[:userID]).first %>
+                <% @university = DB[:universities].where(universityID: @user[:universityID]).first %>
+                <article class="feed_post">
+                    <p><b>'<%= h post.title %>'</b></p>
+                    <p><em>By <%= h @user[:username] %></em></p>
+                    <p><%= h post.message %></p>
+                    <p><%= h @university[:university_name] %>. Tags: </p>
+                </article>
+                <br>
+            <% end %>
         <% end %>
+    <% else %>
+        <p>No posts were found.</p>
     <% end %>
-<% else %>
-    <p>No posts were found.</p>
-<% end %>
+</section>
 
 <%= erb :"common/footer" %>

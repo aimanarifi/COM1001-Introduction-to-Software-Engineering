@@ -50,6 +50,16 @@ input:hover {
   border-bottom: 2px solid var(--colour-outline);
 }
 
+section {
+  border: 2px solid var(--colour-outline);
+  border-radius: 25px;
+  padding: 1%;
+  padding-right: 2%;
+  width: 20%;
+  background-color: var(--colour-secondary);
+}
+
+
 #submitButton {
   color: var(--colour-text);
   background-color: var(--colour-contrast);
