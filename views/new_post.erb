@@ -1,6 +1,5 @@
-<%#load common header here%>
-
-<h1>Make A Post</h1>
+<% @subtitle = "New Post" %>
+<%= erb :"common/header" %>
 
 <% unless @post.errors.size.zero? %>
   <p><strong class="error">Please fix the errors below:</strong></p>
@@ -34,5 +33,4 @@
 
 <a href="/" target="_parent"><button>Cancel</button></a>
 
-<%#load common footer here%>
-
+<%= erb :"common/footer" %>
