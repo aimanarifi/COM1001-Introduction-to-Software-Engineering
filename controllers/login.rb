@@ -29,7 +29,7 @@ post "/login" do
       @error = "The username or password that you entered is incorrect, please try again"
     end
   else
-    @error = "Please correct the information below"
+    @error = "The username or password that you entered is incorrect, please try again"
   end
 
   erb :login
