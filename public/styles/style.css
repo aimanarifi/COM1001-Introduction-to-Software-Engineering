@@ -166,6 +166,10 @@ article {
   padding: 1% 2%;
 }
 
+#login {
+  flex-direction: column;
+}
+
 .error {
   color:red;
 }
@@ -175,4 +179,16 @@ article {
   flex-direction: row;
   padding: 2% 10%;
   width: 35%;
+}
+
+
+/* desktop styles */
+
+@media screen and (min-width: 768px) {
+
+  #login {
+    flex-direction: row;
+  }
+
+
 }
