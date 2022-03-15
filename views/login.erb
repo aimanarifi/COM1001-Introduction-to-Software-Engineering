@@ -7,12 +7,16 @@
     <p>at ACME we strive to connect uni students world wide i think</p>
   </header>
 
+<div class="flex-container">
   <!---
   validation required for form inputs(sinatra):
     max characters(20?)
   --->
-  
+  <form method="post">
+    <label for="username"><p>Username:</p></label>
+    <input type="text" id="username" name="username" value="<%= @user.username %>">
 
+<<<<<<< HEAD
   <form action="/login" method="post">
   
     <% unless @error.nil? %> 
@@ -23,7 +27,18 @@
     <p>Password: <br /><input type="password" name="password" /></p>
 
     <input type="submit" value="Submit" id="submitButton">
+=======
+    <label for="password"><p>Password:</p></label>
+    <input type="password" id="password" name="password">
+
+    <% unless @error.nil? %> 
+      <p style="color:red"><%= @error %></p>
+    <% end %>
+
+    <input class="button" type="submit" value="Submit" id="submitButton">
+>>>>>>> 8c318e8301b757985ef73e7f09eb359f85a4795c
   </form>
 
+</div>
 
 <%= erb :"common/footer" %>
