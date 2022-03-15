@@ -17,7 +17,7 @@ get "/moderation-feed/users" do
     @user = User[user_id]  
 
     unless @user.nil?
-        #Display all unmoderated post to admin, while for moderator, display posts th
+        #Only admin can moderate accounts
         if @user[:account_type] == 3
 
             @user_type_query = "Moderator"

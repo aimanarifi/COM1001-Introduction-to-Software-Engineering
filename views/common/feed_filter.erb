@@ -1,4 +1,10 @@
 <!-- Author: Muhammad Kamaludin -->
+<!-- the filter pass a param called filter with value "<filtertype>,<filterid>,<filtername>" -->
+<!-- filter type currently availabe is uni and tag -->
+<!-- if filtertype = uni, filterid = universityID, filtername = university name -->
+<!-- same goes to tag -->
+<!-- For moderation: filter for deleted is not available yet -->
+
     <% @tags = Tag.all %>
     <% unless @tags.nil? %>
         <form method="get">
@@ -7,7 +13,7 @@
                 
                 <optgroup label="Current filter">
                     <% unless @filter.nil? %>
-                        <option value="<%= h @filter_id %>,<%= h @filter_type %>"><%= h @filter_name %></option> 
+                        <option value="<%= h @filter_type %>,<%= h @filter_id %>,<%= h @filter_name %>"><%= h @filter_name %></option> 
                     <% else %>
                         <option value="">All</option> 
                     <% end %>
@@ -15,7 +21,7 @@
 
                 <optgroup label="Default">
                     <% if @page_title == "Moderate Posts" && @user[:account_type] == 2 %>
-                        <option value="uni,<%= h @user[:universityID] %>,<%= University[@user[:universityID]].university_name %>"></option>
+                        <option value="uni,<%= h @user[:universityID] %>,<%= h University[@user[:universityID]].university_name %>"><%= h University[@user[:universityID]].university_name %></option>
                     <% else %>
                         <option value="">All</option>
                     <% end %>
@@ -27,6 +33,7 @@
                     <%# TODO: Add another option "Deleted" %>
                 </optgroup>
                 
+                <%# Tags filter doesnt appear in account moderation%>
                 <% if @page_title != "Moderate Users Account" %>
                 <optgroup label="By Tags">
                     <% @tags.each do |tag| %>
@@ -35,6 +42,7 @@
                 </optgroup>
                 <% end %>
 
+                <%#University filter doesn't appear on mod's post moderation feed%>
                 <% unless @page_title == "Moderate Posts" && @user[:account_type] == 2 %>
                 <optgroup label="By University">
                     <% University.each do |uni| %>
