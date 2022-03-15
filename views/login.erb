@@ -19,7 +19,11 @@
 
     <input class="button" type="submit" value="Submit" id="submitButton">
   </form>
-</div>
 
+  <div id="loginButtons">
+    <input class="button" type="button" id="submitButton" onclick="location.href='/register'" value="Register">
+    <input class="button" type="button" id="submitButton" onclick="location.href='/guest'" value="Continue As Guest">
+  </div>
+</div>
 
 <%= erb :"common/footer" %>
