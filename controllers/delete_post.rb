@@ -1,4 +1,5 @@
-get "/delete_post" do
+#Author: Muhammad Kamaludin
+get "/delete-post" do
     redirect "/login" unless session[:logged_in] == 1
 
     id = params["postID"]
@@ -8,13 +9,13 @@ get "/delete_post" do
     erb :delete_post
 end
 
-post "/delete_post" do
+post "/delete-post" do
     id = params["postID"]
     @post = Post[id]
     @post.update(is_moderated: 2)
 
     #insert new entry to tht reported_posts table here
 
-    redirect "/moderationfeed"
+    redirect "/moderation-feed/posts"
     erb :delete_post
 end

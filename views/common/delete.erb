@@ -1,0 +1,27 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<form method="post" action="/delete-<%= h @delete_type %>">
+
+    <p>Why the <%= h @delete_type %> needs to be deleted?</p>
+    <div>
+        <% @delete_reason = DB[:report_reasons] %>
+        <% unless @delete_reason.nil? %>
+        <% if @delete_reason.count > 0 %>
+            <% @delete_reason.each do |reason| %>
+                <input type="radio" id="reason<%= h reason[:report_reasonID] %>" name="report_reasonID" value="<%= h reason[:report_reasonID] %>" required="required">
+                <label for="reason<%= h reason[:report_reasonID] %>"> <%= reason[:report_name] %></label><br>
+            <% end %>
+        <% end %>
+        <% end %> 
+    </div>
+    <br>
+
+    <% if @delete_type == "post" %>
+        <input type="hidden" name="<%= h @delete_type %>ID" value="<%= h @post[:postID] %>" >
+    <% elsif @delete_type == "user" %>
+        <input type="hidden" name="<%= h @delete_type %>ID" value="<%= h @user[:userID] %>" >
+    <% end %>
+    
+    <input type="submit" value="Delete <%= h @delete_type %>">
+
+</form>

@@ -1,11 +1,10 @@
 <!-- Author: Muhammad Kamaludin -->
 
-<% @page_title = "Delete Post" %>
-<% @delete_type = "post" %>
-
+<% @page_title= "Delete Account" %>
+<% @delete_type = "user" %>
 <%= erb :"common/header" %>
 
-<p><strong>Post ID:</strong> <%= h @post[:postID] %></p>
+<p><strong>User ID:</strong> <%= h @user[:userID] %></p>
 
 <%= erb :"common/delete" %> 
 
