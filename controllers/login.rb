@@ -9,12 +9,14 @@ post "/login" do
   @error = nil
 
   if @user.exist? && @user.valid?
+    @logged_in_user = User.where(username: params.fetch("username","")).first
+
     session[:logged_in] = 1
     session[:is_guest] = 0
-    session[:account_type] = @user.account_type
-    session[:userID] = @user.userID
-    session[:username] = @user.username
-    session[:universityID] = @user.universityID
+    session[:account_type] = @logged_in_user.account_type
+    session[:userID] = @logged_in_user.userID
+    session[:username] = @logged_in_user.username
+    session[:universityID] = @logged_in_user.universityID
 
     redirect "/"
   else
