@@ -23,8 +23,3 @@ post "/login" do
 
   erb :login
 end
-
-get "/logout" do
-  session.clear
-  erb :login
-end
