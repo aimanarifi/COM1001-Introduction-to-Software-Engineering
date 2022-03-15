@@ -56,12 +56,15 @@ header {
   width: 100%;
   padding: 0%;
   text-align: center;
+  margin: 0;
 }
 
 header h1 {
   background-color: var(--colour-contrast);
   font-size: 280%;
   width: 100%;
+  margin: 0;
+  margin-bottom: 1%;
 }
 
 footer {
@@ -77,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 p, h1 {
@@ -106,6 +110,8 @@ a {
 
 /* LOGIN FORM */
 
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -131,6 +137,10 @@ form input {
 input:hover {
   background-color: var(--colour-accent2);
   border: 1px solid var(--colour-outline);
+}
+
+#login .flex-container {
+  flex-direction: row;
 }
 
 
@@ -172,7 +182,19 @@ article {
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 2% 10%;
-  width: 35%;
+  width: 100s%;
+}
+
+
+/* desktop styles */
+
+@media screen and (min-width: 768px) {
+
+  #login {
+    flex-direction: row;
+  }
+
+
 }
