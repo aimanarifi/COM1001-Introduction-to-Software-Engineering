@@ -1,0 +1,72 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<% @page_title = "Moderate Posts" %>
+<%= erb :"common/header" %>    
+   
+<% unless @user.nil? %>
+
+    <% if @user[:account_type] == 3 %>
+    <a href="/moderation-feed/posts" >Moderate Posts</a> | <a href="/moderation-feed/users">Moderate Accounts |</a>
+    <% end %>
+    
+<%= erb :"common/feed_filter" %>
+
+    <% unless @posts.nil? %>
+
+        <% unless @filter.nil? %>
+        <%# Update @posts according to filter %>
+            <% if @filter_type == "uni" %>
+                <% @posts = @posts.where(universityID: @filter_id.to_i) %>
+
+            <% elsif @filter_type == "tag" %>
+                <% @taggedpost = PostTag.where(tagID: @filter_id.to_i) %>
+                <% @taggedpost_ID = [] %>
+                <% @taggedpost.each do |i|%>
+                    <% @taggedpost_ID.push(i.postID) %>
+                <% end %>
+
+                <% @posts = @posts.where(postID: @taggedpost_ID)%>
+            <% end %>
+        <% end %>
+
+        <% @posts.each do |post| %>
+
+            <div>
+                <% @uni = University.where(universityID: post.universityID).first %>
+                <h3 class="post_title" ><%= h post.title %></h3>
+                <p>By <strong><%= h User[post.userID].username %></strong> From <%= h @uni[:university_name] %></p>
+                <p><strong>Tags:</strong></p>
+                <% unless PostTag.where(postID: post.postID).nil? %>
+                    <% PostTag.where(postID: post.postID).each do |tag| %>
+                        <p><%= h Tag[tag.tagID].tag_name %></p>
+                    <% end %>
+                <% else %>
+                    <p> None </p>
+                <% end %>
+                <p class="post_message" name="message" ><%= h post.message %></p>
+                
+                <!-- load image if exist -->
+                <% if post.is_image == 1 %>
+                    <br>
+                    <img src="<%= h post.image_link %>" alt="This is alt text" >
+                <% end %>
+
+                <!-- The link below brings to new page where moderator can edit/reject/approve -->
+                <p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate post</a></p>
+            </div>
+
+        <% end %>
+
+    <% else %>
+
+        <p>Content Not Found</p>
+        
+    <% end %>
+
+<% else %>
+
+    <p>Error, <strong>User Not Found</strong></p>
+
+<% end %>
+
+<%= erb :"common/footer" %>
