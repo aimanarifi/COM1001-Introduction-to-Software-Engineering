@@ -1,0 +1,49 @@
+<!-- Author: Muhammad Kamaludin -->
+    <% @tags = Tag.all %>
+    <% unless @tags.nil? %>
+        <form method="get">
+            <label for="feedfilter">Filter accounts by:</label>
+            <select name="filter" id="feedfilter">
+                
+                <optgroup label="Current filter">
+                    <% unless @filter.nil? %>
+                        <option value="<%= h @filter_id %>,<%= h @filter_type %>"><%= h @filter_name %></option> 
+                    <% else %>
+                        <option value="">All</option> 
+                    <% end %>
+                </optgroup>
+
+                <optgroup label="Default">
+                    <% if @page_title == "Moderate Posts" && @user[:account_type] == 2 %>
+                        <option value="uni,<%= h @user[:universityID] %>,<%= University[@user[:universityID]].university_name %>"></option>
+                    <% else %>
+                        <option value="">All</option>
+                    <% end %>
+                </optgroup>
+
+                <optgroup label="General">
+                    <option value="">All</option>
+                    <%# TODO: Add another option "Not Deleted" %>
+                    <%# TODO: Add another option "Deleted" %>
+                </optgroup>
+                
+                <% if @page_title != "Moderate Users Account" %>
+                <optgroup label="By Tags">
+                    <% @tags.each do |tag| %>
+                        <option value="tag,<%= h tag.tagID %>,<%= h tag.tag_name %>"><%= h tag.tag_name %></option>
+                    <% end %>
+                </optgroup>
+                <% end %>
+
+                <% unless @page_title == "Moderate Posts" && @user[:account_type] == 2 %>
+                <optgroup label="By University">
+                    <% University.each do |uni| %>
+                        <option value="uni,<%= h uni.universityID %>,<%= h uni.university_name %>"><%= h uni.university_name %></option>
+                    <% end %>
+                </optgroup>
+                <% end %>
+
+            </select>
+            <input type="submit" value="Apply filter">
+        </form>
+    <% end %>
