@@ -118,8 +118,7 @@ form {
   text-align: center;
   border: 2px solid var(--colour-outline);
   border-radius: 25px;
-  padding: 1%;
-  padding-right: 2%;
+  padding: 0% 1%;
   width: 100%;
   background-color: var(--colour-secondary);
   margin: 10%;
@@ -132,13 +131,13 @@ form input {
   background-color: var(--colour-accent);
 }
 
+form label {
+  margin: 1%;
+}
+
 input:hover {
   background-color: var(--colour-accent2);
   border: 1px solid var(--colour-outline);
-}
-
-#login .flex-container {
-  flex-direction: row;
 }
 
 
@@ -169,8 +168,8 @@ article {
 #submitButton {
   color: var(--colour-accent2);
   background-color: var(--colour-contrast);
-  width: auto;
-  margin: auto;
+  width: 30%;
+  margin: 4%;
   padding: 1% 2%;
 }
 
@@ -182,7 +181,8 @@ article {
   display: flex;
   flex-direction: column;
   padding: 2% 10%;
-  width: 100s%;
+  width: 30%;
+  align-items: center
 }
 
 
