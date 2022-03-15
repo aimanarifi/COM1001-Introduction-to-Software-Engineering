@@ -1,8 +1,3 @@
-get "/" do
-  redirect "/login" unless session[:logged_in]
-  erb :feed
-end
-
 get "/login" do
   @user = User.new
   erb :login
@@ -14,7 +9,7 @@ post "/login" do
   @error = nil
 
   if @user.exist? && @user.valid?
-    session[:logged_in] = true
+    session[:logged_in] = 1
     session[:is_guest] = 0
     session[:account_type] = @user.account_type
     session[:userID] = @user.userID
@@ -33,16 +28,3 @@ get "/logout" do
   session.clear
   erb :login
 end
-
-=begin
-    # Temporary, until login is implemented:
-    session[:logged_in] = true
-    session[:is_guest] = 0 # Not a guest
-    session[:account_type] = 3 # Admin
-    session[:userID] = 1
-    session[:username] = "admin1"
-    session[:universityID] = 1
-    
-    erb :login
-end
-=end

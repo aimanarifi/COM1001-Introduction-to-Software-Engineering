@@ -3,11 +3,11 @@
 #TODO: Styling
 
 get "/moderation-feed" do
+    redirect "/login" unless session[:logged_in] == 1
+
     #This route fetch the account_type from database to determine whether he/she is a mod or admin
     #and display the unmoderated content to them
     user_id = session[:userID]
-
-    redirect "/login" unless session[:logged_in]
 
     @user = User[user_id]
 
@@ -39,6 +39,7 @@ get "/moderation-feed" do
 end
 
 get "/moderation-action" do
+    redirect "/login" unless session[:logged_in] == 1
 
     id = params["postID"]
     @post = Post[id]
@@ -48,6 +49,7 @@ get "/moderation-action" do
 end
 
 post "/approve" do
+    redirect "/login" unless session[:logged_in] == 1
 
     id = params["postID"]
 
@@ -64,6 +66,7 @@ post "/approve" do
 end
 
 post "/reject" do
+    redirect "/login" unless session[:logged_in] == 1
 
     id = params["postID"]
 

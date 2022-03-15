@@ -1,12 +1,12 @@
 get "/new-post" do
-    redirect "/login" unless session[:logged_in]
+    redirect "/login" unless session[:logged_in] == 1
 
     @post = Post.new
     erb :new_post
 end
 
 post "/new-post" do
-    redirect "/login" unless session[:logged_in]
+    redirect "/login" unless session[:logged_in] == 1
 
     # Create new post, add parameters from form
     @post = Post.new

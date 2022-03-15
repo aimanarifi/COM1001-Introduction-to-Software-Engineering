@@ -1,4 +1,6 @@
 get "/delete_post" do
+    redirect "/login" unless session[:logged_in] == 1
+
     id = params["postID"]
     @post = Post[id]
     @report_reason = DB[:report_reasons] 
@@ -7,7 +9,6 @@ get "/delete_post" do
 end
 
 post "/delete_post" do
-
     id = params["postID"]
     @post = Post[id]
     @post.update(is_moderated: 2)
