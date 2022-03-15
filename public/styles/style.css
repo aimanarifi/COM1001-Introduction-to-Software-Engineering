@@ -64,6 +64,11 @@ header h1 {
   width: 100%;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
 /* MAIN */
 
 body {
@@ -113,6 +118,7 @@ form {
   padding-right: 2%;
   width: 100%;
   background-color: var(--colour-secondary);
+  margin: 10%;
 }
 
 form input {
@@ -126,6 +132,9 @@ input:hover {
   background-color: var(--colour-accent2);
   border: 1px solid var(--colour-outline);
 }
+
+
+/* FEED */
 
 section {
   border: 2px solid var(--colour-outline);
@@ -147,6 +156,7 @@ article {
   background-color: var(--colour-accent2);
   margin: 1%;
 }
+
 
 #submitButton {
   color: var(--colour-accent2);
