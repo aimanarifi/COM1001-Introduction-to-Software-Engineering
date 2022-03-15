@@ -1,0 +1,44 @@
+<!-- Author: Muhammad Kamaludin -->
+
+<% @page_title = "Moderate Users Account" %>
+<%= erb :"common/header" %>
+
+<% unless @user.nil? %>
+    
+    <% if @user[:account_type] == 3 %>
+        <a href="/moderation-feed/posts" >Moderate Posts</a> | <a href="/moderation-feed/users">Moderate Accounts |</a>
+    <% end %>
+    
+<%= erb :"common/feed_filter" %>
+
+    <% if @account.count > 0 %>
+
+        <% @account.each do |account| %>
+
+            <div>
+                <p><strong>User ID:</strong> <%= h account.userID %></p>
+                <p><strong>Username:</strong> <%= h account.username %></p> 
+                <p><strong>Name :</strong> <%= h account.name %></p>
+                <p><strong>University:</strong> <%= h University[account.universityID].university_name %></p>
+                <% if account.is_suspended ==  0 %>
+                    <p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p>
+                <% elsif account.is_suspended == 1 %>
+                    <p>Restore Account</p>
+                <% end %>
+            </div>
+
+        <% end %>
+
+    <% else %>
+
+        <p>No account found</p>
+        
+    <% end %>
+
+<% else %>
+
+    <p>Error, <strong>User Not Found</strong></p>
+
+<% end %>
+
+<%= erb :"common/footer" %>
