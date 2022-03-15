@@ -15,6 +15,15 @@
                 <p><em>By <%= h post_user.username %></em></p>
                 <p><%= h post.message %></p>
                 <p><%= h university.university_name %>. Tags:</p>
+
+                <% unless PostTag.where(postID: post.postID).nil? %>
+                    <% PostTag.where(postID: post.postID).each do |tag| %>
+                        <p><%= h Tag[tag.tagID].tag_name %></p>
+                    <% end %>
+                <% else %>
+                    <p> None </p>
+                <% end %>
+
             </article>
             <br>
         <% end %>
