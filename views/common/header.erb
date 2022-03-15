@@ -15,17 +15,3 @@
 </head>
 
 <body>
-  <nav class="nav_wrapper">
-        <ul class="nav_bar">
-            <li><a href="/">Home</a></li>
-            <li><a href="/profile">Profile</a></li>
-
-            <% if session[:account_type] == 3 || session[:account_type] == 2 %>
-              <li><a href="/moderation-feed">Moderation Feed</a></li>
-            <% end %>
-        </ul>
-    </nav>
-
-  <header>
-    <h1><%= @page_title %></h1>
-  </header>
