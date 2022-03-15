@@ -23,7 +23,7 @@ get "/moderation-feed/posts" do
     unless @user.nil?
         #Display all unmoderated post to admin, while for moderator, display posts that matches their university only
         if @user[:account_type] == 2
-
+            
             @user_type_query = "Moderator"
             @posts = Post.where(universityID: @user[:universityID]).where(is_moderated: 0)
 
