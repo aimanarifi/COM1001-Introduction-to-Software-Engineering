@@ -50,6 +50,21 @@ class Post < Sequel::Model
             self.image_link = params.fetch("image_link").strip
             self.is_image = 0 if self.image_link == ""
         end
+        
+        #Update tags
+        post_tags = PostTag.where(postID: params["postID"])
+        post_tags.each do |tag|
+            
+            matching_tagID = false
+            params["tags"].each do |remaining_tag|
 
+                if tag == remaining_tag 
+                    matching_tagID = true
+                end
+            end
+            
+            #tagID that doesn't exist in the new array of saved tagID will be deleted
+            PostTag.where(postID: params[:postID]).where(tagID: tag.tagID).delete unless matching_tagID
+        end
     end
 end
