@@ -1,7 +1,10 @@
-<% @page_title = "Profile" %>
+<% @page_title = "#{@user.username}'s Profile" %>
 <%= erb :"common/header" %>
 
-<h1>Hello <%= h @user[:first_name] %> <%= h @user[:last_name] %></h1>
+<p><b>Name:</b> <%= h @user.name %></p>
+<p><b>Email:</b> <%= h @user.email %></p>
+<p><b>Account Type:</b> <%= @user.type_of_account %></p>
+<p><b>University:</b> <%= University.first(universityID: @user.universityID).university_name %></p>
 
 <section>
     <% if @posts.count > 0 %>
