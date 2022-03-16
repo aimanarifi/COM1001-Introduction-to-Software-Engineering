@@ -1,5 +1,5 @@
 #Author: Muhammad Kamaludin
-get "/moderation-feed/users" do 
+get "/user-moderation-feed" do 
 
     user_id = session[:userID]
     redirect "/login" unless session[:logged_in]
@@ -44,6 +44,6 @@ get "/restore/account" do
 
     DB[:deleted_users].where(userID: params["userID"]).delete
 
-    redirect "/moderation-feed/users"
+    redirect "/user-moderation-feed"
 
 end

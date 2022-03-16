@@ -2,7 +2,7 @@
 #TODO: validation and sanisation in this file and the erb(s)
 #TODO: Styling
 
-get "/moderation-feed/posts" do
+get "/post-moderation-feed" do
     #This route fetch the account_type from database to determine whether he/she is a mod or admin
     #and display the unmoderated content to them
     user_id = session[:userID]

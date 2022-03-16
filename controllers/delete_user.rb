@@ -16,6 +16,6 @@ post "/delete-user" do
     #update user table and add new row in deleted_users table
     @user.update(is_suspended: 1)
     DB[:deleted_users].insert(userID: id, date_deleted: Time.new.strftime("%Y-%m-%d %H:%M:%S").to_s)
-    redirect "/moderation-feed/users"
+    redirect "/user-moderation-feed"
     erb :delete_user
 end

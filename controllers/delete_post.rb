@@ -16,6 +16,6 @@ post "/delete-post" do
 
     #insert new entry to tht reported_posts table here
 
-    redirect "/moderation-feed/posts"
+    redirect "/post-moderation-feed"
     erb :delete_post
 end
