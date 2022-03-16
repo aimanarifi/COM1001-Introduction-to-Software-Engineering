@@ -2,6 +2,7 @@ get "/new-post" do
     redirect "/login" unless session[:logged_in] == 1
 
     @post = Post.new
+
     erb :new_post
 end
 
@@ -13,8 +14,19 @@ post "/new-post" do
 
     # Add session cookies to params hash
     params[:userID] = session[:userID]
-    params[:universityID] = session[:universityID]
-    params[:account_type] = session[:account_type]
+    
+    if session[:is_guest] == 1
+        params[:is_guest] = 1
+        
+        @university = params[:university_name]
+        params[:universityID] = University.first(university_name: @university)[:universityID]
+
+        params[:account_type] = 0
+    else
+        params[:is_guest] == 0
+        params[:universityID] = session[:universityID]
+        params[:account_type] = session[:account_type]
+    end
 
     @post.load(params)
 
@@ -24,9 +36,10 @@ post "/new-post" do
         @all_tags = Tag.all
 
         # Splits tags into an array
-        @tags = params[:tags].split(/\s*,\s*/)
+        @tags = params[:tags]
+        @split_tags = @tags.split(/\s*,\s*/)
 
-        @tags.each do |tag|
+        @split_tags.each do |tag|
             tag.upcase!
 
             # If tag doesn't exist, create new tag

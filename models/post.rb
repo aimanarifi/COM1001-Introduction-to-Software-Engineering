@@ -1,7 +1,13 @@
 # A post record from the database
 class Post < Sequel::Model
     def load(params)
-        self.userID = params.fetch("userID", "") 
+        if params.fetch("is_guest", "") == 1
+            self.is_guest = 1
+        else
+            self.is_guest = 0
+            self.userID = params.fetch("userID", "") 
+        end
+
         self.title = params.fetch("title", "").strip
         self.message = params.fetch("message", "").strip
         self.date_posted = Time.new.strftime("%Y-%m-%d %H:%M:%S").to_s

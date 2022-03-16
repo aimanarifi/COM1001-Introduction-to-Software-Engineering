@@ -80,6 +80,7 @@ def create_tables
             column :is_image, Integer
             column :image_link, String
             foreign_key :universityID, :universities
+            column :is_guest, Integer
         end
     end
 

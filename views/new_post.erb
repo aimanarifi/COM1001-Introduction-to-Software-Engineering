@@ -1,7 +1,9 @@
 <% @page_title = "New Post" %>
 <%= erb :"common/header" %>
 
-<div class="button"><a href="/">Cancel</a></div>
+<% if session[:is_guest] == 0 %>
+    <div class="button"><a href="/">Cancel</a></div>
+<% end %>
 
 <% unless @post.errors.size.zero? %>
   <p><strong class="error">Please fix the errors below:</strong></p>
@@ -23,6 +25,11 @@
             <% @post.errors["message"].each do |error| %>
                 <p class="error"><strong>Message <%= error %></strong></p>
             <% end %>
+        <% end %>
+
+        <% if session[:is_guest] == 1 %>
+            <label for="university"><p>University:</p></label>
+            <input type="text" name="university_name">
         <% end %>
 
         <label for="tags"><p>Tags (Comma Separated):</p></label>

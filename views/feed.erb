@@ -8,11 +8,17 @@
     <% if @posts.count > 0 %>
         <% @posts.each do |post| %>
             <% post_user = User.where(userID: post.userID).first %>
-            <% university = University.where(universityID: session[:universityID]).first %>
+            <% university = University.where(universityID: post.universityID).first %>
 
             <article class="feed_post">
                 <p><b>'<%= h post.title %>'</b></p>
-                <p><em>By <%= h post_user.username %></em></p>
+
+                <% if post.is_guest == 1 %>
+                    <p><em>By guest user.</em></p>
+                <% else %>
+                    <p><em>By <%= h post_user.username %></em></p>
+                <% end %>
+                
                 <p><%= h post.message %></p>
                 <p><b><%= h university.university_name %>. Tags:</b></p>
 

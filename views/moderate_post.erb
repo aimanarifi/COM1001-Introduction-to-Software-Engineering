@@ -6,8 +6,15 @@
 <!-- Non-modifiable info -->
 
 <p><strong>Post ID:</strong> <%= h @post[:postID] %></p><br>
-<% @author = User[@post[:userID]] %>
-<p><strong>Author:</strong> <%= h @author.name %></p><br>
+
+
+<% if @post.is_guest == 0 %>
+    <% @author = User[@post[:userID]] %>
+    <p><strong>Author:</strong> <%= h @author.name %></p><br>
+<% else %>
+    <p><strong>Author:</strong> Guest User</p><br>
+<% end %>
+
 <% @uni = DB[:universities].where(universityID: @post[:universityID]).first %>
 <p><strong>University:</strong> <%= h @uni[:university_name] %></p><br>
 <p><strong>Date created:</strong> <%= h @post[:date_posted] %></p><br>
