@@ -14,7 +14,7 @@
                 <p><b>'<%= h post.title %>'</b></p>
                 <p><em>By <%= h post_user.username %></em></p>
                 <p><%= h post.message %></p>
-                <p><%= h university.university_name %>. Tags:</p>
+                <p><b><%= h university.university_name %>. Tags:</b></p>
 
                 <% unless PostTag.where(postID: post.postID).nil? %>
                     <% PostTag.where(postID: post.postID).each do |tag| %>
