@@ -3,11 +3,17 @@
 ## Team Members
 
 Onaghalino Ekere
+
 Albie Gray
+
 Alexander Johns
+
 Muhammad Kamaludin
+
 Raymon Narwal
+
 Habil Bin Abdul Rahim Khan Suratee
+
 Lexi Wheadon
 
 ## Setup & Installation

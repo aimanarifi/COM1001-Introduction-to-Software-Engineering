@@ -20,56 +20,58 @@
 <p><strong>Date created:</strong> <%= h @post[:date_posted] %></p><br>
 
 <!-- Modifiable info -->
-<form method="post">
+<div class="flex-container">
+    <form method="post" id="moderateForm">
 
-    <label><strong>Title</strong></label>
-    <input type="text" name="title" value="<%= h @post[:title] %>" >
-    <% if @post.errors.include?("title") %>
-        <% @post.errors["title"].each do |error| %>
-            <p class="error"><strong>Title <%= error %></strong></p>
+        <label><strong>Title</strong></label>
+        <input type="text" name="title" value="<%= h @post[:title] %>" >
+        <% if @post.errors.include?("title") %>
+            <% @post.errors["title"].each do |error| %>
+                <p class="error"><strong>Title <%= error %></strong></p>
+            <% end %>
         <% end %>
-    <% end %>
-    <br>
+        <br>
 
-    <label><strong>Tags</strong></label>
-    <p>Uncheck to remove the tag(s)</p>
-    <% unless @post_tags.nil? %>
-        <% @post_tags.each_with_index do |tag, i| %>
-            <% @Tag = Tag[tag.tagID] %>
-            <input type="hidden" name="tagID<%= h i %>" value=""> 
-            <input type="checkbox" id="savetag" name="tagID<%= h i %>" value="<%= h @Tag.tagID %>" checked>
-            <label for="savetag"><%= h @Tag.get_tag_name %></label>
+        <label><strong>Tags</strong></label>
+        <p>Uncheck to remove the tag(s)</p>
+        <% unless @post_tags.nil? %>
+            <% @post_tags.each_with_index do |tag, i| %>
+                <% @Tag = Tag[tag.tagID] %>
+                <input type="hidden" name="tagID<%= h i %>" value=""> 
+                <input type="checkbox" id="savetag" name="tagID<%= h i %>" value="<%= h @Tag.tagID %>" checked>
+                <label for="savetag"><%= h @Tag.get_tag_name %></label>
+            <% end %>
+        <% else %>
+        <p>No tag</p>
         <% end %>
-    <% else %>
-     <p>No tag</p>
-    <% end %>
-    <br>
+        <br>
 
-    <label><strong>Content</strong></label>
-    <textarea name="message" rows="10" cols="45"><%= h @post[:message] %></textarea> 
-    <% if @post.errors.include?("message") %>
-        <% @post.errors["message"].each do |error| %>
-            <p class="error"><strong>Message <%= error %></strong></p>
+        <label><strong>Content</strong></label>
+        <textarea name="message" rows="10" cols="45"><%= h @post[:message] %></textarea> 
+        <% if @post.errors.include?("message") %>
+            <% @post.errors["message"].each do |error| %>
+                <p class="error"><strong>Message <%= error %></strong></p>
+            <% end %>
         <% end %>
-    <% end %>
-    <br>
+        <br>
 
-    <% if @post[:is_image] == 1 %>
-        <label><strong>Image</strong></label>
-        <img src=" <%= h @post[:image_link] %>" alt="d" >
-        <input type="hidden" name="image_link" value="<%= h @post[:image_link] %>" > <!-- When checbox is unchecked, returns this image link param -->
-        <input type="checkbox" id="deleteimage" name="image_link" value="">          <!-- When checbox is checked, returns this image link param. Sequel take the latest as param -->
-        <label for="deleteimage">Delete this image</label>
-    <% end %>
+        <% if @post[:is_image] == 1 %>
+            <label><strong>Image</strong></label>
+            <img src=" <%= h @post[:image_link] %>" alt="d" >
+            <input type="hidden" name="image_link" value="<%= h @post[:image_link] %>" > <!-- When checbox is unchecked, returns this image link param -->
+            <input type="checkbox" id="deleteimage" name="image_link" value="">          <!-- When checbox is checked, returns this image link param. Sequel take the latest as param -->
+            <label for="deleteimage">Delete this image</label>
+        <% end %>
 
-    <input type="hidden" name="postID" value="<%= @post[:postID] %>" >
-    <input id="approvebutton" type="submit" value="approve" formaction="/approve" >
+        <input type="hidden" name="postID" value="<%= @post[:postID] %>" >
 
-    <div>
-        <p>Rejected post will be <strong>deleted</strong>!</p>
-        <input id="rejectbutton" type="submit" value="reject" formaction="/reject" >
-    </div>
+        <div id="moderateButtons">
+            <input class="button" id="submitButton" type="submit" value="approve" formaction="/approve">
+            <input class="button" id="submitButton" type="submit" value="reject" formaction="/reject">
+        </div>
 
-</form>
+        <p>Warning: rejected posts will be <strong>deleted</strong>!</p>
+    </form>
+</div>
 
 <%= erb :"common/footer" %>

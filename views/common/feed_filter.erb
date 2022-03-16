@@ -4,10 +4,11 @@
 <!-- if filtertype = uni, filterid = universityID, filtername = university name -->
 <!-- same goes to tag -->
 <!-- For moderation: filter for deleted is not available yet -->
-<div id="filter">
+
+<div>
     <% @tags = Tag.all %>
     <% unless @tags.nil? %>
-        <form method="get">
+        <form method="get" id="filter">
             <% if @page_title == "Moderate Accounts" %>
                 <label for="feedfilter">Filter accounts by:</label>
             <% else %>
@@ -56,7 +57,7 @@
                 <% end %>
 
             </select>
-            <input type="submit" value="Apply filter">
+            <input class="button" type="submit" value="Apply filter" id="submitButton">
         </form>
     <% end %>
 </div>

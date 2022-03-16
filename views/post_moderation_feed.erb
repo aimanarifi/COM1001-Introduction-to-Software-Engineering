@@ -6,7 +6,7 @@
 <% unless @user.nil? %>
 
     <% if @user[:account_type] == 3 %>
-    <a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts |</a>
+        <p><a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts</a></p>
     <% end %>
     
 <%= erb :"common/feed_filter" %>

@@ -15,6 +15,7 @@
 .nav_wrapper { 
     width: 100%;
     background-color: var(--colour-secondary);
+    margin-bottom: 0.5%;
 }
 
 .nav_wrapper ul {
@@ -64,7 +65,6 @@ header h1 {
   font-size: 280%;
   width: 100%;
   margin: 0;
-  margin-bottom: 1%;
 }
 
 footer {
@@ -95,6 +95,11 @@ body {
 p, h1 {
   color: var(--colour-text);
   font-family: verdana;
+  margin: 0;
+}
+
+p {
+  padding: 1%;
 }
 
 a {
@@ -105,7 +110,7 @@ a {
 .button {
   padding: 0.5%;
   background-color: var(--colour-background);
-  margin: 0.5%;
+  margin: 1%;
   border-radius: 5px;
   border: 1px solid;
   border-color:black;
@@ -213,6 +218,30 @@ article {
   padding: 2% 10%;
   width: 30%;
   align-items: center
+}
+
+/* MODERATION FEED */
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+  margin: 1%;
+}
+
+#moderateForm {
+  margin-top: 0;
+}
+
+#moderateButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0% 1%;
+  width: 100%;
 }
 
 
