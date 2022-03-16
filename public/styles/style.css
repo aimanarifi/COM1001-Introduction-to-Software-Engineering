@@ -70,6 +70,7 @@ header h1 {
 footer {
   position: fixed;
   bottom: 0;
+  background-color: var(--colour-contrast);
 }
 
 /* MAIN */
