@@ -7,7 +7,7 @@
 <section>
     <% if @posts.count > 0 %>
         <% @posts.each do |post| %>
-            <% post_user = User.where(userID: session[:userID]).first %>
+            <% post_user = User.where(userID: post.userID).first %>
             <% university = University.where(universityID: session[:universityID]).first %>
 
             <article class="feed_post">
