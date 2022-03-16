@@ -23,7 +23,7 @@
                 <% if account.is_suspended ==  0 %>
                     <p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p>
                 <% elsif account.is_suspended == 1 %>
-                    <p>Restore Account</p>
+                    <p><a href="/restore/account?userID=<%= h account.userID %>">Restore Account</a></p>
                 <% end %>
             </div>
 

@@ -36,3 +36,14 @@ get "/moderation-feed/users" do
 
     erb :account_moderation_feed
 end
+
+get "/restore/account" do
+
+    User[params["userID"]].update(is_suspended: 0)
+    
+
+    DB[:deleted_users].where(userID: params["userID"]).delete
+
+    redirect "/moderation-feed/users"
+
+end
