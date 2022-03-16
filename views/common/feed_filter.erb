@@ -8,7 +8,11 @@
     <% @tags = Tag.all %>
     <% unless @tags.nil? %>
         <form method="get">
-            <label for="feedfilter">Filter accounts by:</label>
+            <% if @page_title == "Moderate Accounts" %>
+                <label for="feedfilter">Filter accounts by:</label>
+            <% else %>
+                <label for="feedfilter">Filter posts by:</label>
+            <% end %>
             <select name="filter" id="feedfilter">
                 
                 <optgroup label="Current filter">
@@ -34,7 +38,7 @@
                 </optgroup>
                 
                 <%# Tags filter doesnt appear in account moderation%>
-                <% if @page_title != "Moderate Users Account" %>
+                <% if @page_title != "Moderate Accounts" %>
                 <optgroup label="By Tags">
                     <% @tags.each do |tag| %>
                         <option value="tag,<%= h tag.tagID %>,<%= h tag.tag_name %>"><%= h tag.tag_name %></option>
