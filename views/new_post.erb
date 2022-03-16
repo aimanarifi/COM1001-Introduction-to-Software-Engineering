@@ -1,7 +1,7 @@
 <% @page_title = "New Post" %>
 <%= erb :"common/header" %>
 
-<a href="/" target="_parent"><button>Cancel</button></a>
+<div class="button"><a href="/">Cancel</a></div>
 
 <% unless @post.errors.size.zero? %>
   <p><strong class="error">Please fix the errors below:</strong></p>
