@@ -70,7 +70,14 @@ header h1 {
 footer {
   position: fixed;
   bottom: 0;
-  background-color: var(--colour-contrast);
+  width: 100%;
+  text-align: center;
+  background-color: var(--colour-secondary);
+}
+
+footer p {
+  font-size: 60%;
+  margin: 0.5%;
 }
 
 /* MAIN */
