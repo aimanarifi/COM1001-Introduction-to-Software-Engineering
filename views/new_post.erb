@@ -1,7 +1,7 @@
 <% @page_title = "New Post" %>
 <%= erb :"common/header" %>
 
-<% if session[:is_guest] == 0 %>
+<% if session[:is_guest] == 0 && session[:account_type] != 0 %>
     <div class="button"><a href="/">Cancel</a></div>
 <% end %>
 
