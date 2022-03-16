@@ -11,6 +11,7 @@
     
 <%= erb :"common/feed_filter" %>
 
+<section>
     <% unless @posts.nil? %>
 
         <% unless @filter.nil? %>
@@ -31,7 +32,7 @@
 
         <% @posts.each do |post| %>
 
-            <div>
+            <article>
                 <% @uni = University.where(universityID: post.universityID).first %>
                 <h3 class="post_title" ><%= h post.title %></h3>
                 <p>By <strong><%= h User[post.userID].username %></strong> From <%= h @uni[:university_name] %></p>
@@ -53,7 +54,7 @@
 
                 <!-- The link below brings to new page where moderator can edit/reject/approve -->
                 <p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate post</a></p>
-            </div>
+            </article>
 
         <% end %>
 
@@ -68,5 +69,6 @@
     <p>Error, <strong>User Not Found</strong></p>
 
 <% end %>
+</section>
 
 <%= erb :"common/footer" %>

@@ -11,11 +11,13 @@
     
 <%= erb :"common/feed_filter" %>
 
+<section>
+
     <% if @account.count > 0 %>
 
         <% @account.each do |account| %>
 
-            <div>
+            <article>
                 <p><strong>User ID:</strong> <%= h account.userID %></p>
                 <p><strong>Username:</strong> <%= h account.username %></p> 
                 <p><strong>Name :</strong> <%= h account.name %></p>
@@ -25,7 +27,7 @@
                 <% elsif account.is_suspended == 1 %>
                     <p><a href="/restore/account?userID=<%= h account.userID %>">Restore Account</a></p>
                 <% end %>
-            </div>
+            </article>
 
         <% end %>
 
@@ -40,5 +42,6 @@
     <p>Error, <strong>User Not Found</strong></p>
 
 <% end %>
+</section>
 
 <%= erb :"common/footer" %>
