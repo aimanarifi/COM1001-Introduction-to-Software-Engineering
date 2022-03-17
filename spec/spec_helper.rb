@@ -25,10 +25,33 @@ RSpec.configure do |config|
 end
 
 # Methods for testing
-# Log in before all tests
-def log_in
-    visit "/login"
-    # TODO - log into a test account on the test db
+
+def log_in_admin
+    visit "/logout"
+    fill_in "username", with: "admin"
+    fill_in "password", with: "admin"
+    click_button "Submit"
+end
+
+def log_in_moderator
+    visit "/logout"
+    fill_in "username", with: "moderator"
+    fill_in "password", with: "moderator"
+    click_button "Submit"
+end
+
+def log_in_viewer
+    visit "/logout"
+    fill_in "username", with: "viewer1"
+    fill_in "password", with: "viewer1"
+    click_button "Submit"
+end
+
+def log_in_reporter
+    visit "/logout"
+    fill_in "username", with: "reporter1"
+    fill_in "password", with: "reporter1"
+    click_button "Submit"
 end
 
 # Add a valid test post

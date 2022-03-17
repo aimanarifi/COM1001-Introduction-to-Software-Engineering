@@ -1,9 +1,13 @@
 get "/login" do
+  redirect "/" if session[:logged_in] == 1
+
   @user = User.new
   erb :login
 end
 
 post "/login" do
+  redirect "/" if session[:logged_in] == 1
+  
   @user = User.new
   @user.login(params)
   @error = nil

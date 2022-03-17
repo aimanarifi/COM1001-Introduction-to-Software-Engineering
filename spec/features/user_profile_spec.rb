@@ -1,7 +1,7 @@
 require_relative "../spec_helper"
 
 describe "the new post page" do
-    before(:all) { log_in }
+    before(:all) { log_in_viewer }
 
     it "is accessible from the feed page" do
         visit "/"

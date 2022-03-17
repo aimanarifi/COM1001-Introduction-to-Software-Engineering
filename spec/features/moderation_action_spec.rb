@@ -11,7 +11,7 @@ describe "The moderation feed," do
 
         it "opens the moderation form" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -32,7 +32,7 @@ describe "The individual post moderation page" do
 
         it "update the is_moderated attribute to 1" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -48,7 +48,7 @@ describe "The individual post moderation page" do
 
         it "the post does not appear in the moderation feed" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -65,7 +65,7 @@ describe "The individual post moderation page" do
     context "when the reject button is clicked" do
 
         it "redirect to the delete post page" do
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -78,7 +78,7 @@ describe "The individual post moderation page" do
 
         it "update the is_moderated attribute to 2" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -101,7 +101,7 @@ describe "The individual post moderation page" do
 
         it "the post does not appear in the moderation feed" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 

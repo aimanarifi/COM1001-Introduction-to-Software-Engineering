@@ -8,7 +8,7 @@ describe "General/ Admin's moderation feed: " do
 
         it "display the post in the mod's feed" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 0)
 
@@ -25,7 +25,7 @@ describe "General/ Admin's moderation feed: " do
 
         it "doesn't display it in the feed. (Case 1: is_moderated == 1)" do
 
-            log_in
+            log_in_admin
             add_test_post
             Post.last.update(is_moderated: 1)
                 
@@ -38,7 +38,7 @@ describe "General/ Admin's moderation feed: " do
 
         it "doesn't display it in the feed. (Case 2: is_moderated == 2)" do
 
-            log_in
+            log_in_admin
 
             add_test_post
             Post.last.update(is_moderated: 2)
@@ -63,7 +63,7 @@ describe "Mod's moderation feed: " do
 
         it " display the posts in the feed " do
 
-            log_in
+            log_in_admin
 
 
             add_test_post
@@ -83,7 +83,7 @@ describe "Mod's moderation feed: " do
 
         it " does not display the post" do
 
-            log_in
+            log_in_admin
             
 
             add_test_post
