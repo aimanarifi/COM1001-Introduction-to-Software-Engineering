@@ -9,9 +9,11 @@
   <p><strong class="error">Please fix the errors below:</strong></p>
 <% end %>
 
+<p><%= h @university %></p>
+
 <div class="flex-container">
     <form method="post">
-        <label for="title"><p>Title:</p></title>
+        <label for="title"><p>Title:</p></label>
         <input type="text" name="title" value="<%= h @post.title %>">
         <% if @post.errors.include?("title") %>
             <% @post.errors["title"].each do |error| %>
@@ -19,7 +21,7 @@
             <% end %>
         <% end %>
 
-        <label for="message"><p>Message:</p></title>
+        <label for="message"><p>Message:</p></label>
         <input type="text" name="message" value="<%= h @post.message %>">
         <% if @post.errors.include?("message") %>
             <% @post.errors["message"].each do |error| %>
@@ -28,8 +30,12 @@
         <% end %>
 
         <% if session[:is_guest] == 1 %>
-            <label for="university"><p>University:</p></label>
-            <input type="text" name="university_name">
+            <label for="universityID"><p>University:</p></label>
+            <select name="universityID">
+                <% University.each do |uni| %>
+                    <option value="<%= h uni.universityID %>"><%= h uni.university_name %></option>
+                <% end %>
+            </select>
         <% end %>
 
         <label for="tags"><p>Tags (Comma Separated):</p></label>

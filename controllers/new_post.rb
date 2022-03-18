@@ -17,10 +17,6 @@ post "/new-post" do
     
     if session[:is_guest] == 1
         params[:is_guest] = 1
-        
-        @university = params[:university_name]
-        params[:universityID] = University.first(university_name: @university)[:universityID]
-
         params[:account_type] = 0
     else
         params[:is_guest] == 0
