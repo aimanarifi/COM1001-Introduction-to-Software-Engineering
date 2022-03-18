@@ -89,13 +89,12 @@ end
 
 
 get "/restore-post" do
-    "This page restore post"
 
-=begin
-    Post[params["userID"]].update(is_deleted: 0)
-    DB[:deleted_posts].where(userID: params["userID"]).delete
+    Post[params["postID"]].update(is_moderated: 0)
+
+    # Delete the row in deleted_posts table DB[:deleted_posts].where(userID: params["userID"]).delete
 
     redirect "/post-moderation-feed"
-=end
+
 end
 
