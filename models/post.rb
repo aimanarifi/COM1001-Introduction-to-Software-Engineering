@@ -64,13 +64,14 @@ class Post < Sequel::Model
             matching_tagID = false
             params["tags"].each do |remaining_tag|
 
-                if tag == remaining_tag 
-                    matching_tagID = true
-                end
+                matching_tagID = true if tag.tagID == remaining_tag 
             end
             
             #tagID that doesn't exist in the new array of saved tagID will be deleted
             PostTag.where(postID: params[:postID]).where(tagID: tag.tagID).delete unless matching_tagID
+            
+            #Update tags table, if a tag isn't exist in post_tags table(no post uses the tag anymore), the tag will be deleted 
+            Tag[tag.tagID].delete if PostTag.where(tagID: tag.tagID).count == 0
         end
     end
 end
