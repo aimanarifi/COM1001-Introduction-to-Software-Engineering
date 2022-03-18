@@ -71,7 +71,7 @@ post "/approve" do
 
     if @post.valid?
         @post.save_changes
-        redirect "/moderation-feed/posts"
+        redirect "/post-moderation-feed"
     end
 
     erb :moderate_post
