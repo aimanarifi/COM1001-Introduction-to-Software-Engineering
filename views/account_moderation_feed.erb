@@ -15,24 +15,36 @@
     
 <%= erb :"common/feed_filter" %>
 
-<section>
-
+<section> 
+    <!-- This page displays non-deleted accounts first and deleted accounts below them -->
     <% if @account.count > 0 %>
 
         <% @account.each do |account| %>
-
+            <% if account.is_suspended == 0 %>
             <article>
                 <p><strong>User ID:</strong> <%= h account.userID %></p>
                 <p><strong>Username:</strong> <%= h account.username %></p> 
                 <p><strong>Name :</strong> <%= h account.name %></p>
                 <p><strong>University:</strong> <%= h University[account.universityID].university_name %></p>
-                <% if account.is_suspended ==  0 %>
-                    <div class="button"><p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p></div>
-                <% elsif account.is_suspended == 1 %>
-                    <div class="button"><p><a href="/restore/account?userID=<%= h account.userID %>">Restore Account</a></p><div>
-                <% end %>
-            </article>
 
+                <div class="button"><p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p></div>
+
+            </article>
+            <% end %>
+        <% end %>
+
+        <% @account.each do |account| %>
+            <% if account.is_suspended == 1 %>
+            <article>
+                <p><strong>User ID:</strong> <%= h account.userID %></p>
+                <p><strong>Username:</strong> <%= h account.username %></p> 
+                <p><strong>Name :</strong> <%= h account.name %></p>
+                <p><strong>University:</strong> <%= h University[account.universityID].university_name %></p>
+
+                <div class="button"><p><a href="/restore-account?userID=<%= h account.userID %>">Restore Account</a></p><div>
+
+            </article>
+            <% end %>
         <% end %>
 
     <% else %>

@@ -37,7 +37,7 @@ get "/user-moderation-feed" do
     erb :account_moderation_feed
 end
 
-get "/restore/account" do
+get "/restore-account" do
 
     User[params["userID"]].update(is_suspended: 0)
     

@@ -30,7 +30,7 @@ get "/post-moderation-feed" do
         elsif @user[:account_type] == 3
 
             @user_type_query = "Administrator"
-            @posts = Post.where(is_moderated: 0)
+            @posts = Post
             
         else
             redirect "/"
@@ -86,3 +86,16 @@ post "/reject" do
     redirect route
 
 end
+
+
+get "/restore-post" do
+    "This page restore post"
+
+=begin
+    Post[params["userID"]].update(is_deleted: 0)
+    DB[:deleted_posts].where(userID: params["userID"]).delete
+
+    redirect "/post-moderation-feed"
+=end
+end
+
