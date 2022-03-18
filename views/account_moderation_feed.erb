@@ -36,6 +36,7 @@
         <% @account.each do |account| %>
             <% if account.is_suspended == 1 %>
             <article>
+                <p><strong>Status: </strong>Suspended<p>
                 <p><strong>User ID:</strong> <%= h account.userID %></p>
                 <p><strong>Username:</strong> <%= h account.username %></p> 
                 <p><strong>Name :</strong> <%= h account.name %></p>
