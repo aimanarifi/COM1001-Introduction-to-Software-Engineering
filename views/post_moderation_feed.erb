@@ -6,7 +6,11 @@
 <% unless @user.nil? %>
 
     <% if @user[:account_type] == 3 %>
-        <p><a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts</a></p>
+    <br>
+    <div class="adminmoderationtab">
+        <a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts</a>
+    </div>
+    <br>
     <% end %>
     
 <%= erb :"common/feed_filter" %>
@@ -59,7 +63,7 @@
                 <% end %>
 
                 <!-- The link below brings to new page where moderator can edit/reject/approve -->
-                <p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate post</a></p>
+                <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate post</a></p></div>
             </article>
 
         <% end %>

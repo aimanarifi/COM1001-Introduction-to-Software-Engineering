@@ -6,7 +6,11 @@
 <% unless @user.nil? %>
     
     <% if @user[:account_type] == 3 %>
-        <a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts |</a>
+    <br>
+    <div class="adminmoderationtab">
+        <a href="/post-moderation-feed" >Moderate Posts</a> | <a href="/user-moderation-feed">Moderate Accounts</a>
+    </div>
+    <br>
     <% end %>
     
 <%= erb :"common/feed_filter" %>
@@ -23,9 +27,9 @@
                 <p><strong>Name :</strong> <%= h account.name %></p>
                 <p><strong>University:</strong> <%= h University[account.universityID].university_name %></p>
                 <% if account.is_suspended ==  0 %>
-                    <p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p>
+                    <div class="button"><p><a href="/delete-user?userID=<%= h account.userID %>">Delete Account</a></p></div>
                 <% elsif account.is_suspended == 1 %>
-                    <p><a href="/restore/account?userID=<%= h account.userID %>">Restore Account</a></p>
+                    <div class="button"><p><a href="/restore/account?userID=<%= h account.userID %>">Restore Account</a></p><div>
                 <% end %>
             </article>
 
