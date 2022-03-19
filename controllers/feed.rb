@@ -3,7 +3,7 @@ get "/" do
 
     redirect "/new-post" if session[:is_guest] == 1 || session[:account_type] == 0
 
-    @posts = Post.where(is_moderated: 1).reverse
+    @posts = Post.where(is_moderated: 1).order(:date_posted).reverse
 
     erb :feed
 end

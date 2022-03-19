@@ -12,7 +12,7 @@
             <article class="feed_post">
                 <p><b><%= h post[:title] %></b></p>
                 <p><%= h post[:message] %></p>
-                <p>Tags: </p>
+                <p><b>Tags:</b></p>
                 <% unless PostTag.where(postID: post.postID).nil? %>
                     <% PostTag.where(postID: post.postID).each do |tag| %>
                         <p><%= h Tag[tag.tagID].tag_name %></p>
