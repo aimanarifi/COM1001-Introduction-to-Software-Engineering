@@ -1,2 +1,40 @@
-<h1>Please sign up or log in to access whatever this is</h1>
-<a href="/registrations/signup">Sign Up</a>
+<% @page_title = "Register" %>
+<%= erb :"common/header" %>
+
+<header>
+  <h1>Welcome To ACME</h1>
+</header>
+
+<div class="flex-container">
+    <h1>Please sign up or log in to access whatever this is</h1>
+    <a href="/registrations/signup">Sign Up</a>
+
+    <form method="post" class="loginElement">
+        <label for="email"><p>Email:</p></label>
+        <input type="email" id="email" name="email">
+
+        <label for="username"><p>Username:</p></label>
+        <input type="text" id="username" name="username" value="<%= @user.username %>">
+
+        <label for="password"><p>Password:</p></label>
+        <input type="password" id="password" name="password">
+
+        <label for="first_name"><p>First name:</p></label>
+        <input type="first_name" id="first_name" name="first_name">
+
+        <label for="last_name"><p>Last name:</p></label>
+        <input type="last_name" id="last_name" name="first_name">         
+
+        <% unless @error.nil? %> 
+          <p style="color:red"><%= @error %></p>
+        <% end %>
+
+        <input class="button" type="submit" value="Submit" id="submitButton">
+    </form>
+
+  <div id="loginButtons" class="loginElement">
+    <input class="button" type="button" id="submitButton" onclick="location.href='/guest'" value="Continue As Guest">
+  </div>
+</div>
+
+<%= erb :"common/footer" %>
