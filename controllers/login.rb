@@ -14,7 +14,7 @@ post "/login" do
 
   if @user.exist? && @user.valid?
     @logged_in_user = User.where(username: params.fetch("username","")).first
-
+    
     session[:logged_in] = 1
     session[:is_guest] = 0
     session[:account_type] = @logged_in_user.account_type
@@ -29,3 +29,4 @@ post "/login" do
 
   erb :login
 end
+

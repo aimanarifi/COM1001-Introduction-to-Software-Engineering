@@ -6,8 +6,8 @@
 <section>
     <% if @posts.count > 0 %>
         <% @posts.each do |post| %>
-            <% post_user = User.where(userID: post.userID).first %>
-            <% university = University.where(universityID: post.universityID).first %>
+            <% post_user = User[post.userID] %>
+            <% university = University[post.universityID] %>
 
             <article class="feed_post">
                 <p><b>'<%= h post.title %>'</b></p>
