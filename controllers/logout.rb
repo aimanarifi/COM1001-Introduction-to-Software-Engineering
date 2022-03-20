@@ -1,3 +1,5 @@
+# Author: Alexander Johns
+
 get "/logout" do
     session.clear
     

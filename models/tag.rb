@@ -1,3 +1,4 @@
+# Author: Alexander Johns
 # A tag record from the database
 class Tag < Sequel::Model
     def load(params)

@@ -1,3 +1,5 @@
+# Author: Lexi Wheadon & Alexander Johns
+
 get "/new-post" do
     redirect "/login" unless session[:logged_in] == 1
 

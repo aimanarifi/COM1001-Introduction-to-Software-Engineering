@@ -1,3 +1,4 @@
+# Author: Lexi Wheadon & Alexander Johns
 # Gems 
 require "require_all"
 require "sinatra"

@@ -1,3 +1,5 @@
+# Author: Alexander Johns
+
 require_relative "../spec_helper"
 
 describe "the feed page" do

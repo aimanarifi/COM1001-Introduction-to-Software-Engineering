@@ -1,3 +1,5 @@
+# Author: Lexi Wheadon & Alexander Johns
+# Updated By: Muhammad Kamaludin 
 # A post record from the database
 class Post < Sequel::Model
     def load(params)

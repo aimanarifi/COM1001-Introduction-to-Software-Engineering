@@ -1,3 +1,5 @@
+# Author: Alexander Johns
+
 get "/profile" do
     redirect "/login" unless session[:logged_in] == 1
 

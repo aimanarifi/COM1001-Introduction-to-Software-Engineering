@@ -1,3 +1,6 @@
+# Author: Alexander Johns
+# Updated: Muhammad Kamaludin 
+
 # Configure coverage logging
 require "simplecov"
 SimpleCov.start do

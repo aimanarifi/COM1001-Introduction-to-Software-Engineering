@@ -1,3 +1,5 @@
+# Author: Lexi Wheadon
+# Updated By: Alexander Johns
 # Sets up the sqlite3 database file
 
 # Gems

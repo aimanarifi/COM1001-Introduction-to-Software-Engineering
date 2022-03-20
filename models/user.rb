@@ -1,3 +1,5 @@
+# Author: Lexi Wheadon & Alexander Johns
+# Updated: Habil Bin Abdul Rahim Khan Suratee 
 # A user record from the database
 class User < Sequel::Model
     def login(params)

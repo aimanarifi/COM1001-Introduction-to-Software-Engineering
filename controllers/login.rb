@@ -1,3 +1,6 @@
+# Author: Habil Bin Abdul Rahim Khan Suratee 
+# Updated By: Alexander Johns
+
 get "/login" do
   redirect "/" if session[:logged_in] == 1
 
