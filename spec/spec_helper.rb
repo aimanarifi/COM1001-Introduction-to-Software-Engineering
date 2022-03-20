@@ -29,6 +29,7 @@ end
 
 # Methods for testing
 
+# Login methods
 def log_in_admin
     visit "/logout"
     fill_in "username", with: "admin"
@@ -57,7 +58,21 @@ def log_in_reporter
     click_button "Submit"
 end
 
-# Add a valid test post
+def log_in_incorrect_username
+    visit "/logout"
+    fill_in "username", with: "adm1n"
+    fill_in "password", with: "admin"
+    click_button "Submit"
+end
+
+def log_in_incorrect_password
+    visit "/logout"
+    fill_in "username", with: "admin"
+    fill_in "password", with: "adm1n"
+    click_button "Submit"
+end
+
+# Creating a post methods
 def add_test_post
     visit "/new-post"
     fill_in "title", with: "This is a post!"
@@ -67,7 +82,6 @@ def add_test_post
     click_button "Submit"
 end
 
-# Add a test post with missing database
 def add_invalid_test_post
     visit "/new-post"
     fill_in "title", with: "This is a post!"
