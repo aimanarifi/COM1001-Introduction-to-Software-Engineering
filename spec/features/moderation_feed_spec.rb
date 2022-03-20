@@ -1,4 +1,5 @@
 #Author: Muhammad Kamaludin
+=begin
 require_relative "../spec_helper"
 
 
@@ -55,7 +56,7 @@ describe "General/ Admin's moderation feed: " do
     
 end
 
-=begin   This testing need something that can modify session, prolly login system
+#  This testing need something that can modify session, prolly login system
 
 describe "Mod's moderation feed: " do
 

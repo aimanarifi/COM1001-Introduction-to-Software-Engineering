@@ -1,4 +1,5 @@
 #Author: Muhammad Kamaludin
+=begin
 require_relative "../spec_helper"
 
 #TODO: Add test for post modification
@@ -123,7 +124,4 @@ describe "The individual post moderation page" do
     end
 
 end
-
-
-
-
+=end
