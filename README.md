@@ -42,6 +42,8 @@ bundle install
 sinatra
 ```
 
+5. Click the link in the terminal to open the application in a new tab.
+
 ## 3. Usage
 
 ### Default User Accounts:
