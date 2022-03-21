@@ -140,6 +140,8 @@ form input {
 
 form label {
   margin: 1%;
+  width: 100%;
+  text-align: center;
 }
 
 input:hover {
