@@ -46,10 +46,12 @@
                 <h3 class="post_title" ><%= h post.title %></h3>
 
                 <% if post.is_guest == 0 %>
-                    <p>By <strong><%= h User[post.userID].username %></strong> From <%= h @uni[:university_name] %></p>
+                    <p>By <strong><%= h User[post.userID].username %></strong>, from <%= h @uni[:university_name] %></p>
                 <% else %>
-                    <p>By <strong>Guest User</strong> From <%= h @uni[:university_name] %></p>
+                    <p>By <strong>Guest User</strong>, from <%= h @uni[:university_name] %></p>
                 <% end %>
+
+                <p class="post_message" name="message" ><%= h post.message %></p>
 
                 <p><strong>Tags:</strong></p>
                 <% unless PostTag.where(postID: post.postID).nil? %>
@@ -59,7 +61,6 @@
                 <% else %>
                     <p> None </p>
                 <% end %>
-                <p class="post_message" name="message" ><%= h post.message %></p>
                 
                 <!-- load image if exist -->
                 <% if post.is_image == 1 %>

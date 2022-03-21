@@ -13,17 +13,23 @@
             <% university = University[post.universityID] %>
 
             <article class="feed_post">
-                <p><b>'<%= h post.title %>'</b></p>
+                <h3 class="post_title" ><%= h post.title %></h3>
 
                 <% if post.is_guest == 1 %>
                     <p><em>By guest user.</em></p>
                 <% else %>
                     <p><em>By <%= h post_user.username %></em></p>
                 <% end %>
-                
-                <p><%= h post.message %></p>
-                <p><b><%= h university.university_name %>. Tags:</b></p>
 
+                <% if post.is_guest == 0 %>
+                    <p>By <strong><%= h post_user.username %></strong>, from <%= h university.university_name %></p>
+                <% else %>
+                    <p>By <strong>Guest User</strong>, from <%= h university.university_name %></p>
+                <% end %>
+                
+                <p class="post_message" name="message" ><%= h post.message %></p>
+
+                <p><strong>Tags:</strong></p>
                 <% unless PostTag.where(postID: post.postID).nil? %>
                     <% PostTag.where(postID: post.postID).each do |tag| %>
                         <p><%= h Tag[tag.tagID].tag_name %></p>
