@@ -7,7 +7,7 @@ describe "the new post page" do
         it "is not accessible when logged out" do
             visit "/logout"
             visit "/profile"
-            expect(page).to have_content "Welcome To ACME"
+            expect(page).to have_content "Log In"
         end
         
         it "is accessible from the feed page" do

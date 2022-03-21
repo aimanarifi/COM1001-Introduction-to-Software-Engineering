@@ -44,7 +44,7 @@ describe "the login page" do
     context "when accessing the page," do
         it "is accessible when logged out" do
             visit "/logout"
-            expect(page).to have_content "Welcome To ACME"
+            expect(page).to have_content "Log In"
         end
 
         it "is not accessible when logged in" do
