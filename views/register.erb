@@ -8,7 +8,7 @@
 </header>
 
 <div class="flex-container">
-    <h1>Please sign up or log in to access whatever this is</h1>
+    <h1>Sign Up</h1>
     <a href="/registrations/signup">Sign Up</a>
 
     <form method="post" class="loginElement">
@@ -16,15 +16,15 @@
         <input type="email" id="email" name="email">
 
         <label for="username"><p>Username:</p></label>
-        <input type="text" id="username" name="username" value="<%= @user.username %>">
+        <input type="text" id="username" name="username">
 
         <label for="password"><p>Password:</p></label>
         <input type="password" id="password" name="password">
 
-        <label for="first_name"><p>First name:</p></label>
+        <label for="first_name"><p>First_name:</p></label>
         <input type="first_name" id="first_name" name="first_name">
 
-        <label for="last_name"><p>Last name:</p></label>
+        <label for="last_name"><p>Last_name:</p></label>
         <input type="last_name" id="last_name" name="first_name">         
 
         <% unless @error.nil? %> 
