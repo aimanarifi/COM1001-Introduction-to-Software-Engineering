@@ -13,8 +13,10 @@
     <% if @posts.count > 0 %>
         <% @posts.each do |post| %>
             <article class="feed_post">
-                <p><b><%= h post[:title] %></b></p>
-                <p><%= h post[:message] %></p>
+                <h3 class="post_title" ><%= h post.title %></h3>
+
+                <p><%= h post.message %></p>
+                
                 <p><b>Tags:</b></p>
                 <% unless PostTag.where(postID: post.postID).nil? %>
                     <% PostTag.where(postID: post.postID).each do |tag| %>
