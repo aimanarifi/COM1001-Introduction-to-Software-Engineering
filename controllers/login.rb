@@ -16,7 +16,9 @@ post "/login" do
   @error = nil
 
   if @user.exist? && @user.valid?
-    @logged_in_user = User.where(username: params.fetch("username","")).first
+    @logged_in_user = User.where(username: params.fetch("username","")).first || 
+    @logged_in_user = User.where(email: params.fetch("username","")).first
+
     
     session[:logged_in] = 1
     session[:is_guest] = 0
