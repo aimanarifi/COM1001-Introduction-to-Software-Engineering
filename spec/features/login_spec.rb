@@ -1,4 +1,5 @@
 # Author: Alexander Johns
+# Updated: Habil Bin Abdul Rahim Khan Suratee 
 
 require_relative "../spec_helper"
 
@@ -38,6 +39,16 @@ describe "the login page" do
         it "can login as a reporter" do
             log_in_reporter
             expect(page).to have_content "New Post"
+        end
+
+        it "can login with email" do
+            log_in_admin_email
+            expect(page).to have_content "Feed"
+        end
+
+        it "will not login with one empty parameter" do
+            log_in_admin_empty
+            expect(page).to have_content "The username or password that you entered is incorrect, please try again"
         end
     end
 

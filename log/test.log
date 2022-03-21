@@ -91,3 +91,107 @@ I, [2022-02-26T16:22:29.232945 #171]  INFO -- : (0.000026s) PRAGMA case_sensitiv
 I, [2022-02-26T16:22:29.233578 #171]  INFO -- : (0.000062s) SELECT sqlite_version()
 I, [2022-02-26T16:22:29.233844 #171]  INFO -- : (0.000121s) PRAGMA table_info('posts')
 I, [2022-02-26T16:22:29.234764 #171]  INFO -- : (0.000113s) PRAGMA table_info('users')
+I, [2022-03-21T12:57:28.223625 #287]  INFO -- : (0.000219s) PRAGMA foreign_keys = 1
+I, [2022-03-21T12:57:28.223727 #287]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
+I, [2022-03-21T12:57:28.223968 #287]  INFO -- : (0.000072s) SELECT sqlite_version()
+I, [2022-03-21T12:57:28.224214 #287]  INFO -- : (0.000063s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-21T12:57:28.224404 #287]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-21T12:57:28.225360 #287]  INFO -- : (0.000072s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-21T12:57:28.225534 #287]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-21T12:57:28.225686 #287]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-21T12:57:28.225852 #287]  INFO -- : (0.000047s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-21T12:57:28.226001 #287]  INFO -- : (0.000043s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-21T12:57:28.226144 #287]  INFO -- : (0.000042s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-21T12:57:28.226953 #287]  INFO -- : (0.000062s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-21T12:57:28.228450 #287]  INFO -- : (0.000175s) PRAGMA table_info('posts')
+I, [2022-03-21T12:57:28.230034 #287]  INFO -- : (0.000091s) PRAGMA table_info('post_tags')
+I, [2022-03-21T12:57:28.231353 #287]  INFO -- : (0.000086s) PRAGMA table_info('tags')
+I, [2022-03-21T12:57:28.232766 #287]  INFO -- : (0.000088s) PRAGMA table_info('universities')
+I, [2022-03-21T12:57:28.235955 #287]  INFO -- : (0.000265s) PRAGMA table_info('users')
+I, [2022-03-21T12:57:28.935480 #287]  INFO -- : (0.000111s) DELETE FROM `post_tags` WHERE (1 = 1)
+I, [2022-03-21T12:57:28.935763 #287]  INFO -- : (0.000075s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-03-21T12:57:28.935915 #287]  INFO -- : (0.000047s) DELETE FROM `report_reasons` WHERE (1 = 1)
+I, [2022-03-21T12:57:29.051836 #287]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2022-03-21T12:57:29.052169 #287]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`email` = '') LIMIT 1
+I, [2022-03-21T12:57:29.063138 #287]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`username` = 'adm1n') LIMIT 1
+I, [2022-03-21T12:57:29.063435 #287]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`email` = 'adm1n') LIMIT 1
+I, [2022-03-21T12:57:29.075883 #287]  INFO -- : (0.000152s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.076090 #287]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.082631 #287]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.082838 #287]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.083130 #287]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.085440 #287]  INFO -- : (0.000083s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:57:29.092256 #287]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`username` = 'moderator') LIMIT 1
+I, [2022-03-21T12:57:29.092472 #287]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`email` = 'moderator') LIMIT 1
+I, [2022-03-21T12:57:29.092736 #287]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'moderator') LIMIT 1
+I, [2022-03-21T12:57:29.093693 #287]  INFO -- : (0.000078s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:57:29.100003 #287]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`username` = 'viewer1') LIMIT 1
+I, [2022-03-21T12:57:29.100186 #287]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'viewer1') LIMIT 1
+I, [2022-03-21T12:57:29.100440 #287]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'viewer1') LIMIT 1
+I, [2022-03-21T12:57:29.101401 #287]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:57:29.107630 #287]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'reporter1') LIMIT 1
+I, [2022-03-21T12:57:29.107810 #287]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'reporter1') LIMIT 1
+I, [2022-03-21T12:57:29.108059 #287]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'reporter1') LIMIT 1
+I, [2022-03-21T12:57:29.121144 #287]  INFO -- : (0.000147s) SELECT * FROM `users` WHERE (`username` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T12:57:29.121401 #287]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`email` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T12:57:29.121709 #287]  INFO -- : (0.000121s) SELECT * FROM `users` WHERE (`username` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T12:57:29.121952 #287]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`email` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T12:57:29.122934 #287]  INFO -- : (0.000079s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:57:29.132096 #287]  INFO -- : (0.000120s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.132280 #287]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.132574 #287]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:57:29.133793 #287]  INFO -- : (0.000081s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:57:29.135238 #287]  INFO -- : (0.000076s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:26.905453 #290]  INFO -- : (0.000203s) PRAGMA foreign_keys = 1
+I, [2022-03-21T13:01:26.905542 #290]  INFO -- : (0.000016s) PRAGMA case_sensitive_like = 1
+I, [2022-03-21T13:01:26.905716 #290]  INFO -- : (0.000052s) SELECT sqlite_version()
+I, [2022-03-21T13:01:26.905912 #290]  INFO -- : (0.000057s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-21T13:01:26.906096 #290]  INFO -- : (0.000058s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-21T13:01:26.907118 #290]  INFO -- : (0.000074s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-21T13:01:26.907299 #290]  INFO -- : (0.000049s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-21T13:01:26.907456 #290]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-21T13:01:26.907635 #290]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-21T13:01:26.907814 #290]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-21T13:01:26.907988 #290]  INFO -- : (0.000048s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-21T13:01:26.908829 #290]  INFO -- : (0.000064s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-21T13:01:26.910426 #290]  INFO -- : (0.000180s) PRAGMA table_info('posts')
+I, [2022-03-21T13:01:26.912084 #290]  INFO -- : (0.000090s) PRAGMA table_info('post_tags')
+I, [2022-03-21T13:01:26.913399 #290]  INFO -- : (0.000087s) PRAGMA table_info('tags')
+I, [2022-03-21T13:01:26.914855 #290]  INFO -- : (0.000956s) PRAGMA table_info('universities')
+I, [2022-03-21T13:01:26.918270 #290]  INFO -- : (0.000298s) PRAGMA table_info('users')
+I, [2022-03-21T13:01:27.207353 #290]  INFO -- : (0.000103s) DELETE FROM `post_tags` WHERE (1 = 1)
+I, [2022-03-21T13:01:27.207608 #290]  INFO -- : (0.000067s) DELETE FROM `posts` WHERE (1 = 1)
+I, [2022-03-21T13:01:27.207745 #290]  INFO -- : (0.000044s) DELETE FROM `report_reasons` WHERE (1 = 1)
+I, [2022-03-21T13:01:27.269404 #290]  INFO -- : (0.000148s) SELECT * FROM `users` WHERE (`username` = '') LIMIT 1
+I, [2022-03-21T13:01:27.269717 #290]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`email` = '') LIMIT 1
+I, [2022-03-21T13:01:27.279046 #290]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'adm1n') LIMIT 1
+I, [2022-03-21T13:01:27.279261 #290]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`email` = 'adm1n') LIMIT 1
+I, [2022-03-21T13:01:27.290830 #290]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.291083 #290]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.297339 #290]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.297516 #290]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.297779 #290]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.299977 #290]  INFO -- : (0.000081s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:27.305929 #290]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'moderator') LIMIT 1
+I, [2022-03-21T13:01:27.306101 #290]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'moderator') LIMIT 1
+I, [2022-03-21T13:01:27.306331 #290]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`username` = 'moderator') LIMIT 1
+I, [2022-03-21T13:01:27.307253 #290]  INFO -- : (0.000076s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:27.313262 #290]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'viewer1') LIMIT 1
+I, [2022-03-21T13:01:27.313435 #290]  INFO -- : (0.000077s) SELECT * FROM `users` WHERE (`email` = 'viewer1') LIMIT 1
+I, [2022-03-21T13:01:27.313666 #290]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'viewer1') LIMIT 1
+I, [2022-03-21T13:01:27.314564 #290]  INFO -- : (0.000076s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:27.320554 #290]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`username` = 'reporter1') LIMIT 1
+I, [2022-03-21T13:01:27.320753 #290]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`email` = 'reporter1') LIMIT 1
+I, [2022-03-21T13:01:27.321002 #290]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'reporter1') LIMIT 1
+I, [2022-03-21T13:01:27.332459 #290]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T13:01:27.332671 #290]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`email` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T13:01:27.332898 #290]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T13:01:27.333113 #290]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`email` = 'admin@admin.com') LIMIT 1
+I, [2022-03-21T13:01:27.334025 #290]  INFO -- : (0.000084s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:27.339203 #290]  INFO -- : (0.000108s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.339377 #290]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.348011 #290]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.348274 #290]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`email` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.348642 #290]  INFO -- : (0.000154s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T13:01:27.349979 #290]  INFO -- : (0.000103s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T13:01:27.352127 #290]  INFO -- : (0.000105s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1

@@ -1,5 +1,5 @@
 # Author: Alexander Johns
-# Updated: Muhammad Kamaludin 
+# Updated: Muhammad Kamaludin, Habil Bin Abdul Rahim Khan Suratee  
 
 # Configure coverage logging
 require "simplecov"
@@ -69,6 +69,19 @@ def log_in_incorrect_password
     visit "/logout"
     fill_in "username", with: "admin"
     fill_in "password", with: "adm1n"
+    click_button "Submit"
+end
+
+def log_in_admin_email
+    visit "/logout"
+    fill_in "username", with: "admin@admin.com"
+    fill_in "password", with: "admin"
+    click_button "Submit"
+end
+
+def log_in_admin_empty
+    visit "/logout"
+    fill_in "username", with: "admin"
     click_button "Submit"
 end
 
