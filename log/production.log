@@ -39,3 +39,29 @@ I, [2022-03-16T14:56:43.914255 #526]  INFO -- : (0.000072s) SELECT * FROM `unive
 I, [2022-03-16T14:56:43.914642 #526]  INFO -- : (0.000058s) SELECT * FROM `tags` WHERE `tagID` = 2
 I, [2022-03-16T14:56:43.914731 #526]  INFO -- : (0.000221s) SELECT * FROM `post_tags` WHERE (`postID` = 2)
 I, [2022-03-16T14:56:43.914777 #526]  INFO -- : (0.001992s) SELECT * FROM `posts` WHERE (`is_moderated` = 1)
+I, [2022-03-21T12:11:10.093711 #216]  INFO -- : (0.000245s) PRAGMA foreign_keys = 1
+I, [2022-03-21T12:11:10.093826 #216]  INFO -- : (0.000018s) PRAGMA case_sensitive_like = 1
+I, [2022-03-21T12:11:10.094058 #216]  INFO -- : (0.000090s) SELECT sqlite_version()
+I, [2022-03-21T12:11:10.094318 #216]  INFO -- : (0.000070s) SELECT NULL AS 'nil' FROM `tags` LIMIT 1
+I, [2022-03-21T12:11:10.094508 #216]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `universities` LIMIT 1
+I, [2022-03-21T12:11:10.094699 #216]  INFO -- : (0.000060s) SELECT NULL AS 'nil' FROM `users` LIMIT 1
+I, [2022-03-21T12:11:10.094871 #216]  INFO -- : (0.000052s) SELECT NULL AS 'nil' FROM `posts` LIMIT 1
+I, [2022-03-21T12:11:10.095034 #216]  INFO -- : (0.000050s) SELECT NULL AS 'nil' FROM `post_tags` LIMIT 1
+I, [2022-03-21T12:11:10.095170 #216]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `deleted_users` LIMIT 1
+I, [2022-03-21T12:11:10.095297 #216]  INFO -- : (0.000041s) SELECT NULL AS 'nil' FROM `deleted_posts` LIMIT 1
+I, [2022-03-21T12:11:10.095427 #216]  INFO -- : (0.000045s) SELECT NULL AS 'nil' FROM `reported_posts` LIMIT 1
+I, [2022-03-21T12:11:10.095569 #216]  INFO -- : (0.000040s) SELECT NULL AS 'nil' FROM `report_reasons` LIMIT 1
+I, [2022-03-21T12:11:10.096410 #216]  INFO -- : (0.000138s) PRAGMA table_info('posts')
+I, [2022-03-21T12:11:10.097341 #216]  INFO -- : (0.000092s) PRAGMA table_info('post_tags')
+I, [2022-03-21T12:11:10.097894 #216]  INFO -- : (0.000079s) PRAGMA table_info('tags')
+I, [2022-03-21T12:11:10.098438 #216]  INFO -- : (0.000073s) PRAGMA table_info('universities')
+I, [2022-03-21T12:11:10.099163 #216]  INFO -- : (0.000119s) PRAGMA table_info('users')
+I, [2022-03-21T12:11:14.238170 #216]  INFO -- : (0.000248s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:11:14.238681 #216]  INFO -- : (0.000194s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2022-03-21T12:11:14.345771 #216]  INFO -- : (0.000151s) SELECT count(*) AS 'count' FROM `posts` WHERE (`is_moderated` = 1) LIMIT 1
+I, [2022-03-21T12:11:14.346152 #216]  INFO -- : (0.000048s) SELECT * FROM `universities` WHERE `universityID` = 304
+I, [2022-03-21T12:11:14.346341 #216]  INFO -- : (0.000046s) SELECT * FROM `post_tags` WHERE (`postID` = 3)
+I, [2022-03-21T12:11:14.346386 #216]  INFO -- : (0.000434s) SELECT * FROM `posts` WHERE (`is_moderated` = 1) ORDER BY `date_posted` DESC
+I, [2022-03-21T12:11:16.849638 #216]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE `userID` = 1
+I, [2022-03-21T12:11:16.851472 #216]  INFO -- : (0.000146s) SELECT * FROM `universities` WHERE `universityID` = 304
+I, [2022-03-21T12:11:16.851788 #216]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `posts` WHERE (`userID` = 1) LIMIT 1

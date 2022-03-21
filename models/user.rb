@@ -14,9 +14,11 @@ class User < Sequel::Model
     end
     
     def exist?
-     other_user = User.first(username: username)
-     !other_user.nil? && other_user.password == password
-    end
+        other_user = User.first(username: username) 
+        another_user= User.first(email: username)
+        (!other_user.nil? && other_user.password == password ) ||
+         (!another_user.nil? && another_user.password == password )
+       end
 
     def name
         # Return full name of user
