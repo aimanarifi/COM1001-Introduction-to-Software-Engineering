@@ -1,16 +1,12 @@
 <!-- Author: Raymon Narwal -->
 
-<% @page_title = "Register" %>
-<%= erb :"common/header" %>
+<%= erb :"common/login_header" %>
 
 <header>
-  <h1>Welcome To ACME</h1>
+  <h1>Register An Account</h1>
 </header>
 
 <div class="flex-container">
-    <h1>Sign Up</h1>
-    <a href="/registrations/signup">Sign Up</a>
-
     <form method="post" class="signupElement">
         <label for="email"><p>Email:</p></label>
         <input type="email" id="email" name="email">
@@ -21,10 +17,10 @@
         <label for="password"><p>Password:</p></label>
         <input type="password" id="password" name="password">
 
-        <label for="first_name"><p>First_name:</p></label>
+        <label for="first_name"><p>First Name:</p></label>
         <input type="text" id="first_name" name="first_name">
 
-        <label for="last_name"><p>Last_name:</p></label>
+        <label for="last_name"><p>Last Name:</p></label>
         <input type="text" id="last_name" name="first_name">         
 
         <% unless @error.nil? %> 
@@ -34,7 +30,8 @@
         <input class="button" type="submit" value="Submit" id="submitButton">
     </form>
 
-  <div id="signupButtons" class="signupElement">
+  <div id="loginButtons" class="loginElement">
+    <input class="button" type="button" id="submitButton" onclick="location.href='/login'" value="Log In">
     <input class="button" type="button" id="submitButton" onclick="location.href='/guest'" value="Continue As Guest">
   </div>
 </div>
