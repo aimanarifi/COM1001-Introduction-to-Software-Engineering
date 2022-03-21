@@ -11,7 +11,7 @@
     <h1>Sign Up</h1>
     <a href="/registrations/signup">Sign Up</a>
 
-    <form method="post" class="loginElement">
+    <form method="post" class="signupElement">
         <label for="email"><p>Email:</p></label>
         <input type="email" id="email" name="email">
 
@@ -22,10 +22,10 @@
         <input type="password" id="password" name="password">
 
         <label for="first_name"><p>First_name:</p></label>
-        <input type="first_name" id="first_name" name="first_name">
+        <input type="text" id="first_name" name="first_name">
 
         <label for="last_name"><p>Last_name:</p></label>
-        <input type="last_name" id="last_name" name="first_name">         
+        <input type="text" id="last_name" name="first_name">         
 
         <% unless @error.nil? %> 
           <p style="color:red"><%= @error %></p>
@@ -34,7 +34,7 @@
         <input class="button" type="submit" value="Submit" id="submitButton">
     </form>
 
-  <div id="loginButtons" class="loginElement">
+  <div id="signupButtons" class="signupElement">
     <input class="button" type="button" id="submitButton" onclick="location.href='/guest'" value="Continue As Guest">
   </div>
 </div>
