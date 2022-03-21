@@ -3,7 +3,7 @@ get "/register" do
     redirect "/" if session[:logged_in] == 1
 
     id = params["userID"]
-    @user = User[id]
+    @user = User.new[id]
 
     erb :register
     "register page"
