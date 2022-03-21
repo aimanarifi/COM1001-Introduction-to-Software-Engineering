@@ -1,4 +1,5 @@
 #Author: Raymon Narwal
+#Todo: Write check for uni email + check for password len>7
 get "/register" do
     redirect "/" if session[:logged_in] == 1
 
