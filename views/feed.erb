@@ -15,12 +15,6 @@
             <article class="feed_post">
                 <h3 class="post_title" ><%= h post.title %></h3>
 
-                <% if post.is_guest == 1 %>
-                    <p><em>By guest user.</em></p>
-                <% else %>
-                    <p><em>By <%= h post_user.username %></em></p>
-                <% end %>
-
                 <% if post.is_guest == 0 %>
                     <p>By <strong><%= h post_user.username %></strong>, from <%= h university.university_name %></p>
                 <% else %>
