@@ -58,7 +58,7 @@ class Post < Sequel::Model
             self.image_link = params.fetch("image_link").strip
             self.is_image = 0 if self.image_link == ""
         end
-        
+
         #Update tags
         post_tags = PostTag.where(postID: params["postID"])
         post_tags.each do |tag|

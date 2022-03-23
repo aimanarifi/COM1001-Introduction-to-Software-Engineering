@@ -9,24 +9,52 @@
 
 <div class="flex-container">
     <form method="post" class="signupElement">
-        <label for="email"><p>Email:</p></label>
-        <input type="email" id="email" name="email">
-
         <label for="username"><p>Username:</p></label>
         <input type="text" id="username" name="username">
-
-        <label for="password"><p>Password:</p></label>
-        <input type="password" id="password" name="password">
+        <% if @user.errors.include?("username") %>
+            <% @user.errors["username"].each do |error| %>
+                <p class="error"><strong>Username <%= error %></strong></p>
+            <% end %>
+        <% end %>
 
         <label for="first_name"><p>First Name:</p></label>
         <input type="text" id="first_name" name="first_name">
+        <% if @user.errors.include?("first_name") %>
+            <% @user.errors["first_name"].each do |error| %>
+                <p class="error"><strong>First Name <%= error %></strong></p>
+            <% end %>
+        <% end %>
 
         <label for="last_name"><p>Last Name:</p></label>
-        <input type="text" id="last_name" name="first_name">         
-
-        <% unless @error.nil? %> 
-          <p style="color:red"><%= @error %></p>
+        <input type="text" id="last_name" name="last_name">
+        <% if @user.errors.include?("last_name") %>
+            <% @user.errors["last_name"].each do |error| %>
+                <p class="error"><strong>Last Name <%= error %></strong></p>
+            <% end %>
         <% end %>
+
+        <label for="email"><p>Email:</p></label>
+        <input type="email" id="email" name="email">
+        <% if @user.errors.include?("email") %>
+            <% @user.errors["email"].each do |error| %>
+                <p class="error"><strong>Email <%= error %></strong></p>
+            <% end %>
+        <% end %>
+
+        <label for="password"><p>Password:</p></label>
+        <input type="password" id="password" name="password">
+        <% if @user.errors.include?("password") %>
+            <% @user.errors["password"].each do |error| %>
+                <p class="error"><strong>Password <%= error %></strong></p>
+            <% end %>
+        <% end %>
+
+        <label for="universityID"><p>University:</p></label>
+        <select name="universityID">
+            <% University.each do |uni| %>
+                <option value="<%= h uni.universityID %>"><%= h uni.university_name %></option>
+            <% end %>
+        </select>      
 
         <input class="button" type="submit" value="Submit" id="submitButton">
     </form>

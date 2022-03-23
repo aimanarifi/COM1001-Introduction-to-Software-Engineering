@@ -3,8 +3,7 @@
 get "/register" do
     redirect "/" if session[:logged_in] == 1
 
-    id = params["userID"]
-    @user = User.new[id]
+    @user = User.new
 
     erb :register
 end
@@ -12,13 +11,16 @@ end
 post "/register" do
     redirect "/" if session[:logged_in] == 1
 
-    @user = User.new(username: params["username"], password: params["password"], email: params["email"], first_name: params["first_name"])
-    @user.save
+    @user = User.new
+
+    params[:is_suspended] = 0
+    params[:account_type] = 1
+
+    @user.load(params)
     
     if @user.valid?
+        @user.save_changes
         redirect "/"
-    else
-        @error = "not working"
     end
 
     erb :register

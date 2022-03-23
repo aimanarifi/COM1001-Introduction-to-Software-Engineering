@@ -2,15 +2,30 @@
 # Updated: Habil Bin Abdul Rahim Khan Suratee 
 # A user record from the database
 class User < Sequel::Model
+    def load(params)
+        self.username = params.fetch("username", "").strip
+        self.password = params.fetch("password", "").strip
+        self.email = params.fetch("email", "").strip
+        self.first_name = params.fetch("first_name", "").strip
+        self.last_name = params.fetch("last_name", "").strip
+        self.is_suspended = params.fetch("is_suspended")
+        self.account_type = params.fetch("account_type")
+        self.universityID = params.fetch("universityID")
+    end
+
     def login(params)
         self.username = params.fetch("username", "").strip
         self.password = params.fetch("password", "").strip
       end
       
     def validate
-     super
-     errors.add("username", "cannot be empty") if username.empty?
-     errors.add("password", "cannot be empty") if password.empty?
+        super
+        errors.add("username", "cannot be empty") if !username || username.empty?
+        errors.add("password", "cannot be empty") if !password || password.empty?
+        errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
+        errors.add("last_name", "cannot be empty") if !last_name || last_name.empty?
+        errors.add("email", "cannot be empty") if !email || email.empty?
+        errors.add("email", "cannot be an invalid format") if !(email =~ URI::MailTo::EMAIL_REGEXP)
     end
     
     def exist?
@@ -18,7 +33,7 @@ class User < Sequel::Model
         another_user= User.first(email: username)
         (!other_user.nil? && other_user.password == password ) ||
          (!another_user.nil? && another_user.password == password )
-       end
+    end
 
     def name
         # Return full name of user
