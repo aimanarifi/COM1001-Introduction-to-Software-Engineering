@@ -22,10 +22,23 @@ class User < Sequel::Model
         super
         errors.add("username", "cannot be empty") if !username || username.empty?
         errors.add("password", "cannot be empty") if !password || password.empty?
+    end
+
+    def register_validate
+        errors.add("username", "cannot be empty") if !username || username.empty?
+        errors.add("username", "already exists") if User.where(username: username).count > 0
+        errors.add("password", "cannot be empty") if !password || password.empty?
         errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
         errors.add("last_name", "cannot be empty") if !last_name || last_name.empty?
         errors.add("email", "cannot be empty") if !email || email.empty?
         errors.add("email", "cannot be an invalid format") if !(email =~ URI::MailTo::EMAIL_REGEXP)
+        errors.add("email", "already exists") if User.where(email: email).count > 0
+
+        if errors.length == 0
+            return true
+        else
+            return false
+        end
     end
     
     def exist?

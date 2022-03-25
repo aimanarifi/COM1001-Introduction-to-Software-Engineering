@@ -33,9 +33,10 @@ post "/new-post" do
 
         @all_tags = Tag.all
 
-        # Splits tags into an array
+        # Splits unique tags into an array
         @tags = params[:tags]
         @split_tags = @tags.split(/\s*,\s*/)
+        @split_tags = @split_tags.uniq
 
         @split_tags.each do |tag|
             tag.upcase!

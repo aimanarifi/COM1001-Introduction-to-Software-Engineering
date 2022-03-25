@@ -11,14 +11,14 @@ end
 post "/register" do
     redirect "/" if session[:logged_in] == 1
 
-    @user = User.new
-
     params[:is_suspended] = 0
     params[:account_type] = 1
 
+    @user = User.new
+
     @user.load(params)
     
-    if @user.valid?
+    if @user.register_validate
         @user.save_changes
         redirect "/"
     end
