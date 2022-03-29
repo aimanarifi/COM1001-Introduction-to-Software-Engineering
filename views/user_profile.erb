@@ -11,23 +11,8 @@
 
 <section>
     <% if @posts.count > 0 %>
-        <% @posts.each do |post| %>
-            <article class="feed_post">
-                <h3 class="post_title" ><%= h post.title %></h3>
-
-                <p><%= h post.message %></p>
-                
-                <p><b>Tags:</b></p>
-                <% unless PostTag.where(postID: post.postID).nil? %>
-                    <% PostTag.where(postID: post.postID).each do |tag| %>
-                        <p><%= h Tag[tag.tagID].tag_name %></p>
-                    <% end %>
-                <% else %>
-                    <p> None </p>
-                <% end %>
-            </article>
-            <br>
-        <% end %>
+        <% @post_is_moderated = 1 %>
+        <%= erb :"common/post" %>
     <% else %>
         <p> No posts were found.</p>
     <% end %>

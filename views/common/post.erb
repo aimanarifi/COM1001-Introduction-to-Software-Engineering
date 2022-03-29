@@ -1,0 +1,63 @@
+<% @posts.each do |post| %>
+    <% post_user = User[post.userID] %>
+    <% university = University[post.universityID] %>
+    
+    <% if post.is_moderated == @post_is_moderated %>
+        <article class="feed_post">
+            <h3 class="post_title" ><%= h post.title %></h3>
+
+            <!-- Display post status on moderation feed -->
+            <% if @page_title == "Moderate Posts"%>
+                <p><strong>Status: </strong>
+                <% if post.is_moderated == 0 %>
+                Unmoderated
+                <% elsif post.is_moderated == 1 %>
+                Approved
+                <% elsif post.is_moderated == 2 %>
+                Rejected/Deleted 
+                <% end %>
+                </p>
+            <% end %>
+
+            <!-- Don't display author info on user profile -->
+            <% if @page_title != "#{User[session[:userID]].username}'s Profile" %>
+                <% if post.is_guest == 0 %>
+                    <p>By <strong><%= h post_user.username %></strong>, from <%= h university.university_name %></p>
+                <% else %>
+                    <p>By <strong>Guest User</strong>, from <%= h university.university_name %></p>
+                <% end %>
+            <% end %>
+                
+            <p class="post_message" name="message" ><%= h post.message %></p>
+
+            <p><strong>Tags:</strong></p>
+            <% if PostTag.where(postID: post.postID).count > 0 %>
+                <p>|
+                <% PostTag.where(postID: post.postID).each do |tag| %>
+                    <%= h Tag[tag.tagID].tag_name %> |
+                <% end %>
+                </p>
+            <% else %>
+                <p> None </p>
+            <% end %>
+
+            <!-- load image if exist -->
+            <% if post.is_image == 1 %>
+                <br>
+                <img src="<%= h post.image_link %>" alt="This is alt text" >
+            <% end %>
+
+            <!-- Display action buttons in the moderation feed -->
+            <% if @page_title == "Moderate Posts" %>
+                <% if post.is_moderated == 0 %>
+                <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate Post</a></p></div>
+                <% elsif post.is_moderated == 1 %>
+                <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/delete-post?postID=<%= h post.postID %>" >Delete Post</a></p></div>
+                <% elsif post.is_moderated == 2 %>
+                    <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/restore-post?postID=<%= h post.postID %>" >Restore Post</a></p></div>
+                <% end %>
+            <% end %>
+        </article>
+    <% end %>
+        <br>
+<% end %>
