@@ -9,27 +9,33 @@
     <% @tags = Tag.all %>
     <% unless @tags.nil? %>
         <form method="get" id="filter">
+
+            <label for="feedfilter">
             <% if @page_title == "Moderate Accounts" %>
-                <label for="feedfilter">Filter accounts by:</label>
+                Filter accounts by:
             <% else %>
-                <label for="feedfilter">Filter posts by:</label>
+                Filter posts by:
             <% end %>
+            </label>
+
             <select name="filter" id="feedfilter">
                 
                 <optgroup label="Current filter">
-                    <% unless @filter.nil? %>
-                        <option value="<%= h @filter_type %>,<%= h @filter_id %>,<%= h @filter_name %>"><%= h @filter_name %></option> 
+                    <% if @filter.nil? %>
+                        <option value="">All
                     <% else %>
-                        <option value="">All</option> 
+                        <option value="<%= h @filter_type %>,<%= h @filter_id %>,<%= h @filter_name %>"><%= h @filter_name %>
                     <% end %>
+                    </option>
                 </optgroup>
 
                 <optgroup label="Default">
                     <% if @page_title == "Moderate Posts" && @user[:account_type] == 2 %>
-                        <option value="uni,<%= h @user[:universityID] %>,<%= h University[@user[:universityID]].university_name %>"><%= h University[@user[:universityID]].university_name %></option>
+                        <option value="uni,<%= h @user[:universityID] %>,<%= h University[@user[:universityID]].university_name %>"><%= h University[@user[:universityID]].university_name %>
                     <% else %>
-                        <option value="">All</option>
+                        <option value="">All
                     <% end %>
+                    </option>
                 </optgroup>
 
                 <optgroup label="General">

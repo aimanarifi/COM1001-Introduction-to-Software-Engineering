@@ -49,13 +49,15 @@
 
             <!-- Display action buttons in the moderation feed -->
             <% if @page_title == "Moderate Posts" %>
+                <div class="button"><p>
                 <% if post.is_moderated == 0 %>
-                <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate Post</a></p></div>
+                    <a id="moderatepost<%= h post.postID %>" href="/moderate-post?postID=<%= h post.postID %>" >Moderate Post
                 <% elsif post.is_moderated == 1 %>
-                <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/delete-post?postID=<%= h post.postID %>" >Delete Post</a></p></div>
+                    <a id="moderatepost<%= h post.postID %>" href="/delete-post?postID=<%= h post.postID %>" >Delete Post
                 <% elsif post.is_moderated == 2 %>
-                    <div class="button"><p><a id="moderatepost<%= h post.postID %>" href="/restore-post?postID=<%= h post.postID %>" >Restore Post</a></p></div>
+                    <a id="moderatepost<%= h post.postID %>" href="/restore-post?postID=<%= h post.postID %>" >Restore Post
                 <% end %>
+                </a></p></div>
             <% end %>
         </article>
     <% end %>

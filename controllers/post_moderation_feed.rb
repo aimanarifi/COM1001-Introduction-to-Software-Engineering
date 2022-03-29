@@ -8,14 +8,14 @@ get "/post-moderation-feed" do
     user_id = session[:userID]
     redirect "/login" unless session[:logged_in]
 
-    unless params["filter"].nil?
+    if params["filter"].nil? || params["filter"] == ""
+        @filter = nil
+    else
         #filter params with have the string "<filtertype>,<post/tagID>,<tag/uniname>"
         @filter = params["filter"].split(",")
         @filter_type = @filter[0]
         @filter_id = @filter[1]
-        @filter_name = @filter[2]
-    else
-        @filter = nil
+        @filter_name = @filter[2]    
     end
 
     @user = User[user_id]

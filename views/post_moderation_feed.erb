@@ -16,7 +16,7 @@
 <%= erb :"common/feed_filter" %>
 
 <section>
-    <% unless @posts.nil? %>
+    <% if @posts.count > 0 %>
 
         <% unless @filter.nil? %>
         <%# Update @posts according to filter %>
@@ -37,11 +37,12 @@
 
          <!--This feed will have 2 parts, it will display unmoderated post first and display moderated post below it -->
 
+        <% if @posts.count > 0 %>    
             <!-- This is for unmoderated post-->
             <% @post_is_moderated = 0 %>
             <%= erb :"common/post" %>
 
-            <!--This display moderated posts & only visible for admin -->
+            <!--This displays moderated posts & only visible for admin -->
             <% if @user[:account_type] == 3 %>
 
                 <% @post_is_moderated = 1 %>
@@ -52,10 +53,13 @@
                 
             <% end %>
 
+        <% else %>
+            <p>No posts Were Found</p>
+        <% end %>
 
     <% else %>
 
-        <p>Content Not Found</p>
+        <p>No posts Were Found</p>
         
     <% end %>
 
