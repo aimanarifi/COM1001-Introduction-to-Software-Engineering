@@ -116,6 +116,7 @@ end
 # Clear the database
 def clear_database
     DB.from("post_tags").delete
+    DB.from("post_bookmarks").delete
     DB.from("posts").delete
     DB.from("report_reasons").delete
 end
