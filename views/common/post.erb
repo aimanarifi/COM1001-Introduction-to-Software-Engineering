@@ -59,6 +59,18 @@
                 <% end %>
                 </a></p></div>
             <% end %>
+
+            <!-- Display bookmark button on feed -->
+            <!-- Display unbookmark button on bookmarks page / bookmarked posts on feed -->
+            <% if @page_title == "Feed" && PostBookmark.where(postID: post.postID, userID: session[:userID]).count == 0 %>
+                <div class="button"><p>
+                    <a id="bookmarkpost,<%= h post.postID %>" href="/bookmark-post?postID=<%= h post.postID %>">Bookmark Post
+                </a></p></div>
+            <% elsif @page_title == "Feed" || @page_title == "#{User[session[:userID]].username}'s Bookmarks" %>
+                <div class="button"><p>
+                    <a id="unbookmarkpost,<%= h post.postID %>" href="/unbookmark-post?postID=<%= h post.postID %>&source=<%= h request.path_info %>">Unbookmark Post
+                </a></p></div>
+            <% end %>
         </article>
         <br>
     <% end %> 

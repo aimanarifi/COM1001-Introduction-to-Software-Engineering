@@ -94,6 +94,15 @@ def create_tables
         end
     end
 
+    unless DB.table_exists?(:post_bookmarks)
+        DB.create_table :post_bookmarks do
+            primary_key [:postID, :userID]
+            foreign_key :postID, :posts
+            foreign_key :userID, :users
+            column :date_bookmarked, String
+        end
+    end
+
     unless DB.table_exists?(:deleted_users)
         DB.create_table :deleted_users do
             primary_key :deleteID_user # this need tweaking on here and deleted posts

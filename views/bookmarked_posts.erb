@@ -1,0 +1,15 @@
+<!-- Author: Alexander Johns -->
+
+<% @page_title = "#{@user.username}'s Bookmarks" %>
+<%= erb :"common/header" %>
+
+<section>
+    <% if @posts.count > 0 %>
+        <% @post_is_moderated = 1 %>
+        <%= erb :"common/post" %>
+    <% else %>
+        <p> No posts were found.</p>
+    <% end %>
+</section>
+
+<%= erb :"common/footer" %>

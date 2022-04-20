@@ -26,6 +26,10 @@
               <li><a href="/profile">Profile</a></li>
             <% end %>
 
+            <% if session[:is_guest] == 0 %>
+              <li><a href="/bookmarks">Bookmarks</a></li>
+            <% end %>
+
             <% if session[:account_type] == 3 || session[:account_type] == 2 %>
               <li><a href="/post-moderation-feed">Moderation</a></li>
             <% end %>
