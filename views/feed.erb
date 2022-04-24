@@ -6,6 +6,25 @@
 
 <div class = "button"><a href="/new-post">Create Post</a></div>
 
+<%= erb :"common/feed_filter" %>
+<% if @posts.count > 0 %>
+    <% unless @filter.nil? %>
+    <%# Update @posts according to filter %>
+        <% if @filter_type == "uni" %>
+            <% @posts = @posts.where(universityID: @filter_id.to_i) %>
+
+        <% elsif @filter_type == "tag" %>
+            <% @taggedpost = PostTag.where(tagID: @filter_id.to_i) %>
+            <% @taggedpost_ID = [] %>
+            <% @taggedpost.each do |i|%>
+                <% @taggedpost_ID.push(i.postID) %>
+            <% end %>
+
+            <% @posts = @posts.where(postID: @taggedpost_ID)%>
+        <% end %>
+    <% end %>
+<% end %>
+
 <section>
     <% if @posts.count > 0 %>
         <% @post_is_moderated = 1 %>

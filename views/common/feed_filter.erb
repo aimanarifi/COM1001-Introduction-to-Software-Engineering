@@ -6,7 +6,24 @@
 <!-- For moderation: filter for deleted is not available yet -->
 
 <div>
-    <% @tags = Tag.all %>
+    <% if @page_title == "Feed" %>
+        <!-- It will no show tags from unmoderated posts -->
+        <% @postIDs = []%>
+        <% @posts.each do |post|%>
+            <% @postIDs.push(post.postID) %>
+        <% end %>
+
+        <% @postTags = PostTag.where(postID: @postIDs) %>
+        <% @postTagsID = [] %>
+        <% @postTags.each do |postTag|%>
+            <% @postTagsID.push(postTag.tagID) %>
+        <% end %>
+        <% @tags = Tag.where(tagID: @postTagsID) %>
+
+    <% else %>
+        <% @tags = Tag.all %>
+    <% end %>
+    
     <% unless @tags.nil? %>
         <form method="get" id="filter">
 
