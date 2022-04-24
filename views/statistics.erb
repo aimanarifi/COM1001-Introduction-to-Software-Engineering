@@ -1,0 +1,57 @@
+<!-- Author: Muhammad Kamaludin -->
+<% @page_title = "Posts Statistics" %>
+<%= erb :"common/header" %>
+
+    <!-- Only show tags of posts that has been moderated -->
+    <% @postIDs = []%>
+    <% @posts.each do |post|%>
+        <% @postIDs.push(post.postID) %>
+    <% end %>
+
+    <% @postTags = PostTag.where(postID: @postIDs) %>
+    <% @postTagsID = [] %>
+    <% @postTags.each do |postTag|%>
+        <% @postTagsID.push(postTag.tagID) %>
+    <% end %>
+
+    <% @tags = Tag.where(tagID: @postTagsID) %>
+
+    <% @university = University %>
+
+    <table>
+        <tr>
+            <td>Total Number of posts</td>
+            <td><%= h @posts.count %></td>
+            <td><a href="/">Read posts</a></td>
+        </tr>
+
+        <% if @tags.count > 0 %>
+            <% @tags.each do |tag|%>
+                <tr>
+                    <td>Posts with <%= h tag.tag_name %> tag</td>
+                    <td><%= h PostTag.where(tagID: tag.tagID).count %></td>
+                    <td><a href="/?filter=tag,<%= h tag.tagID %>,<%= h tag.tag_name %>">Read posts</a></td>
+                </tr>
+            <% end %>
+        <% end %>
+
+        <% @university.each do |uni|%>
+            <% @uni_post_counter = 0 %>
+            <% @posts.each do |post| %>
+                <% if post.universityID == uni.universityID %>
+                    <% @uni_post_counter += 1 %>
+                <% end %>
+            <% end %>
+            <% if @uni_post_counter > 0 %>
+                <tr>
+                    <td>Posts from <%= h uni.university_name %></td>
+                    <td><%= h @uni_post_counter %></td>
+                    <td><a href="/?filter=uni,<%= h uni.universityID %>,<%= h uni.university_name %>">Read posts</a></td>
+                </tr>
+            <% end %>
+        <% end %>
+        
+    </table>
+
+
+<%= erb :"common/footer" %>
